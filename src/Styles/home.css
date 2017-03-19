@@ -3,10 +3,6 @@
 	position: relative;
 	height: 100%;
 	overflow: hidden;
-	// justify-content: center;
-	// align-items: center;
-	// color: white;
-	// font-size: 2rem;
 }
 .center-text {
 	position: absolute;
@@ -17,15 +13,4 @@
 	color: white;
 	font-size: 2rem;
 	font-family: arial, sans-serif;
-}
-.floating-planet {
-	width: 600px;
-	height: 600px;
-	border-radius: 50%;
-	background: white;
-
-	position: absolute;
-	bottom: 0px;
-	left: 50%;
-	transform: translate(-50%, 50%);
 }

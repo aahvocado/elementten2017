@@ -1,0 +1,11 @@
+.floating-planet {
+	width: 600px;
+	height: 600px;
+	border-radius: 50%;
+	background: white;
+
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
