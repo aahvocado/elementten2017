@@ -9,6 +9,7 @@ import '../Styles/navigation.css';
 export default class Navigation extends React.Component {
 	static get defaultProps() {
         return {
+        	PromiseNavigationDidPress: () => {}
         }
     }
 
@@ -17,16 +18,16 @@ export default class Navigation extends React.Component {
 			<nav role='navigation' className='navigation-component'>
 
 				<FloatingButton txt='Home'
-					PromiseLinkDidPress={ () => { console.log('it worked'); }} />
+					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
 
 				<FloatingButton txt='Projects'
-					PromiseLinkDidPress={ () => { console.log('it worked'); }} />
+					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
 
 				<FloatingButton txt='Games'
-					PromiseLinkDidPress={ () => { console.log('it worked'); }} />
+					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
 
 				<FloatingButton txt='About'
-					PromiseLinkDidPress={ () => { console.log('it worked'); }} />
+					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
 
 			</nav>
 		);

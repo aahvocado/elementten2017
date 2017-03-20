@@ -13,3 +13,7 @@
 	width: 75%;
 	height: 75%;
 }
+
+.projects-page.inactive {
+	display: none;
+}
