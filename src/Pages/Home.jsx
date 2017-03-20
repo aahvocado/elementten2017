@@ -1,4 +1,5 @@
 import React from 'react';
+import {CONSTANTS} from '../constants';
 
 /* components */
 import Navigation from '../Components/Navigation';
@@ -18,7 +19,7 @@ export default class Home extends React.Component {
 	constructor(props) {
         super(props);
         this.state = {
-        	currentPage: Home.CONSTANTS.PAGE.HOME
+        	currentPage: CONSTANTS.PAGE.HOME
         };
         this.handleNavigationDidClick = this.handleNavigationDidClick.bind(this);
     }
@@ -35,24 +36,25 @@ export default class Home extends React.Component {
 		return (
 			<div className='home-page'>
 				<div className='center-container'>
-					<Navigation 
+					<Navigation
+						selected={currentPage} 
 						PromiseNavigationDidPress={this.handleNavigationDidClick}
 						/>
 
 					<Projects
-						active={currentPage === Home.CONSTANTS.PAGE.HOME}
+						active={currentPage === CONSTANTS.PAGE.HOME}
 						/>
 
 					<Projects
-						active={currentPage === Home.CONSTANTS.PAGE.PROJECTS}
+						active={currentPage === CONSTANTS.PAGE.PROJECTS}
 						/>
 
 					<Projects
-						active={currentPage === Home.CONSTANTS.PAGE.GAMES}
+						active={currentPage === CONSTANTS.PAGE.GAMES}
 						/>
 
 					<Projects
-						active={currentPage === Home.CONSTANTS.PAGE.ABOUT}
+						active={currentPage === CONSTANTS.PAGE.ABOUT}
 						/>
 				</div>
 
@@ -66,16 +68,16 @@ export default class Home extends React.Component {
 		const pageName = e.target.innerText.toLowerCase();//todo: this properly
 		switch(pageName) {
 			case 'home':
-				this.handlePageChange(Home.CONSTANTS.PAGE.HOME);
+				this.handlePageChange(CONSTANTS.PAGE.HOME);
 				break;
 			case 'projects':
-				this.handlePageChange(Home.CONSTANTS.PAGE.PROJECTS);
+				this.handlePageChange(CONSTANTS.PAGE.PROJECTS);
 				break;
 			case 'games':
-				this.handlePageChange(Home.CONSTANTS.PAGE.GAMES);
+				this.handlePageChange(CONSTANTS.PAGE.GAMES);
 				break;
 			case 'about':
-				this.handlePageChange(Home.CONSTANTS.PAGE.ABOUT);
+				this.handlePageChange(CONSTANTS.PAGE.ABOUT);
 				break;
 			default:
 				break;
@@ -85,15 +87,5 @@ export default class Home extends React.Component {
 	/* handle switching to another page */
 	handlePageChange(newPage) {
 		this.setState({currentPage: newPage});
-	}
-}
-
-/* todo: constants file */
-Home.CONSTANTS = {
-	PAGE: {
-		HOME: 'home-page',
-		PROJECTS: 'project-page',
-		GAMES: 'games-page',
-		ABOUT: 'about-page'
 	}
 }
