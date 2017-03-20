@@ -1,16 +1,15 @@
-.home-component {
+.home-page {
 	display: flex;
 	position: relative;
 	height: 100%;
 	overflow: hidden;
 }
-.center-text {
+.center-container {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 
-	color: white;
-	font-size: 2rem;
-	font-family: arial, sans-serif;
+	width: 75%;
+	height: 75%;
 }

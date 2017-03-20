@@ -1,7 +1,8 @@
-.floating-button {
+.floating-button-component {
 	padding: 0.5rem 1rem;
-	position: absolute;
 	border-radius: 5px;
+	flex: 0 0 auto;
+	height: 4rem;
 
 	background: transparent;
 	color: white;
@@ -9,7 +10,15 @@
 	font-family: arial, sans-serif;
 	font-size: 2rem;
 }
-.floating-button:hover{
+.floating-button-component:hover{
 	color: gray;
 	background: white;
+}
+
+.floating-button-component ~ .floating-button-component {
+	margin-left: 1rem;
+}
+
+.floating-button-component:nth-child(even) {
+	margin-top: 1rem;
 }

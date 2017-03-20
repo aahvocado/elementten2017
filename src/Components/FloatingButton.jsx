@@ -13,7 +13,7 @@ export default class FloatingButton extends React.Component {
 		const { txt } = this.props;
 
 		return (
-			<button	className='floating-button'
+			<button	className='floating-button-component'
 					onClick={this.props.PromiseLinkDidPress}>
 					
 				{txt}

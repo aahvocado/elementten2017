@@ -20,10 +20,10 @@ export default class Home extends React.Component {
 
 	render(){
 		return (
-			<div className='home-component'>
-				<Navigation />
-
-				<div className='center-text'>hello world</div>
+			<div className='home-page'>
+				<div className='center-container'>
+					<Navigation />
+				</div>
 
 				<FloatingPlanet />
 			</div>
