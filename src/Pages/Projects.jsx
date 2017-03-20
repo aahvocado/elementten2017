@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 /* components */
-// import Navigation from '../Components/Navigation';
+import ProjectItem from '../Components/ProjectItem';
 
 /* styles */
 // import '../Styles/styles.css';
@@ -22,7 +22,10 @@ export default class Projects extends React.Component {
 
 		return (
 			<div className={cx('projects-page', (active ? 'active':'inactive'))}>
-				here are my projects
+				<h2>Projects</h2>
+				<ul className='project-list'>
+					<ProjectItem />
+				</ul>
 			</div>
 		);
 	}
