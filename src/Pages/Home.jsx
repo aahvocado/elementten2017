@@ -1,31 +1,42 @@
 import React from 'react';
 
 /* components */
+import Navigation from '../Components/Navigation';
 import FloatingPlanet from '../Components/FloatingPlanet';
-import FloatingButton from '../Components/FloatingButton';
 
 /* styles */
 import '../Styles/styles.css';
 import '../Styles/home.css';
 
+/*
+	Home should be the top level Page that holds all the other Pages
+*/
 export default class Home extends React.Component {
+	static get defaultProps() {
+        return {
+        	currentPage: Home.CONSTANTS.PAGE.HOME
+        }
+    }
+
 	render(){
 		return (
 			<div className='home-component'>
-				{/* todo: separate component */}
-				<header>
-					<nav role='navigation'>
-						<FloatingButton txt='this is a link'
-							PromiseLinkDidPress={ () => {
-								console.log('it worked');
-							}} />
-					</nav>
-				</header>
+				<Navigation />
 
 				<div className='center-text'>hello world</div>
 
 				<FloatingPlanet />
 			</div>
 		);
+	}
+}
+
+/* todo: constants file */
+Home.CONSTANTS = {
+	PAGE: {
+		HOME: 'home-page',
+		PROJECTS: 'project-page',
+		GAMES: 'games-page',
+		ABOUT: 'about-page'
 	}
 }
