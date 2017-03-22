@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import {CONSTANTS} from '../constants';
+// import {CONSTANTS} from '../constants';
 
 /* components */
 
@@ -11,7 +11,8 @@ export default class ProjectItem extends React.Component {
 	static get defaultProps() {
         return {
         	active: false,
-        	img: '',
+        	name: '',
+        	icon: '',
         	description: '',
         	alttxt: '',
         	PromiseNavigationDidPress: () => {}
@@ -19,13 +20,14 @@ export default class ProjectItem extends React.Component {
     }
 
 	render(){
-		const { active, img, description, alttxt } = this.props;
+		const { name, active, icon, description, alttxt } = this.props;
 		
 		return (
 			<li className={cx('project-item', active ? 'active':'')}>
-				{img &&
-					<img src={img} alt={alttxt}/>
+				{icon &&
+					<img src={icon} alt={alttxt}/>
 				}
+				<h3>{name}</h3>
 				<p>{description}</p>
 			</li>
 		);
