@@ -6,7 +6,7 @@ import ProjectList from '../ProjectList';
 import ProjectItem from '../Components/ProjectItem';
 
 /* styles */
-// import '../Styles/styles.css';
+import '../Styles/project-list.css';
 
 /*
 	Projects

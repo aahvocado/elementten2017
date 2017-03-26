@@ -12,8 +12,3 @@
 .project-item.selected {
 	border: 2px solid darkgray;
 }
-.project-list {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
