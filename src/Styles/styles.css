@@ -17,3 +17,6 @@ button {
 	padding: 0;
 	border-style: initial;
 }
+h1, h2 {
+	margin: 0;
+}
