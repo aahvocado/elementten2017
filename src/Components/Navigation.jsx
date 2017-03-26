@@ -21,9 +21,9 @@ export default class Navigation extends React.Component {
 		return (
 			<nav role='navigation' className='navigation-component'>
 
-				<FloatingButton txt='Home'
+				{/*<FloatingButton txt='Home'
 					active={selected === CONSTANTS.PAGE.HOME}
-					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
+					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />*/}
 
 				<FloatingButton txt='Projects'
 					active={selected === CONSTANTS.PAGE.PROJECTS}

@@ -1,28 +1,43 @@
 .floating-button-component {
-	padding: 0.5rem 1rem;
-	border-radius: 5px;
-	flex: 0 0 auto;
-	height: 4rem;
-	box-sizing: border-box;
-
+	height: 200px;
+	width: 200px;
+	
+	border: 2px solid white;
 	background: transparent;
-	color: white;
+	border-radius: 50%;
 
+	color: white;
+	flex: 0 0 auto;
 	font-family: arial, sans-serif;
+}
+/* horizontal */
+.style__splash-page .floating-button-component {
+	/* size, and animation should be variable */
+	height: 200px;
+	width: 200px;
+
 	font-size: 2rem;
 }
-.floating-button-component:hover{
-	color: gray;
-	background: white;
+.style__splash-page .floating-button-component ~ .floating-button-component {
+	margin-left: 2rem;
 }
-.floating-button-component.active {
-	border-bottom: 5px solid white;
+.style__splash-page .floating-button-component:nth-child(1) {
+	margin-top: 50px;
+}
+.style__splash-page .floating-button-component:nth-child(1) {
+	margin-top: 50px;
+}
+.style__splash-page .floating-button-component:nth-child(1) {
+	margin-top: 50px;
 }
 
-.floating-button-component ~ .floating-button-component {
-	margin-left: 1rem;
-}
+/* vertical */
+.style__inner-page .floating-button-component {
+	height: 100px;
+	width: 100px;
 
-.floating-button-component:nth-child(even) {
+	font-size: 1.5rem;
+}
+.style__inner-page .floating-button-component ~ .floating-button-component {
 	margin-top: 1rem;
 }

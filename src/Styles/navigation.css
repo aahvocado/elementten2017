@@ -4,3 +4,7 @@
 
 	justify-content: center;
 }
+.style__inner-page .navigation-component {
+	flex-direction: column;
+	
+}

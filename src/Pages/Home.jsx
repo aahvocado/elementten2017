@@ -1,9 +1,10 @@
 import React from 'react';
+import cx from 'classnames';
 import {CONSTANTS} from '../constants';
 
 /* components */
 import Navigation from '../Components/Navigation';
-import FloatingPlanet from '../Components/FloatingPlanet';
+// import FloatingPlanet from '../Components/FloatingPlanet';
 
 /* pages */
 import Projects from '../Pages/Projects';
@@ -32,17 +33,19 @@ export default class Home extends React.Component {
 
 	render(){
 		const { currentPage } = this.state;
+		const isInnerPage = currentPage !== CONSTANTS.PAGE.HOME;
 
 		return (
-			<div className='home-page'>
-				<div className='center-container'>
+			<div className={cx('et-main', isInnerPage ? 'style__inner-page':'style__splash-page')}>
+				<header className='header-container'>
+					<h1>Daniel Xiao</h1>
+					<h2>is ElementTen</h2>
+				</header>
+
+				<div className={cx('center-container')}>
 					<Navigation
 						selected={currentPage} 
 						PromiseNavigationDidPress={this.handleNavigationDidClick}
-						/>
-
-					<Projects
-						active={currentPage === CONSTANTS.PAGE.HOME}
 						/>
 
 					<Projects
@@ -57,8 +60,6 @@ export default class Home extends React.Component {
 						active={currentPage === CONSTANTS.PAGE.ABOUT}
 						/>
 				</div>
-
-				<FloatingPlanet />
 			</div>
 		);
 	}
