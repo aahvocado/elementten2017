@@ -22,6 +22,8 @@ export default class Home extends React.Component {
         this.state = {
         	currentPage: CONSTANTS.PAGE.HOME
         };
+
+        this.navToHome = this.navToHome.bind(this);
         this.handleNavigationDidClick = this.handleNavigationDidClick.bind(this);
     }
 
@@ -37,7 +39,8 @@ export default class Home extends React.Component {
 
 		return (
 			<div className={cx('et-main', isInnerPage ? 'style__inner-page':'style__splash-page')}>
-				<header className='header-container'>
+				<header className='header-container'
+						onClick={this.navToHome}>
 					<h1>Daniel Xiao</h1>
 					<h2>is ElementTen</h2>
 				</header>
@@ -88,5 +91,10 @@ export default class Home extends React.Component {
 	/* handle switching to another page */
 	handlePageChange(newPage) {
 		this.setState({currentPage: newPage});
+	}
+
+	/* shortcuts */
+	navToHome() {
+		this.handlePageChange(CONSTANTS.PAGE.HOME);
 	}
 }
