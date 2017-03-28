@@ -52,14 +52,17 @@ export default class Home extends React.Component {
 						/>
 
 					<Projects
+						pageName='development'
 						active={currentPage === CONSTANTS.PAGE.PROJECTS}
 						/>
 
 					<Projects
+						pageName='games'
 						active={currentPage === CONSTANTS.PAGE.GAMES}
 						/>
 
 					<Projects
+						pageName='design'
 						active={currentPage === CONSTANTS.PAGE.ABOUT}
 						/>
 				</div>

@@ -14,22 +14,26 @@ import '../Styles/project-list.css';
 export default class Projects extends React.Component {
 	static get defaultProps() {
         return {
+        	pageName: '',
         	active: false
         }
     }
 
 	render(){
-		const { active } = this.props;
+		const { pageName, active } = this.props;
 
-		let renderedProjects = ProjectList().map((project, idx) => {
-			return (
-				<ProjectItem key={'project-item-'+idx+'-key'}
-					{...project}/>
-			);
+		let renderedProjects = [];
+		ProjectList().forEach((project, idx) => {
+			if(project.category === pageName){
+				renderedProjects.push(
+					<ProjectItem key={'project-item-'+idx+'-key'}
+						{...project}/>
+				);
+			}
 		});
 
 		return (
-			<div className={cx('projects-page', (active ? 'active':'inactive'))}>
+			<div className={cx(`${pageName}-page`, (active ? 'active':'inactive'), 'projects-page')}>
 				<h2>Projects</h2>
 				<ul className='project-list'>
 					{ renderedProjects }

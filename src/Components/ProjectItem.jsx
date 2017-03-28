@@ -14,19 +14,23 @@ export default class ProjectItem extends React.Component {
         	name: '',
         	icon: '',
         	description: '',
-        	alttxt: '',
         	PromiseNavigationDidPress: () => {}
         }
     }
 
 	render(){
-		const { name, active, icon, description, alttxt } = this.props;
+		const { name, active, icon, description } = this.props;
+
+		const imgPath = require(`../images/${icon}`);
+
+		const styles = {
+			backgroundImage: `url(${imgPath})`
+		}
 		
 		return (
-			<li className={cx('project-item', active ? 'active':'')}>
-				{icon &&
-					<img src={icon} alt={alttxt}/>
-				}
+			<li className={cx('project-item', active ? 'active':'')}
+				style={styles}>
+				
 				<h3>{name}</h3>
 				<p>{description}</p>
 			</li>
