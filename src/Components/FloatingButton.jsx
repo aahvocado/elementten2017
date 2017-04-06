@@ -3,6 +3,7 @@ import cx from 'classnames';
 
 /* styles */
 import '../Styles/floating-button.css';
+import '../Styles/floating-button-animation.css';
 
 /* kinda generic button actually */
 export default class FloatingButton extends React.Component {

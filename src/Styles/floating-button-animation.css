@@ -1,0 +1,17 @@
+.style__splash-page .floating-button-component {
+	transform: scale(.5);
+	animation-name: anim_bubble;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+.floating-button-component:nth-child(1) {
+	animation-delay: 100ms;
+}
+.floating-button-component:nth-child(2) {
+	animation-delay: 200ms;
+}
+
+@keyframes anim_bubble {
+	0% 		{ transform: scale(.5); }
+	100%	{ transform: scale(1); }
+}
