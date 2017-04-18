@@ -1,5 +1,5 @@
 .style__splash-page .floating-button-component {
-	transform: scale(.5);
+	transform: scale(0);
 	animation-name: anim_bubble;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
@@ -12,6 +12,7 @@
 }
 
 @keyframes anim_bubble {
-	0% 		{ transform: scale(.5); }
+	0% 		{ transform: scale(0); }
+	// 10%		{ transform: scale(0.2); }
 	100%	{ transform: scale(1); }
 }

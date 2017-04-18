@@ -3,12 +3,13 @@
 	width: 200px;
 	
 	border: 2px solid white;
-	background: transparent;
+	background: white;
 	border-radius: 50%;
 
-	color: white;
+	color: gray;
 	flex: 0 0 auto;
 	font-family: arial, sans-serif;
+	// font-weight: bold;
 }
 /* horizontal */
 .style__splash-page .floating-button-component {
@@ -20,15 +21,6 @@
 }
 .style__splash-page .floating-button-component ~ .floating-button-component {
 	margin-left: 2rem;
-}
-.style__splash-page .floating-button-component:nth-child(1) {
-	margin-top: 50px;
-}
-.style__splash-page .floating-button-component:nth-child(1) {
-	margin-top: 50px;
-}
-.style__splash-page .floating-button-component:nth-child(1) {
-	margin-top: 50px;
 }
 
 /* vertical */

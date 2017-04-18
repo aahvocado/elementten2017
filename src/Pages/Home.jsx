@@ -42,7 +42,7 @@ export default class Home extends React.Component {
 				<header className='header-container'
 						onClick={this.navToHome}>
 					<h1>Daniel Xiao</h1>
-					<h2>is ElementTen</h2>
+					<span>is ElementTen</span>
 				</header>
 
 				<div className={cx('center-container')}>

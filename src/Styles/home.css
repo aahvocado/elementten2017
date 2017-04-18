@@ -13,6 +13,9 @@
 	justify-content: center;
     align-items: center;
 }
+.header-container h1 {
+	font-size: 2rem;
+}
 .center-container {
 	padding: 2rem;
 
