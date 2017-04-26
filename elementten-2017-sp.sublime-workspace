@@ -1,0 +1,766 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"get",
+				"getOrientation"
+			],
+			[
+				"Prefab",
+				"PrefabParticles2D"
+			],
+			[
+				"GetCompone",
+				"GetComponentsInChildren"
+			],
+			[
+				"Particle",
+				"ParticleSystem"
+			],
+			[
+				"Motor",
+				"CharacterMotor"
+			],
+			[
+				"return",
+				"returnToCamera"
+			],
+			[
+				"throw",
+				"throwVelocity"
+			],
+			[
+				"Getcompon",
+				"GetComponent\tComponent.*<T>()"
+			],
+			[
+				"eure",
+				"eurecaClient"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"spect",
+				"SpectatorCtrl"
+			],
+			[
+				"selecte",
+				"selectedIndex"
+			],
+			[
+				"data",
+				"dataCreator"
+			],
+			[
+				"a",
+				"AutoInput"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"syntax unity",
+				"Set Syntax: Unity C#"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax c#",
+				"Set Syntax: C#"
+			],
+			[
+				"format",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"unity",
+				"Set Syntax: Unity C#"
+			],
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"htmlpr",
+				"HTMLPrettify"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"jsformat",
+				"JSCS Formatter: Format this file"
+			],
+			[
+				"syntax bab",
+				"Set Syntax: JavaScript (Babel)"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax: babl",
+				"Set Syntax: JavaScript (Babel)"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/section-top.css",
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/forms.css",
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/base.css",
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/reach-us.css",
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/navbar.css",
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/index.html",
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/stylereset.css",
+		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/header.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingButton.jsx",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-list.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/ProjectList.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-item.css",
+		"/C/Users/Decks/Documents/Git Projects/ElementTen/index.html",
+		"/C/Users/Decks/Documents/Git Projects/ElementTen/js/projectObjects.js",
+		"/C/Users/Decks/Documents/Git Projects/ElementTen/js/elementten.js",
+		"/C/Users/Decks/Documents/Git Projects/ElementTen/js/npm.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-button.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/constants.jsx",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/Navigation.jsx",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Projects.jsx",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Abstract/LevelGeometry.cs",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/styles.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/home.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/navigation.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/node_modules/cssom/lib/StyleSheet.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/public/index.html",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingPlanet.jsx",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-planet.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/index.js",
+		"/C/Users/Decks/Documents/Git Projects/AlicenBirthday/Alicen2017.html",
+		"/C/Users/Decks/Documents/Git Projects/AlicenBirthday/styles.css",
+		"/C/Users/Decks/Documents/Git Projects/AlicenBirthday/colorfulbackground.js",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Objects/Giant Crystal/CrystalExplosionTrigger.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/General/DevConsoleController.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Abstract/ActiveInteractable.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Objects/Door.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/General/AdviceGiver.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/General/ConsoleActionsManager.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/UI/Saved_UI.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Camera/CameraController.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/GameManager/Edge Scripts/Edge.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Environment/AmbientParticleHandler.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/GameManager/Edge Scripts/EdgeManager.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/GameManager/SaveManager.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/UI/Bonfire_UI.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Abstract/BoundObject.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/GameManager/GameStateManager.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Prefabs/Interactive Objects/Ice.prefab.meta",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Standard Assets/Effects/ImageEffects/Scripts/ColorCorrectionLookup.cs",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Standard Assets/Effects/ImageEffects/Shaders/ConvertDepth.shader",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Shaders/ShowDepth.shader",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Shaders/OverDraw.shader",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Prefabs/CreditsScene/Ice.prefab.meta",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Prefabs/Background Objects/Generators.meta",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/.gitignore",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/SuperPerspective/Assets/Scripts/Player/PlayerController.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/Scripts/Player/PlayerController.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/Scripts/GridWindow.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/Scripts/Util/CircularCalculator.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/Scripts/CircularCalculator.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/InputManager/Examples/Common/Packages/FirstPersonController/Sources/Scripts/CharacterMotor.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/InputManager/Examples/Common/Packages/FirstPersonController/Sources/Scripts/FPSInputController.cs",
+		"/C/Program Files/Unity/Editor/Data/Documentation/en/Manual/class-CharacterController.html",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/InputManager/Addons/UIInputModules/Runtime/StandaloneInputModule.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/InputManager/Source/Runtime/InputManager_Unity.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/InputManager/Source/Runtime/InputManager.cs",
+		"/C/Users/Decks/Documents/Git Projects/Shang/Assets/InputManager/Examples/01 - Controls Menu/Scripts/LoadInputsOnStart.cs",
+		"/C/Users/Decks/Documents/Git Projects/DaringSeafaring/Assets/Scripts/Util/ZLayer.cs",
+		"/C/Users/Decks/Documents/Git Projects/UnityDoodles/Ball Physics/Assets/Scripts/DragObject.cs",
+		"/C/Users/Decks/Documents/Git Projects/UnityDoodles/Ball Physics/Assets/Scripts/SimpleDragObject.cs",
+		"/C/Users/Decks/Documents/Git Projects/UnityDoodles/Ball Physics/Assets/DragObject.cs",
+		"/C/Users/Decks/Documents/Git Projects/UnityDoodles/Ball Physics/.gitignore",
+		"/C/Users/Decks/Documents/Git Projects/UnityDoodles/UnityDoodles.sublime-project",
+		"/C/Users/Decks/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Decks/AppData/Local/Temp/Rar$DIa0.404/README.txt",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Objects/heart-and-soul",
+		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Objects/MobilePlatform.cs",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/src/client/index.html",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/webpack.config.js",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/package.json",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/src/client/app/index.html",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/src/index.html",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/src/index.js",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/Gruntfile.js",
+		"/C/Users/Decks/Documents/Git Projects/superperspective-web/.babelrc",
+		"/C/Users/Decks/.bash_profile",
+		"/H/.bash_profile",
+		"/C/Users/Decks/Documents/Git Projects/tntgame/server.js",
+		"/C/Users/Decks/Downloads/FightOptimizer.ash",
+		"/C/Users/Decks/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/.gitignore",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/package.json",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/main.js",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/scripts/KeyHandler.jsx",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/scripts/DataService.js",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/styles/main.less",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/Index.jsx",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/devserver_files/index.html",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/README.md",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/scripts/AutoInput.jsx",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/scripts/example.js",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/server.config.js",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/scripts/Index.jsx",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/webpack.config.js",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/node_modules/faker/build/build/faker.js",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/source/scripts/data/fakeData.js",
+		"/C/Users/Decks/Downloads/mark43-frontend-takehome - Copy/takehome-test-frontend/source/main.js",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/node_modules/faker/vendor/password-generator.js",
+		"/C/Users/Decks/Downloads/mark43-frontend-takehome/takehome-test-frontend/package.json",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/.babelrc",
+		"/C/Users/Decks/Documents/Major Projects/Mark43-Takehome/node_modules/faker/package.json",
+		"/C/Users/Decks/Documents/Major Projects/react-hello-world/src/client/app/index.jsx",
+		"/C/Users/Decks/.bash_history"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"-*/node_modules/*,",
+			"",
+			"-*/node_modules/*,",
+			"*/node_modules/*,",
+			"-*/node_modules/*,"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"10px",
+			";\n",
+			" coal-width-constraint",
+			"3px",
+			"2px",
+			"div",
+			"section",
+			"p",
+			"div",
+			"p",
+			"inactive",
+			"active",
+			".active",
+			".actvie",
+			"games",
+			"'js', 'civics', 'gridster', 'ALS', 'visualization'",
+			"development",
+			"Home.",
+			" () => { console.log('it worked'); }",
+			"FloatingPlanet",
+			"a",
+			"600px",
+			"Planet",
+			"div",
+			"Home",
+			"600px",
+			"200px",
+			"Saved_UI",
+			"notiMarker",
+			"inrange",
+			"isinrange",
+			"Debug.Log",
+			"Destroy",
+			"playerCanGrab",
+			"checkOverlaps",
+			"SpaceFreeForGrabbing",
+			"updateCuboid",
+			"edgeDropEpsilon",
+			"Timer",
+			"addToCollectableList",
+			"ShowSaved",
+			"effectoncoll",
+			"mr",
+			"MeshRenderer",
+			"Renderer",
+			"IsEnabled",
+			"invisible",
+			"10",
+			"30f",
+			"1f",
+			"BigCrystalGetUI",
+			"addToCollectableList",
+			"collect()",
+			"collect",
+			"Collect",
+			"collect",
+			"Collect",
+			"collect",
+			"Collect",
+			"collect",
+			"Collect",
+			"collect",
+			"Collect",
+			"SavedUI",
+			"UIPopupManager",
+			"instance",
+			"BigCrystalGetUI",
+			"isPickedUp",
+			"editor",
+			"UnityEditor",
+			"playerprefs",
+			"slopespeed",
+			"slope speed",
+			"movement",
+			"controller",
+			"CharController",
+			"Controller",
+			"controller",
+			"cc",
+			"motor",
+			"CharacterMotor",
+			"this",
+			"Movement",
+			"movement",
+			"CharacterMotorMovement",
+			"maxForwardSpeed",
+			"static",
+			"directionVector",
+			"maxVelocity",
+			"throwVelocity",
+			"Throwable",
+			"player",
+			"Player",
+			"player",
+			"Player",
+			"player",
+			"inYRange",
+			"testdelta",
+			"IsInYRange",
+			"range",
+			"active",
+			"teleportOffset",
+			"teleportVar",
+			"teleportOffset",
+			"door",
+			"h2",
+			"span",
+			"Row",
+			"updatedata",
+			"updatedclient",
+			"updateclient",
+			"spawnEnemy",
+			"updateState",
+			"div",
+			"handshake",
+			"updateplayer",
+			"checkAction",
+			"fromTemplateUrl",
+			"CharacterCtrl",
+			"character",
+			"closeColors",
+			"character select",
+			".setId",
+			"islocal",
+			".spawnPlayer",
+			"spawnPlayer",
+			".setId",
+			"setid"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "elementten-2017-sp.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"project-list",
+				"src\\Styles\\project-list.css"
+			],
+			[
+				"projects.css",
+				"src\\Styles\\project-list.css"
+			],
+			[
+				"projectlist.js",
+				"src\\ProjectList.js"
+			],
+			[
+				"projectitem.jsx",
+				"src\\Components\\ProjectItem.jsx"
+			],
+			[
+				"projects.jsx",
+				"src\\Pages\\Projects.jsx"
+			],
+			[
+				"home.css",
+				"src\\Styles\\home.css"
+			],
+			[
+				"styles.css",
+				"src\\Styles\\styles.css"
+			],
+			[
+				"styles",
+				"node_modules\\cssom\\lib\\StyleSheet.js"
+			],
+			[
+				"floatinbutton.jsx",
+				"src\\Components\\FloatingButton.jsx"
+			],
+			[
+				"floatingplanet",
+				"src\\Components\\FloatingPlanet.jsx"
+			],
+			[
+				"consol",
+				"Assets\\Scripts\\General\\ConsoleActionsManager.cs"
+			],
+			[
+				"savedui",
+				"Assets\\Scripts\\UI\\Saved_UI.cs"
+			],
+			[
+				"activeinter",
+				"Assets\\Scripts\\Abstract\\ActiveInteractable.cs"
+			],
+			[
+				"door.cs",
+				"Assets\\Scripts\\Objects\\Door.cs"
+			],
+			[
+				"console",
+				"Assets\\Scripts\\General\\DevConsoleController.cs"
+			],
+			[
+				"advicerg",
+				"Assets\\Scripts\\General\\AdviceGiver.cs"
+			],
+			[
+				"crystalexplosion",
+				"Assets\\Scripts\\Objects\\Giant Crystal\\CrystalExplosionTrigger.cs"
+			],
+			[
+				"consoleaction",
+				"Assets\\Scripts\\General\\ConsoleActionsManager.cs"
+			],
+			[
+				"activein",
+				"Assets\\Scripts\\Abstract\\ActiveInteractable.cs"
+			],
+			[
+				"door",
+				"Assets\\Scripts\\Objects\\Door.cs"
+			],
+			[
+				"gamestatemanager",
+				"Assets\\Scripts\\GameManager\\GameStateManager.cs"
+			],
+			[
+				"ice.prefab.meta",
+				"Assets\\Prefabs\\Interactive Objects\\Ice.prefab.meta"
+			],
+			[
+				"iceprefab.meta",
+				"Assets\\Prefabs\\CreditsScene\\Ice.prefab.meta"
+			],
+			[
+				"maincoll",
+				"Assets\\Scripts\\Objects\\MainCollectable.cs"
+			],
+			[
+				"generators.meta",
+				"Assets\\Prefabs\\Background Objects\\Generators.meta"
+			],
+			[
+				"charactermotor",
+				"Assets\\InputManager\\Examples\\Common\\Packages\\FirstPersonController\\Sources\\Scripts\\CharacterMotor.cs"
+			],
+			[
+				"mobileplatforms",
+				"Assets\\Scripts\\Objects\\MobilePlatformSpawn.cs"
+			],
+			[
+				"platform.cs",
+				"Assets\\Scripts\\Objects\\MobilePlatform.cs"
+			],
+			[
+				"orb.cs",
+				"Assets\\Scripts\\Objects\\Orb.cs"
+			],
+			[
+				"platform",
+				"Assets\\Scripts\\Objects\\PlatformWobble.cs"
+			],
+			[
+				"orbdrop",
+				"Assets\\Scripts\\Objects\\OrbDropPedestal.cs"
+			],
+			[
+				"edgemanager",
+				"Assets\\Scripts\\GameManager\\Edge Scripts\\EdgeManager.cs"
+			],
+			[
+				"islandcontro",
+				"Assets\\Scripts\\GameManager\\IslandControl.cs"
+			],
+			[
+				"levelgeom",
+				"Assets\\Scripts\\Abstract\\LevelGeometry.cs"
+			],
+			[
+				"mobilep",
+				"Assets\\Scripts\\Objects\\MobilePlatform.cs"
+			],
+			[
+				"playercontrol",
+				"Assets\\Scripts\\Player\\PlayerController.cs"
+			],
+			[
+				"playerspawnc",
+				"Assets\\Scripts\\Player\\PlayerSpawnController.cs"
+			],
+			[
+				"spectator",
+				"www\\js\\tnt-spectator.js"
+			],
+			[
+				"tntplayer",
+				"www\\js\\tnt-player.js"
+			],
+			[
+				".js",
+				"server.js"
+			],
+			[
+				"gitignore",
+				".gitignore"
+			],
+			[
+				"dataservice",
+				"source\\scripts\\DataService.js"
+			],
+			[
+				"main.less",
+				"source\\styles\\main.less"
+			],
+			[
+				"autoinpu",
+				"source\\scripts\\AutoInput.jsx"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"index.jsx",
+				"source\\Index.jsx"
+			],
+			[
+				"main.js",
+				"source\\main.js"
+			],
+			[
+				"index.html",
+				"devserver_files\\index.html"
+			],
+			[
+				"exmaple",
+				"source\\scripts\\example.js"
+			],
+			[
+				"example",
+				"source\\scripts\\example.js"
+			],
+			[
+				"password",
+				"node_modules\\faker\\vendor\\password-generator.js"
+			],
+			[
+				"fakedata",
+				"source\\scripts\\data\\fakeData.js"
+			],
+			[
+				".less",
+				"source\\styles\\main.less"
+			],
+			[
+				"example.js",
+				"source\\scripts\\example.js"
+			],
+			[
+				"main",
+				"source\\main.js"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"autocomplete",
+				"source\\scripts\\AutocompleteInput.jsx"
+			],
+			[
+				"index",
+				"devserver_files\\index.html"
+			],
+			[
+				"readme.",
+				"README.md"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 348.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

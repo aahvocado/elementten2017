@@ -10,6 +10,12 @@
 	flex: 0 0 auto;
 	font-family: arial, sans-serif;
 	// font-weight: bold;
+	cursor: pointer;
+
+	transition: transform 100ms;
+}
+.floating-button-component:hover {
+	transform: scale(1.2);
 }
 /* horizontal */
 .style__splash-page .floating-button-component {

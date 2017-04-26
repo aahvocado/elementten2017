@@ -1,18 +1,17 @@
-.style__splash-page .floating-button-component {
+.pop-in-enter,
+.pop-in-appear {
 	transform: scale(0);
-	animation-name: anim_bubble;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
 }
-.floating-button-component:nth-child(1) {
-	animation-delay: 100ms;
-}
-.floating-button-component:nth-child(2) {
-	animation-delay: 200ms;
+.pop-in-enter.pop-in-enter-active,
+.pop-in-appear.pop-in-appear-active {
+	transform: scale(1);
+	transition: transform 1000ms;
 }
 
-@keyframes anim_bubble {
-	0% 		{ transform: scale(0); }
-	// 10%		{ transform: scale(0.2); }
-	100%	{ transform: scale(1); }
+.pop-in-leave {
+	transform: scale(1);
+}
+.pop-in-leave.pop-in-leave-active {
+	transform: scale(0);
+	transition: transform 300ms;
 }
