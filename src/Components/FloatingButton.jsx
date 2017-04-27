@@ -11,15 +11,17 @@ export default class FloatingButton extends React.Component {
         return {
 			txt: '',
 			active: false,
-			PromiseLinkDidPress: () => {}
+			PromiseLinkDidPress: () => {},
+			style: {}
         }
     }
 
 	render(){
-		const { txt, active } = this.props;
+		const { txt, active, style } = this.props;
 
 		return (
 			<button	className={cx('floating-button-component', active ? 'active':'')}
+					style={style}
 					key={`${txt}-key`}
 					onClick={this.props.PromiseLinkDidPress}>
 					
