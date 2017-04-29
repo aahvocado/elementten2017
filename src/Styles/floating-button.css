@@ -25,7 +25,8 @@
 
 	font-size: 2rem;
 }
-.style__splash-page .floating-button-component ~ .floating-button-component {
+.style__splash-page .floating-button-component ~ .floating-button-component,
+.style__splash-page .floating-button-container ~ .floating-button-container {
 	margin-left: 2rem;
 }
 
@@ -36,6 +37,7 @@
 
 	font-size: 1.5rem;
 }
-.style__inner-page .floating-button-component ~ .floating-button-component {
+.style__inner-page .floating-button-component ~ .floating-button-component,
+.style__inner-page .floating-button-container ~ .floating-button-container {
 	margin-top: 1rem;
 }

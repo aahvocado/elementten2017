@@ -1,3 +1,4 @@
+/* floating button animation */
 .pop-in-enter,
 .pop-in-appear {
 	transform: scale(0);
@@ -14,4 +15,20 @@
 .pop-in-leave.pop-in-leave-active {
 	transform: scale(0);
 	transition: transform 300ms;
+}
+
+/* variants */
+.floating-button-container:nth-child(2) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(2) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 200ms;
+}
+
+.floating-button-container:nth-child(3) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(3) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 400ms;
+}
+
+.floating-button-container:nth-child(4) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(4) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 600ms;
 }

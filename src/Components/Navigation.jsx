@@ -19,57 +19,78 @@ export default class Navigation extends React.Component {
     constructor(props) {
     	super(...props);
     	this.state = {
-    		offset1: 0,
-    		offset2: 0,
-    		offset3: 0,
+    		offsets: this.initOffsets()
     	}
     }
 
 	render(){
 		const { selected } = this.props;
-		const { offset1, offset2, offset3 } = this.state;
+		const { offsets } = this.state;
 		
 		return (
 			<nav role='navigation' className='navigation-component'>
-
-				<ReactCSSTransitionGroup
-					className='navigation-component'
-					transitionName="pop-in"
-					transitionAppear={true}
-      				transitionAppearTimeout={1000}
-					transitionEnterTimeout={1000}
-					transitionLeaveTimeout={300}>
 
 				{/*<FloatingButton txt='Home'
 					active={selected === CONSTANTS.PAGE.HOME}
 					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />*/}
 
+				<ReactCSSTransitionGroup
+					className='floating-button-container'
+					style={{
+						marginTop: offsets.marginTop[0],
+					}}
+					transitionName="pop-in"
+					transitionAppear={true}
+      				transitionAppearTimeout={1000}
+					transitionEnterTimeout={1200}
+					transitionLeaveTimeout={300}>
 					<FloatingButton txt='Projects'
-						style={{ marginTop: offset1 }}
 						active={selected === CONSTANTS.PAGE.PROJECTS}
 						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
+				</ReactCSSTransitionGroup>
 
+				<ReactCSSTransitionGroup
+					className='floating-button-container'
+					style={{
+						marginTop: offsets.marginTop[1],
+					}}
+					transitionName="pop-in"
+					transitionAppear={true}
+      				transitionAppearTimeout={200 + 1000}
+					transitionEnterTimeout={1200}
+					transitionLeaveTimeout={300}>
 					<FloatingButton txt='Games'
-						style={{ marginTop: offset2 }}
 						active={selected === CONSTANTS.PAGE.GAMES}
 						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
+				</ReactCSSTransitionGroup>
 
+				<ReactCSSTransitionGroup
+					className='floating-button-container'
+					style={{
+						marginTop: offsets.marginTop[2],
+					}}
+					transitionName="pop-in"
+					transitionAppear={true}
+      				transitionAppearTimeout={400 + 1000}
+					transitionEnterTimeout={1400}
+					transitionLeaveTimeout={300}>
 					<FloatingButton txt='About'
-						style={{ marginTop: offset3 }}
 						active={selected === CONSTANTS.PAGE.ABOUT}
 						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
-
-
 				</ReactCSSTransitionGroup>
+
+
 
 			</nav>
 		);
 	}
 
-	componentDidMount() {
-		const offset1 = Math.random() * 100;
-		const offset2 = Math.random() * 100;
-		const offset3 = Math.random() * 100;
-		this.setState({ offset1, offset2, offset3 });
+	initOffsets() {
+		let offsets = {};
+
+		const martinTopFunc = () => { return Math.random() * 100 };
+		offsets.marginTop = [martinTopFunc(), martinTopFunc(), martinTopFunc()];
+
+		return offsets;
 	}
 }
