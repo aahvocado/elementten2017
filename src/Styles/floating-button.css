@@ -6,7 +6,7 @@
 	background: white;
 	border-radius: 50%;
 
-	color: gray;
+	color: #5073ad;
 	flex: 0 0 auto;
 	font-family: arial, sans-serif;
 	// font-weight: bold;
@@ -14,7 +14,10 @@
 
 	transition: transform 100ms;
 }
-.floating-button-component:hover {
+.floating-button-component:hover,
+.floating-button-component:focus {
+	outline: 0;
+	border-color: #375079;
 	transform: scale(1.2);
 }
 /* horizontal */

@@ -12,9 +12,13 @@
     flex-direction: column;
 	justify-content: center;
     align-items: center;
+	font-family: 'Convergence', sans-serif;
 }
-.header-container h1 {
-	font-size: 2rem;
+.title {
+	font-size: 4rem;
+}
+.subtitle {
+	font-size: 2rem
 }
 .center-container {
 	padding: 2rem;

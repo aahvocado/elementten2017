@@ -41,8 +41,8 @@ export default class Home extends React.Component {
 			<div className={cx('et-main', isInnerPage ? 'style__inner-page':'style__splash-page')}>
 				<header className='header-container'
 						onClick={this.navToHome}>
-					<h1>Daniel Xiao</h1>
-					<span>is ElementTen</span>
+					<h1 className='title'>Daniel Xiao</h1>
+					<span className='subtitle'>is ElementTen</span>
 				</header>
 
 				<div className={cx('center-container')}>
