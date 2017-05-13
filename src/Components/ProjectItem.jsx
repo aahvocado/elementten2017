@@ -25,14 +25,24 @@ export default class ProjectItem extends React.Component {
 
 		const styles = {
 			backgroundImage: `url(${imgPath})`
-		}
+		};
+
+		const modifiers = {
+			'active': active,
+		};
 		
 		return (
-			<li className={cx('project-item', active ? 'active':'')}
-				style={styles}>
-				
-				<h3>{name}</h3>
-				<p>{description}</p>
+			<li className={cx('project-item', modifiers)}>
+				<div 
+					className="project-item__image"
+					style={styles}
+				>
+				</div>
+
+				<div className="project-item__info">
+					<h3>{ name }</h3>
+					<p>{ description }</p>
+				</div>
 			</li>
 		);
 	}

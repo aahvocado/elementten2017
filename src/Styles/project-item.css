@@ -6,19 +6,22 @@
 
 	margin: 10px;
 
-	width: 250px;
-	height: 175px;
+	width: 500px;
+	height: 150px;
 	position: relative;
+
+	display: flex;
+	flex-direction: column;
 }
 .project-item__image {
+	flex: 1 1 auto;
 	width: 100%;
-	z-index: -1;
-
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+}
+.project-item__info {
+	flex: 0 0 auto;
+	width: 100%;
 }
 .project-item.selected {
+	flex: 0 0 auto;
 	border: 2px solid darkgray;
 }
