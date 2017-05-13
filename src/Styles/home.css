@@ -1,18 +1,11 @@
 .et-main {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 
 	position: relative;
 	height: 100%;
 	overflow: hidden;
-}
-.header-container {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-	justify-content: center;
-    align-items: center;
-	font-family: 'Convergence', sans-serif;
 }
 .title {
 	font-size: 4rem;
@@ -20,20 +13,29 @@
 .subtitle {
 	font-size: 2rem
 }
+.header-container {
+	flex: 0 0 auto;
+    padding: 2rem;
+    max-width: 720px;
+
+    display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: center;
+	font-family: 'Convergence', sans-serif;
+}
 .center-container {
+	flex: 1 1 auto;
+	height: 100%;
 	padding: 2rem;
+    max-width: 720px;
 
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+	overflow: hidden;
 }
-
 .projects-page.inactive {
 	display: none;
-}
-
-.style__splash-page .center-container {
-	flex-direction: column;
-}
-.style__inner-page .center-container {
-	flex-direction: row;
 }

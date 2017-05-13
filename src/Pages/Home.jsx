@@ -35,10 +35,15 @@ export default class Home extends React.Component {
 
 	render(){
 		const { currentPage } = this.state;
+		
 		const isInnerPage = currentPage !== CONSTANTS.PAGE.HOME;
+		const modifiers = {
+			'style__inner-page': isInnerPage,
+			'style__splash-page': !isInnerPage,
+		};
 
 		return (
-			<div className={cx('et-main', isInnerPage ? 'style__inner-page':'style__splash-page')}>
+			<div className={cx('et-main', modifiers)}>
 				<header className='header-container'
 						onClick={this.navToHome}>
 					<h1 className='title'>Daniel Xiao</h1>

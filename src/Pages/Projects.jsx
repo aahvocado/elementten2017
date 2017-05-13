@@ -10,6 +10,7 @@ import '../Styles/project-list.css';
 
 /*
 	Projects
+	generic page that creates a list
 */
 export default class Projects extends React.Component {
 	static get defaultProps() {
@@ -32,9 +33,13 @@ export default class Projects extends React.Component {
 			}
 		});
 
+		const modifiers = {
+			'active': active,
+			'inactive': !active,
+		};
+
 		return (
-			<div className={cx(`${pageName}-page`, (active ? 'active':'inactive'), 'projects-page')}>
-				<h2>Projects</h2>
+			<div className={cx(`${pageName}-page`, 'projects-page', modifiers)}>
 				<ul className='project-list'>
 					{ renderedProjects }
 				</ul>
