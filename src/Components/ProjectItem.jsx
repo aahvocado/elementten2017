@@ -40,8 +40,8 @@ export default class ProjectItem extends React.Component {
 				</div>
 
 				<div className="project-item__info">
-					<h3>{ name }</h3>
-					<p>{ description }</p>
+					<h3 className="project-item__info__name">{ name }</h3>
+					<p className="project-item__info__description">{ description }</p>
 				</div>
 			</li>
 		);
