@@ -9,6 +9,7 @@ import '../Styles/floating-button-animation.css';
 export default class FloatingButton extends React.Component {
 	static get defaultProps() {
         return {
+        	wrapperCls: '',
 			txt: '',
 			active: false,
 			PromiseLinkDidPress: () => {},
@@ -17,10 +18,14 @@ export default class FloatingButton extends React.Component {
     }
 
 	render(){
-		const { txt, active, style } = this.props;
+		const { wrapperCls, txt, active, style } = this.props;
+
+		const modifiers = {
+			'active': active,
+		}
 
 		return (
-			<button	className={cx('floating-button-component', active ? 'active':'')}
+			<button	className={cx('floating-button-component', modifiers, wrapperCls)}
 					style={style}
 					key={`${txt}-key`}
 					onClick={this.props.PromiseLinkDidPress}>

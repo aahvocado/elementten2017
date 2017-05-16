@@ -14,11 +14,28 @@
 
 	transition: transform 100ms;
 }
+/* generic coloring */
 .floating-button-component:hover,
 .floating-button-component:focus {
 	outline: 0;
 	border-color: #375079;
 	transform: scale(1.2);
+}
+/* specific coloring */
+.floating-button-component.projects-color:hover,
+.floating-button-component.projects-color.active {
+	color: #2b9a3f;
+	border-color: #2b9a3f;
+}
+.floating-button-component.games-color:hover,
+.floating-button-component.games-color.active {
+	color: orange;
+	border-color: orange;
+}
+.floating-button-component.about-color:hover,
+.floating-button-component.about-color.active {
+	color: #db7ee4;
+	border-color: #db7ee4;
 }
 /* horizontal */
 .style__splash-page .floating-button-component {

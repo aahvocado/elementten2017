@@ -53,7 +53,9 @@ export default class Navigation extends React.Component {
       				transitionAppearTimeout={1000}
 					transitionEnterTimeout={1200}
 					transitionLeaveTimeout={1000}>
-					<FloatingButton txt='Projects'
+					<FloatingButton 
+						txt='Projects'
+						wrapperCls="projects-color"
 						active={selected === CONSTANTS.PAGE.PROJECTS}
 						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
 				</ReactCSSTransitionGroup>
@@ -68,7 +70,9 @@ export default class Navigation extends React.Component {
       				transitionAppearTimeout={200 + 1000}
 					transitionEnterTimeout={1200}
 					transitionLeaveTimeout={1000}>
-					<FloatingButton txt='Games'
+					<FloatingButton 
+						txt='Games'
+						wrapperCls="games-color"
 						active={selected === CONSTANTS.PAGE.GAMES}
 						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
 				</ReactCSSTransitionGroup>
@@ -83,7 +87,9 @@ export default class Navigation extends React.Component {
       				transitionAppearTimeout={400 + 1000}
 					transitionEnterTimeout={1400}
 					transitionLeaveTimeout={100}>
-					<FloatingButton txt='About'
+					<FloatingButton 
+						txt='About'
+						wrapperCls="about-color"
 						active={selected === CONSTANTS.PAGE.ABOUT}
 						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
 				</ReactCSSTransitionGroup>

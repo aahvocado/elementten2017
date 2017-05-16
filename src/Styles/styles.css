@@ -1,10 +1,23 @@
+/*
+.projects-color {
+	color: #2b9a3f;
+	border-color: #2b9a3f;
+}
+.games-color {
+	color: orange;
+	border-color: orange;
+}
+.about-color {
+	color: #db7ee4;
+	border-color: #db7ee4;
+}
+*/
 
 #root {
-	background: #5073ad;
+	color: #5073ad;
+	background: white;
 	width: 100%;
 	height: 100vh;
-
-	color: white;
 	font-family: arial, sans-serif;
 	font-size: 10px;
 }
