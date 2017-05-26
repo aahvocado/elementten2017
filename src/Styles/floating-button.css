@@ -14,12 +14,16 @@
 
 	transition: transform 100ms;
 }
+.floating-button-container {
+	margin: 50px;
+}
 /* generic coloring */
 .floating-button-component:hover,
 .floating-button-component:focus {
 	outline: 0;
 	border-color: #375079;
 	transform: scale(1.2);
+	// box-shadow: 0px 0px 40px green;
 }
 /* specific coloring */
 .floating-button-component.projects-color:hover,

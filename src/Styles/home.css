@@ -20,9 +20,7 @@
 }
 .center-container {
 	flex: 0 0 auto;
-	// height: 100%;
 	padding: 2rem;
-    max-width: 720px;
 
 	display: flex;
 	flex-direction: row;

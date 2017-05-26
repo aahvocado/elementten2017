@@ -16,7 +16,8 @@ import '../Styles/home.css';
 */
 export default class Home extends React.Component {
 	static defaultProps = {
-		currentPage: CONSTANTS.PAGE.HOME
+		currentPage: CONSTANTS.PAGE.HOME,
+		onNavClick: () => Promise.resolve(),
 	};
 
 	render(){
@@ -26,7 +27,7 @@ export default class Home extends React.Component {
 			<div className={cx('center-container')}>
 				<Navigation
 					selected={currentPage} 
-					PromiseNavigationDidPress={this.handleNavigationDidClick}
+					onNavClick={ this.handleNavDidClick }
 					/>
 
 				<Projects
@@ -45,5 +46,10 @@ export default class Home extends React.Component {
 					/>
 			</div>
 		);
+	}
+
+	handleNavDidClick = (nextPage) => {
+		const { onNavClick } = this.props;
+		onNavClick(nextPage);
 	}
 }

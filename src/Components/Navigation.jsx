@@ -13,16 +13,13 @@ export default class Navigation extends React.Component {
 	static get defaultProps() {
         return {
         	selected: CONSTANTS.PAGE.HOME,
-        	PromiseNavigationDidPress: () => {}
+        	onNavClick: () => Promise.resolve(),
         }
     }
 
-    constructor(props) {
-    	super(...props);
-    	this.state = {
-    		offsets: this.initOffsets()
-    	}
-    }
+    state = {
+		offsets: this.initOffsets(),
+	}
 
 	render(){
 		const { selected } = this.props;
@@ -34,15 +31,10 @@ export default class Navigation extends React.Component {
 			offsets = {
 				marginTop: [25, 25, 25]
 			}
-		}
+		};
 		
 		return (
 			<nav role='navigation' className='navigation-component'>
-
-				{/*<FloatingButton txt='Home'
-					active={selected === CONSTANTS.PAGE.HOME}
-					PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />*/}
-
 				<ReactCSSTransitionGroup
 					className='floating-button-container'
 					style={{
@@ -56,8 +48,9 @@ export default class Navigation extends React.Component {
 					<FloatingButton 
 						txt='Projects'
 						wrapperCls="projects-color"
+						action={ CONSTANTS.NAVIGATION.PROJECTS }
 						active={selected === CONSTANTS.PAGE.PROJECTS}
-						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
+						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 
 				<ReactCSSTransitionGroup
@@ -73,8 +66,9 @@ export default class Navigation extends React.Component {
 					<FloatingButton 
 						txt='Games'
 						wrapperCls="games-color"
+						action={ CONSTANTS.NAVIGATION.GAMES }
 						active={selected === CONSTANTS.PAGE.GAMES}
-						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
+						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 
 				<ReactCSSTransitionGroup
@@ -90,8 +84,9 @@ export default class Navigation extends React.Component {
 					<FloatingButton 
 						txt='About'
 						wrapperCls="about-color"
+						action={ CONSTANTS.NAVIGATION.ABOUT }
 						active={selected === CONSTANTS.PAGE.ABOUT}
-						PromiseLinkDidPress={this.props.PromiseNavigationDidPress} />
+						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 			</nav>
 		);
@@ -101,9 +96,14 @@ export default class Navigation extends React.Component {
 	initOffsets() {
 		let offsets = {};
 
-		const martinTopFunc = () => { return Math.random() * 100 };
-		offsets.marginTop = [martinTopFunc(), martinTopFunc(), martinTopFunc()];
+		const marginTopFunc = () => { return Math.random() * 100 };
+		offsets.marginTop = [marginTopFunc(), marginTopFunc(), marginTopFunc()];
 
 		return offsets;
+	}
+
+	handleNavClick = (action) => {
+		const { onNavClick } = this.props;
+		onNavClick(action);
 	}
 }

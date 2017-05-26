@@ -12,8 +12,9 @@ export default class FloatingButton extends React.Component {
         	wrapperCls: '',
 			txt: '',
 			active: false,
-			PromiseLinkDidPress: () => {},
-			style: {}
+			onclick: () => Promise.resolve(),
+			style: {},
+			action: '',
         }
     }
 
@@ -28,10 +29,14 @@ export default class FloatingButton extends React.Component {
 			<button	className={cx('floating-button-component', modifiers, wrapperCls)}
 					style={style}
 					key={`${txt}-key`}
-					onClick={this.props.PromiseLinkDidPress}>
-					
+					onClick={ this.handleOnClick }>
 				{txt}
 			</button>
 		);
+	}
+
+	handleOnClick = (e) => {
+		const { onClick, action } = this.props;
+		onClick(action);
 	}
 }

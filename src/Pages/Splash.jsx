@@ -10,14 +10,17 @@ export default class Splash extends Component {
 	};
 
 	render(){
-		const { onNavClick } = this.props;
-
 		return (
 			<div className={cx('center-container')}>
 				<Navigation
-					PromiseNavigationDidPress={ onNavClick }
-					/>
+					onNavClick={ this.handleNavDidClick }
+				/>
 			</div>
 		);
+	}
+
+	handleNavDidClick = (nextPage) => {
+		const { onNavClick } = this.props;
+		onNavClick(nextPage);
 	}
 }

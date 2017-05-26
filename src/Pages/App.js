@@ -61,8 +61,8 @@ export default class App extends React.Component {
 						transitionLeaveTimeout={1000}
 					>
 						<Header 
-								onHeaderClick={ this.navToHome }
-							/>
+							onHeaderClick={ this.navToHome }
+						/>
 						<Home
 							currentPage={ currentPage }
 							onNavClick={ this.handleNavDidClick }
@@ -74,22 +74,21 @@ export default class App extends React.Component {
 	}
 
 	/* handle the button that was clicked */
-	handleNavDidClick = (e) => {
-		const pageName = e.target.innerText.toLowerCase() || e;//todo: this properly
-		switch(pageName) {
-			case 'splash':
+	handleNavDidClick = (nextPage) => {
+		switch(nextPage) {
+			case CONSTANTS.NAVIGATION.SPLASH:
 				this.handlePageChange(CONSTANTS.PAGE.SPLASH);
 				break;
-			case 'home':
+			case CONSTANTS.NAVIGATION.HOME:
 				this.handlePageChange(CONSTANTS.PAGE.HOME);
 				break;
-			case 'projects':
+			case CONSTANTS.NAVIGATION.PROJECTS:
 				this.handlePageChange(CONSTANTS.PAGE.PROJECTS);
 				break;
-			case 'games':
+			case CONSTANTS.NAVIGATION.GAMES:
 				this.handlePageChange(CONSTANTS.PAGE.GAMES);
 				break;
-			case 'about':
+			case CONSTANTS.NAVIGATION.ABOUT:
 				this.handlePageChange(CONSTANTS.PAGE.ABOUT);
 				break;
 			default:
