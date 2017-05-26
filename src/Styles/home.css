@@ -5,7 +5,12 @@
 
 	position: relative;
 	height: 100%;
-	overflow: hidden;
+	overflow: auto;
+}
+.et-main.style__splash-page {
+	justify-content: center;
+}
+.et-main.style__inner-page {
 }
 .title {
 	font-size: 4rem;
@@ -13,21 +18,9 @@
 .subtitle {
 	font-size: 2rem
 }
-.header-container {
-	flex: 0 0 auto;
-    padding: 0 2rem;
-    max-width: 720px;
-    padding-top: 2rem;
-
-    display: flex;
-    flex-direction: column;
-	justify-content: center;
-    align-items: center;
-	font-family: 'Convergence', sans-serif;
-}
 .center-container {
-	flex: 1 1 auto;
-	height: 100%;
+	flex: 0 0 auto;
+	// height: 100%;
 	padding: 2rem;
     max-width: 720px;
 

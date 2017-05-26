@@ -6,6 +6,9 @@ import {CONSTANTS} from '../constants';
 import Home from '../Pages/Home';
 import Splash from '../Pages/Splash';
 
+/* components */
+import Header from '../Components/Header';
+
 /* styles */
 import '../Styles/styles.css';
 
@@ -29,11 +32,7 @@ export default class App extends React.Component {
 
 		return (
 			<div className={cx('et-main', modifiers)}>
-				<header className='header-container'
-						onClick={this.navToHome}>
-					<h1 className='title'>Daniel Xiao</h1>
-					<span className='subtitle'>is ElementTen</span>
-				</header>
+				<Header />
 
 				{ currentPage === CONSTANTS.PAGE.SPLASH &&
 					<Splash 
