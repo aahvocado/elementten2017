@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {CONSTANTS} from '../constants';
 
 /* pages */
@@ -32,18 +33,41 @@ export default class App extends React.Component {
 
 		return (
 			<div className={cx('et-main', modifiers)}>
-				<Header />
-
 				{ currentPage === CONSTANTS.PAGE.SPLASH &&
-					<Splash 
-						onNavClick={ this.handleNavDidClick }
-					/>
+					<ReactCSSTransitionGroup
+						className='floating-button-container'
+						transitionName="pop-in"
+						transitionAppear={true}
+	      				transitionAppearTimeout={1000}
+						transitionEnterTimeout={1200}
+						transitionLeaveTimeout={1000}
+					>
+						<Header 
+							onHeaderClick={ this.navToHome }
+						/>
+
+						<Splash 
+							onNavClick={ this.handleNavDidClick }
+						/>
+					</ReactCSSTransitionGroup>
 				}
 				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-					<Home
-						currentPage={ currentPage }
-						onNavClick={ this.handleNavDidClick }
-					/>
+					<ReactCSSTransitionGroup
+						className='floating-button-container'
+						transitionName="pop-in"
+						transitionAppear={true}
+	      				transitionAppearTimeout={1000}
+						transitionEnterTimeout={1200}
+						transitionLeaveTimeout={1000}
+					>
+						<Header 
+								onHeaderClick={ this.navToHome }
+							/>
+						<Home
+							currentPage={ currentPage }
+							onNavClick={ this.handleNavDidClick }
+						/>
+					</ReactCSSTransitionGroup>
 				}
 			</div>
 		);

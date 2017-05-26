@@ -14,10 +14,18 @@ import '../Styles/header.css';
 export default class Header extends React.Component {
 	render(){
 		return (
-			<header className={ cx('et-header') }>
+			<header 
+				className={ cx('et-header') }
+				onClick={ this.handleHeaderClick }
+			>
 				<h1 className='title'>Daniel Xiao</h1>
 				<span className='subtitle'>is ElementTen</span>
 			</header>
 		);
+	}
+
+	handleHeaderClick = () => {
+		const { onHeaderClick } = this.props;
+		onHeaderClick();
 	}
 }
