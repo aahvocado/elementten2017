@@ -8,15 +8,13 @@ import cx from 'classnames';
 import '../Styles/project-item.css';
 
 export default class ProjectItem extends React.Component {
-	static get defaultProps() {
-        return {
-        	active: false,
-        	name: '',
-        	icon: '',
-        	description: '',
-        	PromiseNavigationDidPress: () => {}
-        }
-    }
+	static defaultProps = {
+    	active: false,
+    	name: '',
+    	icon: '',
+    	description: '',
+    	PromiseNavigationDidPress: () => {},
+    };
 
 	render(){
 		const { name, active, icon, description } = this.props;

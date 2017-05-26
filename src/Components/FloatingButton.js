@@ -7,16 +7,14 @@ import '../Styles/floating-button-animation.css';
 
 /* kinda generic button actually */
 export default class FloatingButton extends React.Component {
-	static get defaultProps() {
-        return {
-        	wrapperCls: '',
-			txt: '',
-			active: false,
-			onclick: () => Promise.resolve(),
-			style: {},
-			action: '',
-        }
-    }
+	static defaultProps = {
+    	wrapperCls: '',
+		txt: '',
+		active: false,
+		onclick: () => Promise.resolve(),
+		style: {},
+		action: '',
+    };
 
 	render(){
 		const { wrapperCls, txt, active, style } = this.props;

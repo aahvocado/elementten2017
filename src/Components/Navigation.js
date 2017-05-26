@@ -10,12 +10,10 @@ import FloatingButton from '../Components/FloatingButton';
 import '../Styles/navigation.css';
 
 export default class Navigation extends React.Component {
-	static get defaultProps() {
-        return {
-        	selected: CONSTANTS.PAGE.HOME,
-        	onNavClick: () => Promise.resolve(),
-        }
-    }
+	static defaultProps = {
+    	selected: CONSTANTS.PAGE.HOME,
+    	onNavClick: () => Promise.resolve(),
+    };
 
     state = {
 		offsets: this.initOffsets(),

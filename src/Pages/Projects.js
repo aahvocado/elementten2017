@@ -13,12 +13,10 @@ import '../Styles/project-list.css';
 	generic page that creates a list
 */
 export default class Projects extends React.Component {
-	static get defaultProps() {
-        return {
-        	pageName: '',
-        	active: false
-        }
-    }
+	static defaultProps = {
+    	pageName: '',
+    	active: false,
+    };
 
 	render(){
 		const { pageName, active } = this.props;
