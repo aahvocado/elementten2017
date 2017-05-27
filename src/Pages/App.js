@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import {CONSTANTS} from '../constants';
+import {CONSTANTS} from '../constants.js';
 
 /* pages */
 import Home from '../Pages/Home';
@@ -12,6 +12,7 @@ import Header from '../Components/Header';
 
 /* styles */
 import '../Styles/styles.css';
+import '../Styles/animations.css';
 
 /*
 	Primary page
@@ -33,42 +34,49 @@ export default class App extends React.Component {
 
 		return (
 			<div className={cx('et-main', modifiers)}>
-				{ currentPage === CONSTANTS.PAGE.SPLASH &&
 					<ReactCSSTransitionGroup
-						className='floating-button-container'
 						transitionName="pop-in"
-						transitionAppear={true}
+						transitionAppear
 	      				transitionAppearTimeout={1000}
+	      				transitionEnter
 						transitionEnterTimeout={1200}
+						transitionLeave
 						transitionLeaveTimeout={1000}
 					>
-						<Header 
-							onHeaderClick={ this.navToHome }
-						/>
+						{ currentPage === CONSTANTS.PAGE.SPLASH &&
+							<Header
+								onHeaderClick={ this.navToHome }
+							/>
+						}
+						{ currentPage === CONSTANTS.PAGE.SPLASH &&
+							<Splash 
+								onNavClick={ this.handleNavDidClick }
+							/>
+						}
+					</ReactCSSTransitionGroup>
 
-						<Splash 
-							onNavClick={ this.handleNavDidClick }
-						/>
-					</ReactCSSTransitionGroup>
-				}
-				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
 					<ReactCSSTransitionGroup
 						className='floating-button-container'
 						transitionName="pop-in"
-						transitionAppear={true}
+						transitionAppear
 	      				transitionAppearTimeout={1000}
+	      				transitionEnter
 						transitionEnterTimeout={1200}
+						transitionLeave
 						transitionLeaveTimeout={1000}
 					>
-						<Header 
-							onHeaderClick={ this.navToHome }
-						/>
-						<Home
-							currentPage={ currentPage }
-							onNavClick={ this.handleNavDidClick }
-						/>
+						{ currentPage !== CONSTANTS.PAGE.SPLASH &&
+							<Header
+								onHeaderClick={ this.navToHome }
+							/>
+						}
+						{ currentPage !== CONSTANTS.PAGE.SPLASH &&
+							<Home
+								currentPage={ currentPage }
+								onNavClick={ this.handleNavDidClick }
+							/>
+						}
 					</ReactCSSTransitionGroup>
-				}
 			</div>
 		);
 	}

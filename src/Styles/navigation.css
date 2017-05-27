@@ -5,7 +5,7 @@
 	flex-direction: row;
 	justify-content: center;
 }
-.style__inner-page .navigation-component {
+.navigation-component.mod-vertical {
 	flex-direction: column;
 	justify-content: flex-start;
 }

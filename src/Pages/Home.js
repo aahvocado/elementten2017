@@ -26,6 +26,7 @@ export default class Home extends React.Component {
 		return (
 			<div className={cx('center-container')}>
 				<Navigation
+					vertical
 					selected={currentPage} 
 					onNavClick={ this.handleNavDidClick }
 					/>

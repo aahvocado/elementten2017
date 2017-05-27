@@ -1,4 +1,4 @@
-/* floating button animation */
+/* pop in animation */
 .pop-in-enter,
 .pop-in-appear {
 	transform: scale(0);
@@ -8,16 +8,16 @@
 	transform: scale(1);
 	transition: transform 1000ms;
 }
-
 .pop-in-leave {
-	transform: scale(1);
+	opacity: 1;
 }
 .pop-in-leave.pop-in-leave-active {
-	transform: scale(0);
-	transition: transform 300ms;
+	transform: scale(1);
+	opacity: 0;
+	transition: opacity 1200ms;
 }
 
-/* variants */
+/* delays */
 .floating-button-container:nth-child(2) .pop-in-enter.pop-in-enter-active,
 .floating-button-container:nth-child(2) .pop-in-appear.pop-in-appear-active {
 	transition-delay: 200ms;
@@ -31,4 +31,13 @@
 .floating-button-container:nth-child(4) .pop-in-enter.pop-in-enter-active,
 .floating-button-container:nth-child(4) .pop-in-appear.pop-in-appear-active {
 	transition-delay: 600ms;
+}
+
+/* fade out animation */
+.fade-out-leave {
+	opacity: 1;
+}
+.fade-out-leave.fade-out-leave-active {
+	opacity: 0;
+	transition: opacity 1200ms;
 }

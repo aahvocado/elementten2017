@@ -1,14 +1,14 @@
 .et-main {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	// align-items: center;
 
 	position: relative;
 	height: 100%;
 	overflow: auto;
 }
 .et-main.style__splash-page {
-	justify-content: center;
+	// justify-content: center;
 }
 .et-main.style__inner-page {
 }
