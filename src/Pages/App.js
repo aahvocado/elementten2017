@@ -34,47 +34,42 @@ export default class App extends React.Component {
 
 		return (
 			<div className={cx('et-main', modifiers)}>
-					<FloatingContainer
-						transitionName="pop-in"
-						transitionAppear
-	      				transitionAppearTimeout={1000}
-						transitionLeave
-						transitionLeaveTimeout={1000}
-					>
-						{ currentPage === CONSTANTS.PAGE.SPLASH &&
-							<Header
-								onHeaderClick={ this.navToHome }
-							/>
-						}
-						{ currentPage === CONSTANTS.PAGE.SPLASH &&
-							<Splash 
-								onNavClick={ this.handleNavDidClick }
-							/>
-						}
-					</FloatingContainer>
+				<FloatingContainer
+					transitionName="pop-in"
+					transitionAppear
+      				transitionAppearTimeout={1000}
+					transitionLeave
+					transitionLeaveTimeout={1000}
+				>
+					{ currentPage === CONSTANTS.PAGE.SPLASH &&
+						<Header
+							onHeaderClick={ this.navToHome }
+						/>
+					}
+					{ currentPage === CONSTANTS.PAGE.SPLASH &&
+						<Splash 
+							onNavClick={ this.handleNavDidClick }
+						/>
+					}
+				</FloatingContainer>
 
-					<FloatingContainer
-						className='floating-button-container'
-						transitionName="pop-in"
-						transitionAppear
-	      				transitionAppearTimeout={1000}
-	      				transitionEnter
-						transitionEnterTimeout={1200}
-						transitionLeave
-						transitionLeaveTimeout={1000}
-					>
-						{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-							<Header
-								onHeaderClick={ this.navToHome }
-							/>
-						}
-						{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-							<Home
-								currentPage={ currentPage }
-								onNavClick={ this.handleNavDidClick }
-							/>
-						}
-					</FloatingContainer>
+				<FloatingContainer
+					className='floating-button-container'
+					transitionName="pop-in"
+					transitionAppear
+      				transitionAppearTimeout={1000}
+      				transitionEnter
+					transitionEnterTimeout={1200}
+					transitionLeave
+					transitionLeaveTimeout={1000}
+				>
+					{ currentPage !== CONSTANTS.PAGE.SPLASH &&
+						<Home
+							currentPage={ currentPage }
+							onNavClick={ this.handleNavDidClick }
+						/>
+					}
+				</FloatingContainer>
 			</div>
 		);
 	}

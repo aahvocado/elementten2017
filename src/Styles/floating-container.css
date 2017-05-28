@@ -4,3 +4,7 @@
 	left: 0;
 	width: 100%;
 }
+.relative-container {
+	position: relative;
+	display: block;
+}
