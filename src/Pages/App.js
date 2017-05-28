@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {CONSTANTS} from '../constants.js';
 
 /* pages */
@@ -9,6 +8,7 @@ import Splash from '../Pages/Splash';
 
 /* components */
 import Header from '../Components/Header';
+import FloatingContainer from '../Components/FloatingContainer';
 
 /* styles */
 import '../Styles/styles.css';
@@ -34,12 +34,10 @@ export default class App extends React.Component {
 
 		return (
 			<div className={cx('et-main', modifiers)}>
-					<ReactCSSTransitionGroup
+					<FloatingContainer
 						transitionName="pop-in"
 						transitionAppear
 	      				transitionAppearTimeout={1000}
-	      				transitionEnter
-						transitionEnterTimeout={1200}
 						transitionLeave
 						transitionLeaveTimeout={1000}
 					>
@@ -53,9 +51,9 @@ export default class App extends React.Component {
 								onNavClick={ this.handleNavDidClick }
 							/>
 						}
-					</ReactCSSTransitionGroup>
+					</FloatingContainer>
 
-					<ReactCSSTransitionGroup
+					<FloatingContainer
 						className='floating-button-container'
 						transitionName="pop-in"
 						transitionAppear
@@ -76,7 +74,7 @@ export default class App extends React.Component {
 								onNavClick={ this.handleNavDidClick }
 							/>
 						}
-					</ReactCSSTransitionGroup>
+					</FloatingContainer>
 			</div>
 		);
 	}
