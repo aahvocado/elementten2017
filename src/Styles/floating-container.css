@@ -8,3 +8,6 @@
 	position: relative;
 	display: block;
 }
+.mod-vertically-centered {
+   transform: translateY(50%);
+}

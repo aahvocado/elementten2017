@@ -16,10 +16,11 @@ export default class FloatingContainer extends Component {
 		transitionAppearTimeout: 0,
 		transitionEnterTimeout: 0,
 		transitionLeaveTimeout: 0,
+		verticallyCentered: false,
 	};
 
 	render(){
-		const { children, wrapperCls } = this.props;
+		const { children, wrapperCls, verticallyCentered } = this.props;
 		const { 
 			transitionName,
 			transitionAppear,
@@ -29,9 +30,14 @@ export default class FloatingContainer extends Component {
 			transitionLeave,
 			transitionLeaveTimeout,
 		} = this.props;
+
+		const modifiers = { 
+			'mod-vertically-centered': verticallyCentered,
+		};
+
 		return (
 			<ReactCSSTransitionGroup
-				className={ cx('et-floating-container', wrapperCls) }
+				className={ cx('et-floating-container', modifiers, wrapperCls) }
 				transitionName={ transitionName }
 				transitionAppear={ transitionAppear }
   				transitionAppearTimeout={ transitionAppearTimeout }

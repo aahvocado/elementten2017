@@ -40,6 +40,7 @@ export default class App extends React.Component {
       				transitionAppearTimeout={1000}
 					transitionLeave
 					transitionLeaveTimeout={1000}
+					verticallyCentered
 				>
 					{ currentPage === CONSTANTS.PAGE.SPLASH &&
 						<Header
