@@ -49,7 +49,7 @@ export default class Navigation extends React.Component {
 	      				transitionAppearTimeout={1000}
 						transitionEnterTimeout={1200}
 						transitionLeaveTimeout={1000}>
-						<h2 className="nav-title">Daniel Xiao</h2>
+						<h1 className="nav-title">Daniel Xiao</h1>
 					</ReactCSSTransitionGroup>
 				}
 				<ReactCSSTransitionGroup

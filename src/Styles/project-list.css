@@ -3,6 +3,11 @@
 	flex: 1 1 auto;
 	width: 100;
 	height: 100%;
+	padding: 2rem;
+}
+.project-page-title {
+	font-size: 2rem;
+    text-transform: capitalize;
 }
 .project-list {
 	flex: 1 1 auto;

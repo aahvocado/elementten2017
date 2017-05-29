@@ -13,6 +13,9 @@
 
 	transition: transform 100ms;
 }
+.nav-button-component:not(:hover):not(:focus) {
+	color: #5073ad;
+}
 .floating-button-container {
 	margin: 50px;
 }
@@ -27,17 +30,14 @@
 /* specific coloring */
 .nav-button-component.projects-color:hover,
 .nav-button-component.projects-color.active {
-	color: #2b9a3f;
 	border-color: #2b9a3f;
 }
 .nav-button-component.games-color:hover,
 .nav-button-component.games-color.active {
-	color: orange;
 	border-color: orange;
 }
 .nav-button-component.about-color:hover,
 .nav-button-component.about-color.active {
-	color: #db7ee4;
 	border-color: #db7ee4;
 }
 

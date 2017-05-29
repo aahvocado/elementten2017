@@ -36,8 +36,17 @@ export default class Projects extends React.Component {
 			'inactive': !active,
 		};
 
+		/* TODO NOT RIGHT PAGES */
+		const titleModifier = {
+			'projects-color': pageName === 'development',
+			'games-color': pageName === 'games', 
+			'about-color': pageName === 'design', 
+		};
+
 		return (
-			<div className={cx(`${pageName}-page`, 'projects-page', modifiers)}>
+			<div className={ cx(`${pageName}-page`, 'projects-page', modifiers) }>
+				<h2 className={ cx('project-page-title', titleModifier)}>{ pageName }</h2>
+
 				<ul className='project-list'>
 					{ renderedProjects }
 				</ul>
