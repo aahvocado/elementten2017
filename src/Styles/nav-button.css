@@ -15,6 +15,7 @@
 }
 .nav-button-component:not(:hover):not(:focus) {
 	color: #5073ad;
+	border-color: transparent;
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
@@ -39,22 +40,8 @@
 .nav-button-component:hover,
 .nav-button-component:focus {
 	outline: 0;
-	border-color: #375079;
 	transform: scale(1.2);
 	// box-shadow: 0px 0px 40px green;
-}
-/* specific coloring */
-.nav-button-component.projects-color:hover,
-.nav-button-component.projects-color.active {
-	border-color: #2b9a3f;
-}
-.nav-button-component.games-color:hover,
-.nav-button-component.games-color.active {
-	border-color: orange;
-}
-.nav-button-component.about-color:hover,
-.nav-button-component.about-color.active {
-	border-color: #db7ee4;
 }
 
 /* delays */

@@ -57,7 +57,7 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='Projects'
 						wrapperCls="projects-color"
-						action={ CONSTANTS.NAVIGATION.PROJECTS }
+						page={ CONSTANTS.NAVIGATION.PROJECTS }
 						active={ currentPage === CONSTANTS.PAGE.PROJECTS }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
@@ -72,7 +72,7 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='Games'
 						wrapperCls="games-color"
-						action={ CONSTANTS.NAVIGATION.GAMES }
+						page={ CONSTANTS.NAVIGATION.GAMES }
 						active={ currentPage === CONSTANTS.PAGE.GAMES }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
@@ -87,7 +87,7 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='About'
 						wrapperCls="about-color"
-						action={ CONSTANTS.NAVIGATION.ABOUT }
+						page={ CONSTANTS.NAVIGATION.ABOUT }
 						active={ currentPage === CONSTANTS.PAGE.ABOUT }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
@@ -137,9 +137,9 @@ export default class Navigation extends React.Component {
 		return offsets;
 	}
 
-	handleNavClick = (action) => {
+	handleNavClick = (page) => {
 		const { onNavClick } = this.props;
-		onNavClick(action);
+		onNavClick(page);
 	}
 
 	handleNavHome = () => {

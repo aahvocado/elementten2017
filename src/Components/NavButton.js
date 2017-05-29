@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
+import { CONSTANTS } from '../constants';
 
 /* styles */
 import '../Styles/nav-button.css';
@@ -12,17 +13,21 @@ export default class NavButton extends React.Component {
 		active: false,
 		onclick: () => Promise.resolve(),
 		style: {},
-		action: '',
+		page: '',
 		modSquare: false,
     };
 
 	render(){
-		const { wrapperCls, txt, active, style, modSquare } = this.props;
+		const { wrapperCls, txt, active, style, modSquare, page } = this.props;
 
 		const modifiers = {
 			'active': active,
 			'mod-square-button': modSquare,
-		}
+
+			'projects-border-color': page === CONSTANTS.NAVIGATION.PROJECTS,
+			'games-border-color': page === CONSTANTS.NAVIGATION.GAMES,
+			'about-border-color': page === CONSTANTS.NAVIGATION.ABOUT,
+		};
 
 		return (
 			<button	className={cx('nav-button-component', modifiers, wrapperCls)}
@@ -35,7 +40,7 @@ export default class NavButton extends React.Component {
 	}
 
 	handleOnClick = (e) => {
-		const { onClick, action } = this.props;
-		onClick(action);
+		const { onClick, page } = this.props;
+		onClick(page);
 	}
 }
