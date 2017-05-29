@@ -5,7 +5,13 @@
 	flex-direction: row;
 	justify-content: center;
 	padding: 2rem 0;
-	overflow: hidden;
+	transition: transform 1s;
+}
+.navigation-component.nav-open {
+	transform: translateX(0);
+}
+.navigation-component.nav-closed {
+	transform: translateX(-100%);
 }
 .navigation-component .nav-title {
 	color: white;
@@ -49,8 +55,8 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-
 		width: 150px;
+		box-sizing: border-box;
 	}
 }
 /* tablet */

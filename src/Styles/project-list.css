@@ -1,9 +1,12 @@
 .projects-page {
-	overflow: auto;
 	flex: 1 1 auto;
 	width: 100%;
-	height: 100%;
+	// height: 100%;
 	padding: 2rem;
+
+	box-sizing: border-box;
+	max-height: 100vh;
+	overflow: auto;
 }
 .project-page-title {
 	font-size: 2rem;
@@ -15,7 +18,7 @@
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	overflow: auto;
+	// overflow: auto;
 
 	display: flex;
 	flex-direction: row;

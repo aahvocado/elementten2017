@@ -5,7 +5,6 @@
 
 	position: relative;
 	height: 100%;
-	overflow: auto;
 }
 .et-main.style__splash-page {
 	justify-content: center;
@@ -26,7 +25,6 @@
 	flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-	overflow: auto;
 }
 .projects-page.inactive {
 	display: none;

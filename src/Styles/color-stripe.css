@@ -1,13 +1,47 @@
 .et-color-stripe {
+    color: orange;
+}
+/* phone */
+@media screen and (min-width: 320px) and (max-width: 760px) {
+    .et-color-stripe:before,
+    .et-color-stripe:after {
+        width: 150px;
+    }
+}
+/* tablet */
+@media screen and (min-width: 760px) and (max-width: 1220px) {
+    .et-color-stripe {
+        color: red;
+    }
+    .et-color-stripe:before,
+    .et-color-stripe:after {
+        width: 100%;
+    }
+}
+/* desktop */
+@media screen and (min-width: 1220px) {
+    .et-color-stripe:before,
+    .et-color-stripe:after {
+        width: 100%;
+    }
 }
 .et-color-stripe.mod-primary {
 	z-index: 2;
 }
 .et-color-stripe.disabled {
 }
+.et-color-stripe:not(.disabled):before {
+    content: '';
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
 .et-color-stripe:not(.disabled):after {
 	content: '';
-    width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
@@ -35,17 +69,6 @@
 	background-color: #db7ee4;
 }
 
-.et-color-stripe:not(.disabled):before {
-	content: '';
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
 .et-color-stripe:not(.disabled).previous-projects-bg:before {
 	background-color: #2b9a3f;
 }
