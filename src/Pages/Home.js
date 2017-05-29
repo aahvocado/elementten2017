@@ -21,15 +21,16 @@ export default class Home extends React.Component {
 	};
 
 	render(){
-		const { currentPage } = this.props;
+		const { currentPage, previousPage } = this.props;
 
 		return (
 			<div className={cx('center-container')}>
 				<Navigation
 					vertical
-					currentPage={currentPage} 
+					previousPage={ previousPage }
+					currentPage={ currentPage } 
 					onNavClick={ this.handleNavDidClick }
-					/>
+				/>
 
 				<Projects
 					pageName='development'

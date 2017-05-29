@@ -40,25 +40,23 @@ export default class Navigation extends React.Component {
 				role='navigation' 
 				className={ cx('navigation-component', modifiers) }
 			>
-				<ColorStripe
-					page={ currentPage }
-					disabled={ !vertical }
-				/>
+				{ this.renderNavigationStripe() }
+
 				{ vertical &&
 					<ReactCSSTransitionGroup
-						transitionName="pop-in"
+						transitionName="speed-pop-in"
 						transitionAppear={true}
 	      				transitionAppearTimeout={1000}
 						transitionEnterTimeout={1200}
 						transitionLeaveTimeout={1000}>
-						<h2 className="vertical-title">Daniel Xiao</h2>
+						<h2 className="nav-title">Daniel Xiao</h2>
 					</ReactCSSTransitionGroup>
 				}
 				<ReactCSSTransitionGroup
 					className='floating-button-container'
 					transitionName="pop-in"
 					transitionAppear={true}
-      				transitionAppearTimeout={1000}
+      				transitionAppearTimeout={200 + 1000}
 					transitionEnterTimeout={1200}
 					transitionLeaveTimeout={1000}>
 					<NavButton 
@@ -73,7 +71,7 @@ export default class Navigation extends React.Component {
 					className='floating-button-container'
 					transitionName="pop-in"
 					transitionAppear={true}
-      				transitionAppearTimeout={200 + 1000}
+      				transitionAppearTimeout={400 + 1000}
 					transitionEnterTimeout={1200}
 					transitionLeaveTimeout={1000}>
 					<NavButton 
@@ -88,7 +86,7 @@ export default class Navigation extends React.Component {
 					className='floating-button-container'
 					transitionName="pop-in"
 					transitionAppear={true}
-      				transitionAppearTimeout={400 + 1000}
+      				transitionAppearTimeout={600 + 1000}
 					transitionEnterTimeout={1400}
 					transitionLeaveTimeout={1000}>
 					<NavButton 
@@ -100,7 +98,36 @@ export default class Navigation extends React.Component {
 				</ReactCSSTransitionGroup>
 			</nav>
 		);
+	}
 
+	renderNavigationStripe() {
+		const { currentPage, previousPage, vertical } = this.props;
+
+		return (
+			<div className='nav-color-stripe-container'>
+				{ currentPage === CONSTANTS.PAGE.PROJECTS &&
+					<ColorStripe
+						previousPage={ previousPage }
+						page={ currentPage }
+						disabled={ !vertical }
+					/>
+				}
+				{ currentPage === CONSTANTS.PAGE.GAMES &&
+					<ColorStripe
+						previousPage={ previousPage }
+						page={ currentPage }
+						disabled={ !vertical }
+					/>
+				}
+				{ currentPage === CONSTANTS.PAGE.ABOUT &&
+					<ColorStripe
+						previousPage={ previousPage }
+						page={ currentPage }
+						disabled={ !vertical }
+					/>
+				}
+			</div>
+		);
 	}
 
 	initOffsets() {

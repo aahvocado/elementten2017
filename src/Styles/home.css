@@ -15,10 +15,8 @@
 .title {
 	font-size: 4rem;
 }
-.subtitle,
-.vertical-title {
+.subtitle {
 	font-size: 2rem;
-	text-align: center;
 }
 .center-container {
 	flex: 1 1 auto;

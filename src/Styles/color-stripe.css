@@ -1,8 +1,11 @@
 .et-color-stripe {
 }
+.et-color-stripe.mod-primary {
+	z-index: 2;
+}
 .et-color-stripe.disabled {
 }
-.et-color-stripe:not(.disabled):before {
+.et-color-stripe:not(.disabled):after {
 	content: '';
     width: 100%;
     height: 100vh;
@@ -22,12 +25,33 @@
     transition-property: transform;
     transition-timing-function: ease-out;
 }
-.et-color-stripe.projects-bg:before {
+.et-color-stripe:not(.disabled).projects-bg:after {
 	background-color: #2b9a3f;
 }
-.et-color-stripe.games-bg:before {
+.et-color-stripe:not(.disabled).games-bg:after {
 	background-color: orange;
 }
-.et-color-stripe.about-bg:before {
+.et-color-stripe:not(.disabled).about-bg:after {
+	background-color: #db7ee4;
+}
+
+.et-color-stripe:not(.disabled):before {
+	content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.et-color-stripe:not(.disabled).previous-projects-bg:before {
+	background-color: #2b9a3f;
+}
+.et-color-stripe:not(.disabled).previous-games-bg:before {
+	background-color: orange;
+}
+.et-color-stripe:not(.disabled).previous-about-bg:before {
 	background-color: #db7ee4;
 }

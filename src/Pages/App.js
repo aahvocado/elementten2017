@@ -25,7 +25,7 @@ export default class App extends React.Component {
     }
 
 	render(){
-		const { currentPage } = this.state;
+		const { currentPage, previousPage } = this.state;
 		
 		const isInnerPage = currentPage !== CONSTANTS.PAGE.SPLASH;
 		const modifiers = {
@@ -56,6 +56,7 @@ export default class App extends React.Component {
 
 				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
 					<Home
+						previousPage={ previousPage }
 						currentPage={ currentPage }
 						onNavClick={ this.handleNavDidClick }
 					/>
@@ -89,7 +90,8 @@ export default class App extends React.Component {
 
 	/* handle switching to another page */
 	handlePageChange = (newPage) => {
-		this.setState({currentPage: newPage});
+		const { currentPage } = this.state;
+		this.setState( {previousPage: currentPage, currentPage: newPage} );
 	}
 
 	/* shortcuts */
