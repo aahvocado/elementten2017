@@ -1,4 +1,4 @@
-.floating-button-component {
+.nav-button-component {
 	height: 200px;
 	width: 200px;
 	
@@ -18,50 +18,50 @@
 	margin: 50px;
 }
 /* generic coloring */
-.floating-button-component:hover,
-.floating-button-component:focus {
+.nav-button-component:hover,
+.nav-button-component:focus {
 	outline: 0;
 	border-color: #375079;
 	transform: scale(1.2);
 	// box-shadow: 0px 0px 40px green;
 }
 /* specific coloring */
-.floating-button-component.projects-color:hover,
-.floating-button-component.projects-color.active {
+.nav-button-component.projects-color:hover,
+.nav-button-component.projects-color.active {
 	color: #2b9a3f;
 	border-color: #2b9a3f;
 }
-.floating-button-component.games-color:hover,
-.floating-button-component.games-color.active {
+.nav-button-component.games-color:hover,
+.nav-button-component.games-color.active {
 	color: orange;
 	border-color: orange;
 }
-.floating-button-component.about-color:hover,
-.floating-button-component.about-color.active {
+.nav-button-component.about-color:hover,
+.nav-button-component.about-color.active {
 	color: #db7ee4;
 	border-color: #db7ee4;
 }
 /* horizontal */
-.style__splash-page .floating-button-component {
+.style__splash-page .nav-button-component {
 	/* size, and animation should be variable */
 	height: 200px;
 	width: 200px;
 
 	font-size: 2rem;
 }
-.style__splash-page .floating-button-component ~ .floating-button-component,
+.style__splash-page .nav-button-component ~ .nav-button-component,
 .style__splash-page .floating-button-container ~ .floating-button-container {
 	margin-left: 2rem;
 }
 
 /* vertical */
-.style__inner-page .floating-button-component {
+.style__inner-page .nav-button-component {
 	height: 100px;
 	width: 100px;
 
 	font-size: 1.5rem;
 }
-.style__inner-page .floating-button-component ~ .floating-button-component,
+.style__inner-page .nav-button-component ~ .nav-button-component,
 .style__inner-page .floating-button-container ~ .floating-button-container {
 	margin-top: 1rem;
 }

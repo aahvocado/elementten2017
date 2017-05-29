@@ -4,7 +4,7 @@ import {CONSTANTS} from '../constants';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* components */
-import FloatingButton from '../Components/FloatingButton';
+import NavButton from '../Components/NavButton';
 
 /* styles */
 import '../Styles/navigation.css';
@@ -22,15 +22,13 @@ export default class Navigation extends React.Component {
 
 	render(){
 		const { selected, vertical } = this.props;
-		let { offsets } = this.state;
+		//let { offsets } = this.state;
 
-		const isSplashPage = selected === CONSTANTS.PAGE.HOME;
-
-		if(!isSplashPage){
+		/*if(!isSplashPage){
 			offsets = {
 				marginTop: [25, 25, 25]
 			}
-		};
+		};*/
 
 		const modifiers = {
 			'mod-vertical': vertical,
@@ -41,17 +39,24 @@ export default class Navigation extends React.Component {
 				role='navigation' 
 				className={ cx('navigation-component', modifiers) }
 			>
+				{ vertical &&
+					<ReactCSSTransitionGroup
+						transitionName="pop-in"
+						transitionAppear={true}
+	      				transitionAppearTimeout={1000}
+						transitionEnterTimeout={1200}
+						transitionLeaveTimeout={1000}>
+						<h2>Daniel Xiao</h2>
+					</ReactCSSTransitionGroup>
+				}
 				<ReactCSSTransitionGroup
 					className='floating-button-container'
-					style={{
-						marginTop: offsets.marginTop[0],
-					}}
 					transitionName="pop-in"
 					transitionAppear={true}
       				transitionAppearTimeout={1000}
 					transitionEnterTimeout={1200}
 					transitionLeaveTimeout={1000}>
-					<FloatingButton 
+					<NavButton 
 						txt='Projects'
 						wrapperCls="projects-color"
 						action={ CONSTANTS.NAVIGATION.PROJECTS }
@@ -61,15 +66,12 @@ export default class Navigation extends React.Component {
 
 				<ReactCSSTransitionGroup
 					className='floating-button-container'
-					style={{
-						marginTop: offsets.marginTop[1],
-					}}
 					transitionName="pop-in"
 					transitionAppear={true}
       				transitionAppearTimeout={200 + 1000}
 					transitionEnterTimeout={1200}
 					transitionLeaveTimeout={1000}>
-					<FloatingButton 
+					<NavButton 
 						txt='Games'
 						wrapperCls="games-color"
 						action={ CONSTANTS.NAVIGATION.GAMES }
@@ -79,15 +81,12 @@ export default class Navigation extends React.Component {
 
 				<ReactCSSTransitionGroup
 					className='floating-button-container'
-					style={{
-						marginTop: offsets.marginTop[2],
-					}}
 					transitionName="pop-in"
 					transitionAppear={true}
       				transitionAppearTimeout={400 + 1000}
 					transitionEnterTimeout={1400}
 					transitionLeaveTimeout={1000}>
-					<FloatingButton 
+					<NavButton 
 						txt='About'
 						wrapperCls="about-color"
 						action={ CONSTANTS.NAVIGATION.ABOUT }

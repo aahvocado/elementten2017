@@ -10,9 +10,9 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 export default class FloatingContainer extends Component {
 	static defaultProps = {
 		transitionName:"pop-in",
-		transitionAppear: true,
-		transitionEnter: true,
-		transitionLeave: true,
+		transitionAppear: false,
+		transitionEnter: false,
+		transitionLeave: false,
 		transitionAppearTimeout: 0,
 		transitionEnterTimeout: 0,
 		transitionLeaveTimeout: 0,

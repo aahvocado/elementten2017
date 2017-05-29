@@ -8,7 +8,7 @@ import Splash from '../Pages/Splash';
 
 /* components */
 import Header from '../Components/Header';
-// import FloatingContainer from '../Components/FloatingContainer';
+import FloatingContainer from '../Components/FloatingContainer';
 
 /* styles */
 import '../Styles/styles.css';
@@ -35,16 +35,23 @@ export default class App extends React.Component {
 		return (
 			<div className={cx('et-main', modifiers)}>
 				
-				{ currentPage === CONSTANTS.PAGE.SPLASH &&
-					<Header
-						onHeaderClick={ this.navToHome }
-					/>
-				}
-				{ currentPage === CONSTANTS.PAGE.SPLASH &&
-					<Splash 
-						onNavClick={ this.handleNavDidClick }
-					/>
-				}
+				<FloatingContainer
+					verticallyCentered
+					transitionName="fade-out"
+					transitionLeave
+					transitionLeaveTimeout={600}
+				>
+					{ currentPage === CONSTANTS.PAGE.SPLASH &&
+						<Header
+							onHeaderClick={ this.navToHome }
+						/>
+					}
+					{ currentPage === CONSTANTS.PAGE.SPLASH &&
+						<Splash 
+							onNavClick={ this.handleNavDidClick }
+						/>
+					}
+				</FloatingContainer>
 
 				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
 					<Home

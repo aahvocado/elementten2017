@@ -54,5 +54,5 @@
 }
 .fade-out-leave.fade-out-leave-active {
 	opacity: 0;
-	transition: opacity 1200ms;
+	transition: opacity 600ms;
 }

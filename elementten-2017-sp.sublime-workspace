@@ -4,12 +4,20 @@
 		"selected_items":
 		[
 			[
-				"project-item",
-				"project-item__info"
+				"backgroun",
+				"background-slide-in"
 			],
 			[
-				"center",
-				"center-container"
+				"transition",
+				"transitionAppearTimeout"
+			],
+			[
+				"transiton",
+				"transitionAppear"
+			],
+			[
+				"React",
+				"ReactCSSTransitionGroup"
 			],
 			[
 				"offse",
@@ -80,38 +88,86 @@
 	"buffers":
 	[
 		{
-			"file": "src/Components/ProjectItem.jsx",
+			"file": "src/Pages/App.js",
 			"settings":
 			{
-				"buffer_size": 1005,
+				"buffer_size": 2033,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Styles/project-item.css",
+			"file": "src/Pages/Splash.js",
 			"settings":
 			{
-				"buffer_size": 1223,
+				"buffer_size": 511,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Styles/navigation.css",
+			"file": "src/Styles/animations.css",
 			"settings":
 			{
-				"buffer_size": 207,
+				"buffer_size": 1464,
 				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Styles/header.css",
+			"settings":
+			{
+				"buffer_size": 674,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Components/Header.js",
+			"settings":
+			{
+				"buffer_size": 606,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Pages/Home.js",
+			"settings":
+			{
+				"buffer_size": 1067,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "src/Styles/home.css",
 			"settings":
 			{
-				"buffer_size": 688,
-				"line_ending": "Unix"
+				"buffer_size": 496,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Components/FloatingContainer.js",
+			"settings":
+			{
+				"buffer_size": 1436,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "import React from 'react';\nimport cx from 'classnames';\nimport {CONSTANTS} from '../constants';\nimport ReactCSSTransitionGroup from 'react-addons-css-transition-group';\n\n/* components */\nimport FloatingButton from '../Components/FloatingButton';\n\n/* styles */\nimport '../Styles/navigation.css';\n\nexport default class Navigation extends React.Component {\n\tstatic defaultProps = {\n    \tselected: CONSTANTS.PAGE.HOME,\n    \tonNavClick: () => Promise.resolve(),\n    \tvertical: false,\n    };\n\n    state = {\n\t\toffsets: this.initOffsets(),\n\t}\n\n\trender(){\n\t\tconst { selected, vertical } = this.props;\n\t\tlet { offsets } = this.state;\n\n\t\tconst isSplashPage = selected === CONSTANTS.PAGE.HOME;\n\n\t\tif(!isSplashPage){\n\t\t\toffsets = {\n\t\t\t\tmarginTop: [25, 25, 25]\n\t\t\t}\n\t\t};\n\n\t\tconst modifiers = {\n\t\t\t'mod-vertical': vertical,\n\t\t}\n\t\t\n\t\treturn (\n\t\t\t<nav \n\t\t\t\trole='navigation' \n\t\t\t\tclassName={ cx('navigation-component', modifiers) }\n\t\t\t>\n\n\t\t\t\t<ReactCSSTransitionGroup\n\t\t\t\t\tclassName='floating-button-container'\n\t\t\t\t\tstyle={{\n\t\t\t\t\t\tmarginTop: offsets.marginTop[0],\n\t\t\t\t\t}}\n\t\t\t\t\ttransitionName=\"pop-in\"\n\t\t\t\t\ttransitionAppear={true}\n      \t\t\t\ttransitionAppearTimeout={1000}\n\t\t\t\t\ttransitionEnterTimeout={1200}\n\t\t\t\t\ttransitionLeaveTimeout={1000}>\n\t\t\t\t\t<h2>Daniel Xiao</h2>\n\t\t\t\t</ReactCSSTransitionGroup>\n\t\t\t\t<ReactCSSTransitionGroup\n\t\t\t\t\tclassName='floating-button-container'\n\t\t\t\t\tstyle={{\n\t\t\t\t\t\tmarginTop: offsets.marginTop[0],\n\t\t\t\t\t}}\n\t\t\t\t\ttransitionName=\"pop-in\"\n\t\t\t\t\ttransitionAppear={true}\n      \t\t\t\ttransitionAppearTimeout={1000}\n\t\t\t\t\ttransitionEnterTimeout={1200}\n\t\t\t\t\ttransitionLeaveTimeout={1000}>\n\t\t\t\t\t<FloatingButton \n\t\t\t\t\t\ttxt='Projects'\n\t\t\t\t\t\twrapperCls=\"projects-color\"\n\t\t\t\t\t\taction={ CONSTANTS.NAVIGATION.PROJECTS }\n\t\t\t\t\t\tactive={selected === CONSTANTS.PAGE.PROJECTS}\n\t\t\t\t\t\tonClick={ this.handleNavClick } />\n\t\t\t\t</ReactCSSTransitionGroup>\n\n\t\t\t\t<ReactCSSTransitionGroup\n\t\t\t\t\tclassName='floating-button-container'\n\t\t\t\t\tstyle={{\n\t\t\t\t\t\tmarginTop: offsets.marginTop[1],\n\t\t\t\t\t}}\n\t\t\t\t\ttransitionName=\"pop-in\"\n\t\t\t\t\ttransitionAppear={true}\n      \t\t\t\ttransitionAppearTimeout={200 + 1000}\n\t\t\t\t\ttransitionEnterTimeout={1200}\n\t\t\t\t\ttransitionLeaveTimeout={1000}>\n\t\t\t\t\t<FloatingButton \n\t\t\t\t\t\ttxt='Games'\n\t\t\t\t\t\twrapperCls=\"games-color\"\n\t\t\t\t\t\taction={ CONSTANTS.NAVIGATION.GAMES }\n\t\t\t\t\t\tactive={selected === CONSTANTS.PAGE.GAMES}\n\t\t\t\t\t\tonClick={ this.handleNavClick } />\n\t\t\t\t</ReactCSSTransitionGroup>\n\n\t\t\t\t<ReactCSSTransitionGroup\n\t\t\t\t\tclassName='floating-button-container'\n\t\t\t\t\tstyle={{\n\t\t\t\t\t\tmarginTop: offsets.marginTop[2],\n\t\t\t\t\t}}\n\t\t\t\t\ttransitionName=\"pop-in\"\n\t\t\t\t\ttransitionAppear={true}\n      \t\t\t\ttransitionAppearTimeout={400 + 1000}\n\t\t\t\t\ttransitionEnterTimeout={1400}\n\t\t\t\t\ttransitionLeaveTimeout={1000}>\n\t\t\t\t\t<FloatingButton \n\t\t\t\t\t\ttxt='About'\n\t\t\t\t\t\twrapperCls=\"about-color\"\n\t\t\t\t\t\taction={ CONSTANTS.NAVIGATION.ABOUT }\n\t\t\t\t\t\tactive={selected === CONSTANTS.PAGE.ABOUT}\n\t\t\t\t\t\tonClick={ this.handleNavClick } />\n\t\t\t\t</ReactCSSTransitionGroup>\n\t\t\t</nav>\n\t\t);\n\n\t}\n\n\tinitOffsets() {\n\t\tlet offsets = {};\n\n\t\tconst marginTopFunc = () => { return Math.random() * 100 };\n\t\toffsets.marginTop = [marginTopFunc(), marginTopFunc(), marginTopFunc()];\n\n\t\treturn offsets;\n\t}\n\n\thandleNavClick = (action) => {\n\t\tconst { onNavClick } = this.props;\n\t\tonNavClick(action);\n\t}\n}",
+			"file": "src/Components/Navigation.js",
+			"file_size": 2990,
+			"file_write_time": 131403313678415890,
+			"settings":
+			{
+				"buffer_size": 3237,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -122,10 +178,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "",
+		"height": 242.0,
+		"last_filter": "babel",
 		"selected_items":
 		[
+			[
+				"babel",
+				"Set Syntax: JavaScript (Babel)"
+			],
 			[
 				"remove ",
 				"Package Control: Remove Package"
@@ -155,10 +215,6 @@
 				"Set Syntax: Unity C#"
 			],
 			[
-				"babel",
-				"Set Syntax: JavaScript (Babel)"
-			],
-			[
 				"htmlpr",
 				"HTMLPrettify"
 			],
@@ -183,7 +239,7 @@
 				"Set Syntax: JavaScript (Babel)"
 			]
 		],
-		"width": 424.0
+		"width": 440.0
 	},
 	"console":
 	{
@@ -204,23 +260,39 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/nxiao/Github/elementten2017",
-		"/Users/nxiao/Github/elementten2017/src",
-		"/Users/nxiao/Github/elementten2017/src/Components",
-		"/Users/nxiao/Github/elementten2017/src/Styles"
+		"/C/Users/Decks/Documents/Git Projects/elementten2017",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/public",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles"
 	],
 	"file_history":
 	[
-		"/Users/nxiao/Github/elementten2017/src/Pages/Home.jsx",
-		"/Users/nxiao/Github/elementten2017/src/Styles/home.css",
-		"/Users/nxiao/Github/elementten2017/src/Styles/project-list.css",
-		"/Users/nxiao/Github/elementten2017/src/Pages/Projects.jsx",
-		"/Users/nxiao/Github/elementten2017/src/Components/Navigation.jsx",
-		"/Users/nxiao/Github/elementten2017/src/Styles/styles.css",
-		"/Users/nxiao/Github/elementten2017/src/Styles/project-item.css",
-		"/Users/nxiao/Github/elementten2017/src/Styles/floating-button.css",
-		"/Users/nxiao/Github/elementten2017/src/Components/FloatingButton.jsx",
-		"/Users/nxiao/Github/elementten2017/src/Styles/floating-button-animation.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/header.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-container.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Home.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/animations.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/navigation.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/public/index.html",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/elementten-2017-sp.sublime-project",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingButton.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/index.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/home.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-button.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/Header.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Splash.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/Navigation.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/ProjectItem.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Projects.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/constants.jsx",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Splash.jsx",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Home.jsx",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-button-animation.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/styles.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-list.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-item.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingButton.jsx",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/package.json",
 		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/section-top.css",
 		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/forms.css",
@@ -230,27 +302,17 @@
 		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/index.html",
 		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/stylereset.css",
 		"/C/Users/Decks/Downloads/CoalitionTechnologiesTest/styles/header.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingButton.jsx",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-list.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/ProjectList.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-item.css",
 		"/C/Users/Decks/Documents/Git Projects/ElementTen/index.html",
 		"/C/Users/Decks/Documents/Git Projects/ElementTen/js/projectObjects.js",
 		"/C/Users/Decks/Documents/Git Projects/ElementTen/js/elementten.js",
 		"/C/Users/Decks/Documents/Git Projects/ElementTen/js/npm.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-button.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/constants.jsx",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/Navigation.jsx",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Projects.jsx",
 		"/C/Users/Decks/Documents/Git Projects/SuperPerspective/SuperPerspective/Assets/Scripts/Abstract/LevelGeometry.cs",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/styles.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/home.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/navigation.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/node_modules/cssom/lib/StyleSheet.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/public/index.html",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingPlanet.jsx",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-planet.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/index.js",
 		"/C/Users/Decks/Documents/Git Projects/AlicenBirthday/Alicen2017.html",
 		"/C/Users/Decks/Documents/Git Projects/AlicenBirthday/styles.css",
 		"/C/Users/Decks/Documents/Git Projects/AlicenBirthday/colorfulbackground.js",
@@ -338,11 +400,11 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
-		"height": 104.0,
+		"height": 219.0,
 		"where_history":
 		[
 			"-*/node_modules/*,",
@@ -357,10 +419,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"1s",
-			"255",
-			"margin",
-			"960px",
+			"FloatingContainer",
+			"pop-in",
+			"Floatingcontainer",
+			"ReactCSSTransitionGroup",
+			"color-red",
+			"enter",
+			"pop-in",
+			"appear",
+			"enter",
+			"appear",
+			"enter",
+			".jsx",
+			"pop-in",
+			"static get defaultProps() {",
+			"martinTopFunc",
+			"this.props.PromiseNavigationDidPress",
+			"link",
+			"page",
+			"onHeaderClick",
+			"Home",
+			"navToHome",
+			"Home",
+			"10",
+			"PromiseLinkDidPress",
+			"pop-in",
+			"Questrial",
 			"transitionDelayOffsetFunc",
 			"topOffsetFunc",
 			"martinTopOffsetFunc",
@@ -462,29 +546,7 @@
 			"CharacterMotorMovement",
 			"maxForwardSpeed",
 			"static",
-			"directionVector",
-			"maxVelocity",
-			"throwVelocity",
-			"Throwable",
-			"player",
-			"Player",
-			"player",
-			"Player",
-			"player",
-			"inYRange",
-			"testdelta",
-			"IsInYRange",
-			"range",
-			"active",
-			"teleportOffset",
-			"teleportVar",
-			"teleportOffset",
-			"door",
-			"h2",
-			"span",
-			"Row",
-			"updatedata",
-			"updatedclient"
+			"directionVector"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -492,6 +554,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"static defaultProps = {"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -502,124 +565,271 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Components/ProjectItem.jsx",
+					"file": "src/Pages/App.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1005,
+						"buffer_size": 2033,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								864,
-								888
+								752,
+								752
 							]
 						],
 						"settings":
 						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 9.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/Styles/project-item.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1223,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								773,
-								773
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 637.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/Styles/navigation.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 207,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								205,
-								205
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/LESS/LESS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 198.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/Styles/home.css",
-					"semi_transient": true,
+					"buffer": 1,
+					"file": "src/Pages/Splash.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 688,
+						"buffer_size": 511,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								394,
-								435
+								511,
+								511
 							]
 						],
 						"settings":
 						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/LESS/LESS.tmLanguage"
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 115.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/Styles/animations.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1314,
+								1314
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/Styles/header.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 674,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								245,
+								245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/Components/Header.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 606,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								504,
+								504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/Pages/Home.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/Styles/home.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 496,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								496,
+								496
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/Components/FloatingContainer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1366,
+								1366
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/Components/Navigation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1244,
+								1244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -673,10 +883,6 @@
 		"last_filter": "",
 		"selected_items":
 		[
-			[
-				"navigation.jsx",
-				"src/Components/Navigation.jsx"
-			],
 			[
 				"project-list",
 				"src\\Styles\\project-list.css"
