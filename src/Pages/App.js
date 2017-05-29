@@ -54,23 +54,12 @@ export default class App extends React.Component {
 					}
 				</FloatingContainer>
 
-				<FloatingContainer
-					className='floating-button-container'
-					transitionName="pop-in"
-					transitionAppear
-      				transitionAppearTimeout={1000}
-      				transitionEnter
-					transitionEnterTimeout={1200}
-					transitionLeave
-					transitionLeaveTimeout={1000}
-				>
-					{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-						<Home
-							currentPage={ currentPage }
-							onNavClick={ this.handleNavDidClick }
-						/>
-					}
-				</FloatingContainer>
+				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
+					<Home
+						currentPage={ currentPage }
+						onNavClick={ this.handleNavDidClick }
+					/>
+				}
 			</div>
 		);
 	}
