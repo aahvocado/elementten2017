@@ -2,7 +2,7 @@
     color: orange;
 }
 /* phone */
-@media screen and (min-width: 320px) and (max-width: 760px) {
+@media screen and (min-width : 0) and (max-width: 760px) {
     .et-color-stripe:before,
     .et-color-stripe:after {
         width: 150px;

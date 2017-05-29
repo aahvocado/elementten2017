@@ -17,16 +17,19 @@ import '../Styles/home.css';
 export default class Home extends React.Component {
 	static defaultProps = {
 		currentPage: CONSTANTS.PAGE.HOME,
+		menuVisible: false,
 		onNavClick: () => Promise.resolve(),
 	};
 
 	render(){
-		const { currentPage, previousPage } = this.props;
+		const { currentPage, previousPage, menuVisible } = this.props;
 
 		return (
 			<div className={cx('center-container')}>
+
 				<Navigation
 					vertical
+					menuVisible={ menuVisible }
 					previousPage={ previousPage }
 					currentPage={ currentPage } 
 					onNavClick={ this.handleNavDidClick }

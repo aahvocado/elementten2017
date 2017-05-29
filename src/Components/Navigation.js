@@ -15,6 +15,7 @@ export default class Navigation extends React.Component {
     	currentPage: CONSTANTS.PAGE.HOME,
     	onNavClick: () => Promise.resolve(),
     	vertical: false,
+		menuVisible: false,
     };
 
     state = {
@@ -22,17 +23,12 @@ export default class Navigation extends React.Component {
 	}
 
 	render(){
-		const { currentPage, vertical } = this.props;
-		//let { offsets } = this.state;
-
-		/*if(!isSplashPage){
-			offsets = {
-				marginTop: [25, 25, 25]
-			}
-		};*/
+		const { currentPage, vertical, menuVisible } = this.props;
 
 		const modifiers = {
 			'mod-vertical': vertical,
+			'nav-open': menuVisible,
+			'nav-closed': !menuVisible,
 		}
 		
 		return (
@@ -40,8 +36,6 @@ export default class Navigation extends React.Component {
 				role='navigation' 
 				className={ cx('navigation-component', modifiers) }
 			>
-				<button className="et-floating-hamburger">☰</button>
-
 				{ vertical &&
 					<ReactCSSTransitionGroup
 						transitionName="speed-pop-in"

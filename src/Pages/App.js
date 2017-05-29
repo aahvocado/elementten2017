@@ -22,10 +22,11 @@ export default class App extends React.Component {
 
 	state = {
     	currentPage: CONSTANTS.PAGE.SPLASH,
+    	menuVisible: false,
     }
 
 	render(){
-		const { currentPage, previousPage } = this.state;
+		const { currentPage, previousPage, menuVisible } = this.state;
 		
 		const isInnerPage = currentPage !== CONSTANTS.PAGE.SPLASH;
 		const modifiers = {
@@ -35,7 +36,20 @@ export default class App extends React.Component {
 
 		return (
 			<div className={cx('et-main', modifiers, currentPage)}>
-				
+				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
+					<button 
+						className={ cx('et-floating-hamburger', {'mod-active': menuVisible}) } 
+						onClick={ this.handleMenuToggle }
+					>
+						{ !menuVisible &&
+							<span>☰</span>
+						}
+						{ menuVisible &&
+							<span>x</span>
+						}
+					</button>
+				}
+
 				<FloatingContainer
 					verticallyCentered
 					transitionName="fade-out"
@@ -59,6 +73,7 @@ export default class App extends React.Component {
 						previousPage={ previousPage }
 						currentPage={ currentPage }
 						onNavClick={ this.handleNavDidClick }
+						menuVisible={ menuVisible }
 					/>
 				}
 			</div>
@@ -88,10 +103,15 @@ export default class App extends React.Component {
 		}
 	}
 
+	handleMenuToggle = () => {
+		const { menuVisible } = this.state;
+		this.setState({ menuVisible: !menuVisible });
+	}
+
 	/* handle switching to another page */
 	handlePageChange = (newPage) => {
 		const { currentPage } = this.state;
-		this.setState( {previousPage: currentPage, currentPage: newPage} );
+		this.setState( {previousPage: currentPage, currentPage: newPage, menuVisible: false} );
 	}
 
 	/* shortcuts */
