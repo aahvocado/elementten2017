@@ -49,7 +49,8 @@ export default class Navigation extends React.Component {
 	      				transitionAppearTimeout={1000}
 						transitionEnterTimeout={1200}
 						transitionLeaveTimeout={1000}>
-						<h1 className="nav-title">Daniel Xiao</h1>
+						<h1 className="nav-title"
+							onClick={ this.handleNavHome }>Daniel Xiao</h1>
 					</ReactCSSTransitionGroup>
 				}
 				<ReactCSSTransitionGroup
@@ -143,4 +144,10 @@ export default class Navigation extends React.Component {
 		const { onNavClick } = this.props;
 		onNavClick(action);
 	}
+
+	handleNavHome = () => {
+		const { onNavClick } = this.props;
+		onNavClick(CONSTANTS.NAVIGATION.SPLASH);
+	}
+
 }

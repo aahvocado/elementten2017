@@ -8,6 +8,20 @@
 	position: relative;
 	display: block;
 }
-.mod-vertically-centered {
-   transform: translateY(50%);
+/* phone */
+@media screen and (min-width : 320px) and (max-width : 760px) {
+	.et-floating-container.mod-vertically-centered {
+	}
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+	.et-floating-container.mod-vertically-centered {
+	   transform: translateY(50%);
+	}
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+	.et-floating-container.mod-vertically-centered {
+	   transform: translateY(50%);
+	}
 }

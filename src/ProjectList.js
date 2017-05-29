@@ -92,28 +92,28 @@ export default function ProjectList() {
 		/* designs */
 		{
 			name: 'Text Messaging Steps',
-			category: 'design',
+			category: 'development',
 			tags: ['illustrator'],
 			icon: 'textposter.png',
 			page: ''
 		},
 		{
 			name: 'Work Ready Grad Videos',
-			category: 'design',
+			category: 'development',
 			tags: ['flash', 'video'],
 			icon: 'workreadygrad.png',
 			page: ''
 		},
 		{
 			name: 'Fastshop',
-			category: 'design',
+			category: 'development',
 			tags: ['flash', 'video'],
 			icon: 'fastshop.png',
 			page: ''
 		},
 		{
 			name: 'Tiamat Media',
-			category: 'design',
+			category: 'development',
 			tags: ['photoshop'],
 			icon: 'tiamatmedia.png',
 			page: ''

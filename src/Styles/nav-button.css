@@ -16,9 +16,25 @@
 .nav-button-component:not(:hover):not(:focus) {
 	color: #5073ad;
 }
-.floating-button-container {
-	margin: 50px;
+/* phone */
+@media screen and (min-width : 320px) and (max-width : 760px) {
+	.floating-button-container {
+		margin: 10px;
+	}
 }
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+	.floating-button-container {
+		margin: 30px;
+	}
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+	.floating-button-container {
+		margin: 50px;
+	}
+}
+
 /* generic coloring */
 .nav-button-component:hover,
 .nav-button-component:focus {
