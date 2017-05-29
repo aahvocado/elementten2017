@@ -1,0 +1,33 @@
+.et-color-stripe {
+}
+.et-color-stripe.disabled {
+}
+.et-color-stripe:not(.disabled):before {
+	content: '';
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+	z-index: -1;
+    animation: vertical-background-slide-in 1200ms;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+
+    transform: scaleY(0);
+    transform-origin: 50% 0;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+.et-color-stripe.projects-bg:before {
+	background-color: #2b9a3f;
+}
+.et-color-stripe.games-bg:before {
+	background-color: orange;
+}
+.et-color-stripe.about-bg:before {
+	background-color: #db7ee4;
+}

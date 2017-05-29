@@ -1,58 +1,16 @@
-/* pop in animation */
-.pop-in-enter,
-.pop-in-appear {
-	transform: scale(0);
+@keyframes vertical-background-slide-in {
+    0% { 
+        transform: scaleY(0);
+    }
+    100% { 
+        transform: scaleY(1);
+    }
 }
-.pop-in-enter.pop-in-enter-active,
-.pop-in-appear.pop-in-appear-active {
-	transform: scale(1);
-	transition: transform 1000ms;
-}
-.pop-in-leave {
-	opacity: 1;
-}
-.pop-in-leave.pop-in-leave-active {
-	transform: scale(1);
-	opacity: 0;
-	transition: opacity 600ms;
-}
-
-/* pop in animation */
-.speed-pop-in-enter,
-.speed-pop-in-appear {
-	transform: scale(0);
-}
-.speed-pop-in-enter.speed-pop-in-enter-active,
-.speed-pop-in-appear.speed-pop-in-appear-active {
-	transform: scale(1);
-	transition: transform 600ms;
-}
-
-/* delays */
-.floating-button-container:nth-child(1) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(1) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 200ms;
-}
-.floating-button-container:nth-child(2) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(2) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 400ms;
-}
-
-.floating-button-container:nth-child(3) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(3) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 600ms;
-}
-
-.floating-button-container:nth-child(4) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(4) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 800ms;
-}
-
-/* fade out animation */
-.fade-out-leave {
-	opacity: 1;
-}
-.fade-out-leave.fade-out-leave-active {
-	opacity: 0;
-	transition: opacity 600ms;
+@keyframes horizontal-background-slide-in {
+    0% { 
+        transform: scaleX(0);
+    }
+    100% { 
+        transform: scaleX(1);
+    }
 }

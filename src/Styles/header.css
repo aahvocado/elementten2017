@@ -17,7 +17,7 @@
     bottom: 0;
 
     z-index: -1;
-    animation: background-slide-in 1200ms;
+    animation: horizontal-background-slide-in 1200ms;
     animation-delay: 0s;
     animation-fill-mode: forwards;
 
@@ -25,13 +25,4 @@
     transform-origin: 0 50%;
     transition-property: transform;
     transition-timing-function: ease-out;
-}
-
-@keyframes background-slide-in {
-    0% { 
-        transform: scaleX(0);
-    }
-    100% { 
-        transform: scaleX(1);
-    }
 }

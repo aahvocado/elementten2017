@@ -15,18 +15,20 @@
 .title {
 	font-size: 4rem;
 }
-.subtitle {
-	font-size: 2rem
+.subtitle,
+.vertical-title {
+	font-size: 2rem;
+	text-align: center;
 }
 .center-container {
-	flex: 0 0 auto;
-	padding: 2rem;
+	flex: 1 1 auto;
+	// padding: 2rem;
 
 	display: flex;
 	flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-	overflow: hidden;
+	overflow: auto;
 }
 .projects-page.inactive {
 	display: none;

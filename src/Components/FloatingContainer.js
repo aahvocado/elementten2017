@@ -27,7 +27,7 @@ export default class FloatingContainer extends Component {
 			transitionAppearTimeout,
 			transitionEnter,
 			transitionEnterTimeout,
-			transitionLeave,
+			transitionLeave ,
 			transitionLeaveTimeout,
 		} = this.props;
 

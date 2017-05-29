@@ -13,6 +13,7 @@ import FloatingContainer from '../Components/FloatingContainer';
 /* styles */
 import '../Styles/styles.css';
 import '../Styles/animations.css';
+import '../Styles/react-animations.css';
 
 /*
 	Primary page
@@ -33,7 +34,7 @@ export default class App extends React.Component {
 		};
 
 		return (
-			<div className={cx('et-main', modifiers)}>
+			<div className={cx('et-main', modifiers, currentPage)}>
 				
 				<FloatingContainer
 					verticallyCentered

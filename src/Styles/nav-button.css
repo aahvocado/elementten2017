@@ -9,7 +9,6 @@
 	color: #5073ad;
 	flex: 0 0 auto;
 	font-family: arial, sans-serif;
-	// font-weight: bold;
 	cursor: pointer;
 
 	transition: transform 100ms;
@@ -64,4 +63,25 @@
 .style__inner-page .nav-button-component ~ .nav-button-component,
 .style__inner-page .floating-button-container ~ .floating-button-container {
 	margin-top: 1rem;
+}
+
+
+/* delays */
+.floating-button-container:nth-child(1) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(1) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 200ms;
+}
+.floating-button-container:nth-child(2) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(2) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 400ms;
+}
+
+.floating-button-container:nth-child(3) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(3) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 600ms;
+}
+
+.floating-button-container:nth-child(4) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(4) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 800ms;
 }

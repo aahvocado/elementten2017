@@ -5,13 +5,14 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* components */
 import NavButton from '../Components/NavButton';
+import ColorStripe from '../Components/ColorStripe';
 
 /* styles */
 import '../Styles/navigation.css';
 
 export default class Navigation extends React.Component {
 	static defaultProps = {
-    	selected: CONSTANTS.PAGE.HOME,
+    	currentPage: CONSTANTS.PAGE.HOME,
     	onNavClick: () => Promise.resolve(),
     	vertical: false,
     };
@@ -21,7 +22,7 @@ export default class Navigation extends React.Component {
 	}
 
 	render(){
-		const { selected, vertical } = this.props;
+		const { currentPage, vertical } = this.props;
 		//let { offsets } = this.state;
 
 		/*if(!isSplashPage){
@@ -39,6 +40,10 @@ export default class Navigation extends React.Component {
 				role='navigation' 
 				className={ cx('navigation-component', modifiers) }
 			>
+				<ColorStripe
+					page={ currentPage }
+					disabled={ !vertical }
+				/>
 				{ vertical &&
 					<ReactCSSTransitionGroup
 						transitionName="pop-in"
@@ -46,7 +51,7 @@ export default class Navigation extends React.Component {
 	      				transitionAppearTimeout={1000}
 						transitionEnterTimeout={1200}
 						transitionLeaveTimeout={1000}>
-						<h2>Daniel Xiao</h2>
+						<h2 className="vertical-title">Daniel Xiao</h2>
 					</ReactCSSTransitionGroup>
 				}
 				<ReactCSSTransitionGroup
@@ -60,7 +65,7 @@ export default class Navigation extends React.Component {
 						txt='Projects'
 						wrapperCls="projects-color"
 						action={ CONSTANTS.NAVIGATION.PROJECTS }
-						active={selected === CONSTANTS.PAGE.PROJECTS}
+						active={ currentPage === CONSTANTS.PAGE.PROJECTS }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 
@@ -75,7 +80,7 @@ export default class Navigation extends React.Component {
 						txt='Games'
 						wrapperCls="games-color"
 						action={ CONSTANTS.NAVIGATION.GAMES }
-						active={selected === CONSTANTS.PAGE.GAMES}
+						active={ currentPage === CONSTANTS.PAGE.GAMES }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 
@@ -90,7 +95,7 @@ export default class Navigation extends React.Component {
 						txt='About'
 						wrapperCls="about-color"
 						action={ CONSTANTS.NAVIGATION.ABOUT }
-						active={selected === CONSTANTS.PAGE.ABOUT}
+						active={ currentPage === CONSTANTS.PAGE.ABOUT }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 			</nav>
