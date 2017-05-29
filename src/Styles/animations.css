@@ -29,19 +29,23 @@
 }
 
 /* delays */
+.floating-button-container:nth-child(1) .pop-in-enter.pop-in-enter-active,
+.floating-button-container:nth-child(1) .pop-in-appear.pop-in-appear-active {
+	transition-delay: 200ms;
+}
 .floating-button-container:nth-child(2) .pop-in-enter.pop-in-enter-active,
 .floating-button-container:nth-child(2) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 200ms;
+	transition-delay: 400ms;
 }
 
 .floating-button-container:nth-child(3) .pop-in-enter.pop-in-enter-active,
 .floating-button-container:nth-child(3) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 400ms;
+	transition-delay: 600ms;
 }
 
 .floating-button-container:nth-child(4) .pop-in-enter.pop-in-enter-active,
 .floating-button-container:nth-child(4) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 600ms;
+	transition-delay: 800ms;
 }
 
 /* fade out animation */

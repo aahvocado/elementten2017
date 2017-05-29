@@ -1,14 +1,10 @@
 .et-header {
 	text-align: center;
 	padding: 1rem;
-	cursor: pointer;
 	color: white;
     position: relative;
+    z-index: 1;
 }
-.et-header:hover {
-	
-}
-
 .et-header:before {
     content: '';
     width: 100%;
@@ -17,16 +13,17 @@
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
 
     z-index: -1;
-    animation: background-slide-in 1s;
-    animation-delay: 1s;
+    animation: background-slide-in 1200ms;
+    animation-delay: 0s;
     animation-fill-mode: forwards;
 
     transform: scaleX(0);
     transform-origin: 0 50%;
     transition-property: transform;
-    // transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
 
