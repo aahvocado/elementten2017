@@ -40,31 +40,6 @@
 	color: #db7ee4;
 	border-color: #db7ee4;
 }
-/* horizontal */
-.style__splash-page .nav-button-component {
-	/* size, and animation should be variable */
-	height: 200px;
-	width: 200px;
-
-	font-size: 2rem;
-}
-.style__splash-page .nav-button-component ~ .nav-button-component,
-.style__splash-page .floating-button-container ~ .floating-button-container {
-	margin-left: 2rem;
-}
-
-/* vertical */
-.style__inner-page .nav-button-component {
-	height: 100px;
-	width: 100px;
-
-	font-size: 1.5rem;
-}
-.style__inner-page .nav-button-component ~ .nav-button-component,
-.style__inner-page .floating-button-container ~ .floating-button-container {
-	margin-top: 1rem;
-}
-
 
 /* delays */
 .floating-button-container:nth-child(1) .pop-in-enter.pop-in-enter-active,
