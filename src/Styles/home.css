@@ -29,36 +29,3 @@
 .projects-page.inactive {
 	display: none;
 }
-/* hamburger menu toggler */
-.et-floating-hamburger {
-	background-color: transparent;
-	outline: 0;
-	
-	z-index: 2;
-	cursor: pointer;
-
-	position: absolute;
-	left: 20px;
-	top: 20px;
-
-	width: 50px;
-	height: 50px;
-	box-sizing: border-box;
-
-	font-size: 2rem;
-	text-align: center;
-}
-.et-floating-hamburger:focus {
-	outline: initial;
-}
-.et-floating-hamburger:not(.mod-active) {
-	color: #5073ad;
-	border: 3px solid #5073ad;
-}
-.et-floating-hamburger.mod-active {
-	color: white;
-	border: 3px solid white;
-}
-.et-floating-hamburger:hover {
-	transform: translateY(-3px);
-}

@@ -40,7 +40,7 @@ export default class Projects extends React.Component {
 		const titleModifier = {
 			'projects-color': pageName === 'development',
 			'games-color': pageName === 'games', 
-			'about-color': pageName === 'design', 
+			'about-color': pageName === 'about', 
 		};
 
 		return (

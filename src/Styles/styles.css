@@ -8,6 +8,16 @@
 	color: #db7ee4;
 }
 
+.projects-border-color {
+	border-color: #2b9a3f;
+}
+.games-border-color {
+	border-color: orange;
+}
+.about-border-color {
+	border-color: #db7ee4;
+}
+
 #root {
 	color: #5073ad;
 	background: white;

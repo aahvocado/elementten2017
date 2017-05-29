@@ -46,7 +46,7 @@ export default class Home extends React.Component {
 					/>
 
 				<Projects
-					pageName='design'
+					pageName='about'
 					active={currentPage === CONSTANTS.PAGE.ABOUT}
 					/>
 			</div>

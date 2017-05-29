@@ -9,6 +9,7 @@ import Splash from '../Pages/Splash';
 /* components */
 import Header from '../Components/Header';
 import FloatingContainer from '../Components/FloatingContainer';
+import HamburgerMenu from '../Components/HamburgerMenu';
 
 /* styles */
 import '../Styles/styles.css';
@@ -37,17 +38,11 @@ export default class App extends React.Component {
 		return (
 			<div className={cx('et-main', modifiers, currentPage)}>
 				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-					<button 
-						className={ cx('et-floating-hamburger', {'mod-active': menuVisible}) } 
+					<HamburgerMenu 
 						onClick={ this.handleMenuToggle }
-					>
-						{ !menuVisible &&
-							<span>☰</span>
-						}
-						{ menuVisible &&
-							<span>x</span>
-						}
-					</button>
+						page={ currentPage }
+						active={ menuVisible }
+					/>
 				}
 
 				<FloatingContainer
