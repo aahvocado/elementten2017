@@ -40,7 +40,7 @@ export default class Navigation extends React.Component {
 				role='navigation' 
 				className={ cx('navigation-component', modifiers) }
 			>
-				{ this.renderNavigationStripe() }
+				<button className="et-floating-hamburger">☰</button>
 
 				{ vertical &&
 					<ReactCSSTransitionGroup
@@ -97,6 +97,9 @@ export default class Navigation extends React.Component {
 						active={ currentPage === CONSTANTS.PAGE.ABOUT }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
+
+				{ this.renderNavigationStripe() }
+
 			</nav>
 		);
 	}
