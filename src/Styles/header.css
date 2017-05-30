@@ -26,3 +26,9 @@
     transition-property: transform;
     transition-timing-function: ease-out;
 }
+.title {
+    font-size: 4rem;
+}
+.subtitle {
+    font-size: 2rem;
+}

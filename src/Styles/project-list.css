@@ -1,32 +1,4 @@
-.projects-page {
-	z-index: 0;
-	flex: 1 1 auto;
-	width: 100%;
-	padding: 2rem;
-
-	box-sizing: border-box;
-	max-height: 100vh;
-	overflow: auto;
-}
-.project-page-title {
-	font-size: 2rem;
-    text-transform: capitalize;
-}
-/* phone */
-@media screen and (min-width : 0) and (max-width : 760px) {
-	.project-page-title {
-	    margin-left: 3rem;
-	}
-}
-/* tablet */
-@media screen and (min-width : 760px) and (max-width : 1220px) {
-	
-}
-/* desktop */
-@media screen and (min-width : 1220px) {
-	
-}
-.project-list {
+.et-project-list {
 	flex: 1 1 auto;
 
 	padding: 0;
@@ -39,8 +11,4 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
-}
-
-.project-page-title + .project-list {
-	margin-top: 2rem;
 }

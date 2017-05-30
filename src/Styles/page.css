@@ -1,0 +1,43 @@
+.et-page {
+	display: flex;
+	flex-direction: row;
+}
+.et-page__inner {
+	flex: 1 1 auto;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 2rem;
+}
+
+.projects-page {
+	z-index: 0;
+	flex: 1 1 auto;
+	width: 100%;
+
+	box-sizing: border-box;
+	max-height: 100vh;
+	overflow: auto;
+}
+.et-page__title {
+	font-size: 2rem;
+    text-transform: capitalize;
+}
+.et-page__title + .et-list-container {
+	margin-top: 1rem;
+}
+/* phone */
+@media screen and (min-width : 0) and (max-width : 760px) {
+	.project-page-title {
+	    margin-left: 3rem;
+	}
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+	
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+	
+}

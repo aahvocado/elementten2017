@@ -29,22 +29,11 @@ export default class ProjectList extends React.Component {
 					{...project}
 				/>
 			);
-		});
-
-		/* TODO NOT RIGHT PAGES */
-		const titleModifier = {
-			'projects-color': pageName === 'development',
-			'games-color': pageName === 'games', 
-			'about-color': pageName === 'about', 
-		};
-
-		console.log(renderedProjects);
+		});		
 
 		return (
-			<div className={ cx(`${pageName}-page`, 'projects-page') }>
-				<h2 className={ cx('project-page-title', titleModifier)}>{ pageName }</h2>
-
-				<ul className='project-list'>
+			<div className={ cx('et-list-container') }>
+				<ul className='et-project-list'>
 					{ renderedProjects }
 				</ul>
 			</div>
