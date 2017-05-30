@@ -15,6 +15,7 @@ export default class NavButton extends React.Component {
 		page: '',
 		modSquare: false,
 		linkPath: CONSTANTS.ROUTES.SPLASH,
+		onNavClick: () => Promise.resolve(),
     };
 
 	render(){
@@ -24,19 +25,25 @@ export default class NavButton extends React.Component {
 			'active': active,
 			'mod-square-button': modSquare,
 
-			'projects-border-color': page === CONSTANTS.NAVIGATION.PROJECTS,
-			'games-border-color': page === CONSTANTS.NAVIGATION.GAMES,
-			'about-border-color': page === CONSTANTS.NAVIGATION.ABOUT,
+			'projects-border-color': page === CONSTANTS.PAGE.PROJECTS,
+			'games-border-color': page === CONSTANTS.PAGE.GAMES,
+			'about-border-color': page === CONSTANTS.PAGE.ABOUT,
 		};
 
 		return (
 			<Link	
 				className={cx('nav-button-component', modifiers, wrapperCls)}
 				key={`${txt}-key`}
+				onClick={ this.handleNavClick }
 				to={ linkPath }
 			>
 				{txt}
 			</Link>
 		);
+	}
+
+	handleNavClick = () => {
+		const { onNavClick, page } = this.props;
+		onNavClick(page);
 	}
 }

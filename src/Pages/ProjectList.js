@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import ProjectsDetails from '../ProjectsDetails';
 
 /* components */
 import ProjectItem from '../Components/ProjectItem';
@@ -15,11 +14,10 @@ import '../Styles/project-list.css';
 export default class ProjectList extends React.Component {
 	static defaultProps = {
 		data: [],
-    	pageName: '',
     };
 
 	render(){
-		const { data, pageName } = this.props;
+		const { data } = this.props;
 
 		let renderedProjects = [];
 		data.forEach((project, idx) => {

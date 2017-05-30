@@ -1,30 +1,30 @@
 export default function ProjectsDetails() {
 	return [
-		/* development */
+		/* projects */
 		{
 			name: 'Betrayal at House on the Hill Helper',
-			category: 'development',
+			category: 'projects',
 			tags: ['semantic-ui', 'js', 'helper'],
 			icon: 'betrayalhelper.png',
 			page: ''
 		},
 		{
 			name: 'MentorWeb',
-			category: 'development',
+			category: 'projects',
 			tags: ['angular-js', 'js', 'css', 'html', 'agile'],
 			icon: 'mentorweb.png',
 			page: ''
 		},
 		{
 			name: 'Robocop Dispatch Interface',
-			category: 'development',
+			category: 'projects',
 			tags: ['game', 'flash'],
 			icon: 'robocop.png',
 			page: ''
 		},
 		{
 			name: 'Atlanta Civic Dashboard',
-			category: 'development',
+			category: 'projects',
 			tags: ['js', 'civics', 'gridster', 'ALS', 'visualization'],
 			icon: 'atlcivicdashboard.png',
 			page: ''
@@ -92,28 +92,28 @@ export default function ProjectsDetails() {
 		/* designs */
 		{
 			name: 'Text Messaging Steps',
-			category: 'development',
+			category: 'projects',
 			tags: ['illustrator'],
 			icon: 'textposter.png',
 			page: ''
 		},
 		{
 			name: 'Work Ready Grad Videos',
-			category: 'development',
+			category: 'projects',
 			tags: ['flash', 'video'],
 			icon: 'workreadygrad.png',
 			page: ''
 		},
 		{
 			name: 'Fastshop',
-			category: 'development',
+			category: 'projects',
 			tags: ['flash', 'video'],
 			icon: 'fastshop.png',
 			page: ''
 		},
 		{
 			name: 'Tiamat Media',
-			category: 'development',
+			category: 'projects',
 			tags: ['photoshop'],
 			icon: 'tiamatmedia.png',
 			page: ''

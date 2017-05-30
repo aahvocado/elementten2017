@@ -4,7 +4,6 @@ import { CONSTANTS } from '../constants';
 
 /* components */
 import Navigation from '../Components/Navigation';
-import Header from '../Components/Header';
 import HamburgerMenu from '../Components/HamburgerMenu';
 
 /* pages */
@@ -19,7 +18,9 @@ import '../Styles/page.css';
 export default class Page extends Component {
 	static defaultProps = {
 		page: CONSTANTS.PAGE.HOME,
-		pageName: 'default'
+		previousPage: CONSTANTS.PAGE.SPLASH,
+		pageName: 'default',
+		onPageChange: () => Promise.resolve(),
 	};
 
 	state = {
@@ -27,7 +28,7 @@ export default class Page extends Component {
     }
 
 	render(){
-		const { page, pageName } = this.props;
+		const { page, pageName, previousPage } = this.props;
 		const { menuVisible } = this.state;
 
 		const titleModifier = {
@@ -47,7 +48,9 @@ export default class Page extends Component {
 				<Navigation
 					vertical
 					page={ page }
+					previousPage={ previousPage }
 					menuVisible={ menuVisible }
+					onPageChange={ this.handlePageChange }
 				/>
 
 				<div className={cx('et-page__inner')}>
@@ -64,6 +67,11 @@ export default class Page extends Component {
 		return (
 			<div>extend this function</div>
 		);
+	}
+
+	handlePageChange = (nextPage) => {
+		const { onPageChange } = this.props;
+		onPageChange(nextPage);
 	}
 
 	handleMenuToggle = () => {

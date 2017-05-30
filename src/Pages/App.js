@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import cx from 'classnames';
+// import cx from 'classnames';
 import { CONSTANTS } from '../constants.js';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -19,30 +19,34 @@ import '../Styles/react-animations.css';
 */
 export default class App extends Component {
 	state = {
-    	currentPage: CONSTANTS.PAGE.SPLASH,
-    	menuVisible: false,
-    }
+		currentPage: CONSTANTS.PAGE.SPLASH,
+		previousPage: CONSTANTS.PAGE.SPLASH,
+	}
 
 	render(){
-		const { currentPage, previousPage, menuVisible } = this.state;
-		
-		const isInnerPage = currentPage !== CONSTANTS.PAGE.SPLASH;
-		const modifiers = {
-			'style__inner-page': isInnerPage,
-			'style__splash-page': !isInnerPage,
-		};
+		const { previousPage } = this.state;
 
 		return (
 			<Router>
-				<div className={cx('et-main', modifiers, currentPage)}>
+				<div className="et-main">
 					<Route exact path={ CONSTANTS.ROUTES.SPLASH } 
 						component={Splash} 
 					/>
 					<Route path={ CONSTANTS.ROUTES.PROJECTS }
-						component={ProjectPage} 
+						component={() => (
+							<ProjectPage
+								previousPage={ previousPage }
+								onPageChange={ this.handlePageChange } 
+							/>
+						)}
 					/>
 					<Route path={ CONSTANTS.ROUTES.GAMES }
-						component={GamesPage} 
+						component={() => (
+							<GamesPage 
+								previousPage={ previousPage }
+								onPageChange={ this.handlePageChange } 
+							/>
+						)} 
 					/>
 					<Route path={ CONSTANTS.ROUTES.ABOUT }
 						component={GamesPage} 
@@ -50,5 +54,10 @@ export default class App extends Component {
 				</div>
 			</Router>
 		);
+	}
+
+	handlePageChange = (nextPage) => {
+		const { currentPage } = this.state;
+		this.setState({previousPage: currentPage, currentPage: nextPage});
 	}
 }

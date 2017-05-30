@@ -13,9 +13,10 @@ import '../Styles/navigation.css';
 export default class Navigation extends React.Component {
 	static defaultProps = {
     	page: CONSTANTS.PAGE.HOME,
+    	previousPage: CONSTANTS.PAGE.SPLASH,
     	vertical: false,
 		menuVisible: false,
-    	onNavClick: () => Promise.resolve(),
+		onPageChange: () => Promise.resolve(),
     };
 
 	render(){
@@ -53,9 +54,10 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='Projects'
 						wrapperCls="projects-color"
-						page={ CONSTANTS.NAVIGATION.PROJECTS }
+						page={ CONSTANTS.PAGE.PROJECTS }
 						active={ page === CONSTANTS.PAGE.PROJECTS }
-						linkPath={ CONSTANTS.ROUTES.PROJECTS } />
+						linkPath={ CONSTANTS.ROUTES.PROJECTS }
+						onNavClick={ this.handlePageChange } />
 				</ReactCSSTransitionGroup>
 
 				<ReactCSSTransitionGroup
@@ -68,9 +70,10 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='Games'
 						wrapperCls="games-color"
-						page={ CONSTANTS.NAVIGATION.GAMES }
+						page={ CONSTANTS.PAGE.GAMES }
 						active={ page === CONSTANTS.PAGE.GAMES }
-						linkPath={ CONSTANTS.ROUTES.GAMES } />
+						linkPath={ CONSTANTS.ROUTES.GAMES }
+						onNavClick={ this.handlePageChange } />
 				</ReactCSSTransitionGroup>
 
 				<ReactCSSTransitionGroup
@@ -83,9 +86,10 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='About'
 						wrapperCls="about-color"
-						page={ CONSTANTS.NAVIGATION.ABOUT }
+						page={ CONSTANTS.PAGE.ABOUT }
 						active={ page === CONSTANTS.PAGE.ABOUT }
-						linkPath={ CONSTANTS.ROUTES.ABOUT } />
+						linkPath={ CONSTANTS.ROUTES.ABOUT }
+						onNavClick={ this.handlePageChange } />
 				</ReactCSSTransitionGroup>
 
 				{ this.renderNavigationStripe() }
@@ -96,6 +100,7 @@ export default class Navigation extends React.Component {
 
 	renderNavigationStripe() {
 		const { page, previousPage, vertical } = this.props;
+		console.log('nav stripe', page, previousPage);
 
 		return (
 			<div className='nav-color-stripe-container'>
@@ -122,5 +127,10 @@ export default class Navigation extends React.Component {
 				}
 			</div>
 		);
+	}
+
+	handlePageChange = (nextPage) => {
+		const { onPageChange } = this.props;
+		onPageChange(nextPage);
 	}
 }

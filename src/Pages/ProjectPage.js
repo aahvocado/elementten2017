@@ -7,12 +7,12 @@ import Page from '../Pages/Page';
 import ProjectList from '../Pages/ProjectList';
 
 /*
-	page for development projects
+	page for general projects
 */
 export default class ProjectPage extends Page {
 	static defaultProps = {
 		page: CONSTANTS.PAGE.PROJECTS,
-		pageName: 'development',
+		pageName: 'projects',
 	};
 
 	renderPageInner() {
