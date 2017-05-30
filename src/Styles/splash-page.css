@@ -1,5 +1,20 @@
 .et-splash-page {
 	display: flex;
 	flex-direction: column;
-    transform: translateY(50%);
+}
+
+/* phone */
+@media screen and (min-width : 0) and (max-width : 760px) {
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+	.et-splash-page {
+		transform: translateY(50%);
+	}
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+	.et-splash-page {
+		transform: translateY(50%);
+	}
 }
