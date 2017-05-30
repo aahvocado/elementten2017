@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import {CONSTANTS} from '../constants';
+import { CONSTANTS } from '../constants';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 /* components */

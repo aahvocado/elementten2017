@@ -12,5 +12,12 @@ export var CONSTANTS = {
 		PROJECTS: 'project-nav',
 		GAMES: 'games-nav',
 		ABOUT: 'about-nav'
+	},
+	ROUTES: {
+		SPLASH: '/',
+		HOME: '/home',
+		PROJECTS: '/projects',
+		GAMES: '/games',
+		ABOUT: '/about'
 	}
 };

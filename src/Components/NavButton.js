@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { CONSTANTS } from '../constants';
+import { Link } from 'react-router-dom';
 
 /* styles */
 import '../Styles/nav-button.css';
@@ -30,12 +31,14 @@ export default class NavButton extends React.Component {
 		};
 
 		return (
-			<button	className={cx('nav-button-component', modifiers, wrapperCls)}
-					style={style}
-					key={`${txt}-key`}
-					onClick={ this.handleOnClick }>
+			<Link	
+				className={cx('nav-button-component', modifiers, wrapperCls)}
+				style={style}
+				key={`${txt}-key`}
+				to={ CONSTANTS.ROUTES.PROJECTS }
+			>
 				{txt}
-			</button>
+			</Link>
 		);
 	}
 

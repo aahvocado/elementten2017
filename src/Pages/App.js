@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import cx from 'classnames';
-import {CONSTANTS} from '../constants.js';
+import { CONSTANTS } from '../constants.js';
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 /* pages */
 import Home from '../Pages/Home';
 import Splash from '../Pages/Splash';
-
-/* components */
-import Header from '../Components/Header';
-import FloatingContainer from '../Components/FloatingContainer';
-import HamburgerMenu from '../Components/HamburgerMenu';
 
 /* styles */
 import '../Styles/styles.css';
@@ -19,7 +16,7 @@ import '../Styles/react-animations.css';
 /*
 	Primary page
 */
-export default class App extends React.Component {
+export default class App extends Component {
 
 	state = {
     	currentPage: CONSTANTS.PAGE.SPLASH,
@@ -36,42 +33,12 @@ export default class App extends React.Component {
 		};
 
 		return (
-			<div className={cx('et-main', modifiers, currentPage)}>
-				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-					<HamburgerMenu 
-						onClick={ this.handleMenuToggle }
-						page={ currentPage }
-						active={ menuVisible }
-					/>
-				}
-
-				<FloatingContainer
-					verticallyCentered
-					transitionName="fade-out"
-					transitionLeave
-					transitionLeaveTimeout={600}
-				>
-					{ currentPage === CONSTANTS.PAGE.SPLASH &&
-						<Header
-							onHeaderClick={ this.navToHome }
-						/>
-					}
-					{ currentPage === CONSTANTS.PAGE.SPLASH &&
-						<Splash 
-							onNavClick={ this.handleNavDidClick }
-						/>
-					}
-				</FloatingContainer>
-
-				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-					<Home
-						previousPage={ previousPage }
-						currentPage={ currentPage }
-						onNavClick={ this.handleNavDidClick }
-						menuVisible={ menuVisible }
-					/>
-				}
-			</div>
+			<Router>
+				<div className={cx('et-main', modifiers, currentPage)}>
+					<Route exact path={ CONSTANTS.ROUTES.SPLASH } component={Splash} />
+					<Route path={ CONSTANTS.ROUTES.HOME } component={Home} />
+				</div>
+			</Router>
 		);
 	}
 
