@@ -101,7 +101,8 @@
 .project-item.mod-active .project-item__link {
 	opacity: 1;
 }
-.project-item__name + .project-item__description {
+.project-item__name + .project-item__description,
+.project-item__description + .project-item__extra {
 	margin-top: 1rem;
 }
 .project-item__extra {

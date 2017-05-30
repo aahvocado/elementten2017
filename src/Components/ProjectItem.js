@@ -34,7 +34,7 @@ export default class ProjectItem extends React.Component {
 			'mod-active': active,
 		};
 
-		const isExternalLink = linkTo && linkTo.includes('www');
+		const isExternalLink = linkTo && linkTo.includes('http');
 		
 		return (
 			<li 
