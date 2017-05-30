@@ -15,17 +15,14 @@
 	padding: 0 2rem;
 	display: block;
 }
-
 /* vertical */
+.floating-title-container + .floating-button-container {
+	margin-top: 2rem;
+}
 .navigation-component.mod-vertical {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-}
-.navigation-component.mod-vertical .nav-button-component {
-	height: 100px;
-	width: 100px;
-	font-size: 1.5rem;
 }
 .navigation-component.mod-vertical .nav-button-component ~ .nav-button-component,
 .navigation-component.mod-vertical .floating-button-container ~ .floating-button-container {
@@ -42,11 +39,6 @@
 	.navigation-component:not(.mod-vertical) {
 		align-items: center;
 		flex-direction: column;
-	}
-	.navigation-component:not(.mod-vertical) .nav-button-component {
-		height: 120px;
-		width: 120px;
-		font-size: 1.7rem;
 	}
 	.navigation-component:not(.mod-vertical) .nav-button-component ~ .nav-button-component,
 	.navigation-component:not(.mod-vertical) .floating-button-container ~ .floating-button-container {
@@ -66,11 +58,6 @@
 		display: none;
 	}
 	/* horizontal */
-	.navigation-component:not(.mod-vertical) .nav-button-component {
-		height: 200px;
-		width: 200px;
-		font-size: 2rem;
-	}
 	.navigation-component:not(.mod-vertical) .nav-button-component ~ .nav-button-component,
 	.navigation-component:not(.mod-vertical) .floating-button-container ~ .floating-button-container {
 		margin-left: 2rem;
@@ -84,11 +71,6 @@
 @media screen and (min-width : 1220px) {
 	.et-floating-hamburger { 
 		display: none;
-	}
-	.navigation-component:not(.mod-vertical) .nav-button-component {
-		height: 200px;
-		width: 200px;
-		font-size: 2rem;
 	}
 	.navigation-component:not(.mod-vertical) .nav-button-component ~ .nav-button-component,
 	.navigation-component:not(.mod-vertical) .floating-button-container ~ .floating-button-container {

@@ -36,6 +36,7 @@ export default class Navigation extends React.Component {
 			>
 				{ vertical &&
 					<ReactCSSTransitionGroup
+						className="floating-title-container"
 						transitionName="speed-pop-in"
 						transitionAppear={true}
 	      				transitionAppearTimeout={1000}
@@ -60,6 +61,7 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='Projects'
 						wrapperCls="projects-color"
+						boxy={ vertical }
 						page={ CONSTANTS.PAGE.PROJECTS }
 						active={ page === CONSTANTS.PAGE.PROJECTS }
 						linkPath={ CONSTANTS.ROUTES.PROJECTS }
@@ -76,6 +78,7 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='Games'
 						wrapperCls="games-color"
+						boxy={ vertical }
 						page={ CONSTANTS.PAGE.GAMES }
 						active={ page === CONSTANTS.PAGE.GAMES }
 						linkPath={ CONSTANTS.ROUTES.GAMES }
@@ -92,6 +95,7 @@ export default class Navigation extends React.Component {
 					<NavButton 
 						txt='About'
 						wrapperCls="about-color"
+						boxy={ vertical }
 						page={ CONSTANTS.PAGE.ABOUT }
 						active={ page === CONSTANTS.PAGE.ABOUT }
 						linkPath={ CONSTANTS.ROUTES.ABOUT }

@@ -4,10 +4,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 	
 	border: 2px solid white;
 	background: white;
 	border-radius: 50%;
+	font-size: 2rem;
 
 	color: #5073ad;
 	flex: 0 0 auto;
@@ -16,35 +18,50 @@
 
 	transition: transform 100ms;
 }
-.nav-button-component:not(:hover):not(:focus) {
+.nav-button-component.mod-boxy {
+	height: 75px;
+	width: 180px;
+	
+	border: 2px solid white;
+	background: transparent;
+	border-radius: 5px;
+	font-size: 1.5rem;
+
+	color: white;
+}
+.nav-button-component:not(:hover):not(:focus):not(.mod-boxy) {
 	color: #5073ad;
 	border-color: transparent;
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.floating-button-container {
-		margin: 10px;
-	}
+	
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	.floating-button-container {
-		margin: 30px;
-	}
+	
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-	.floating-button-container {
-		margin: 50px;
+	.nav-button-component {
+
 	}
 }
 
 /* generic coloring */
-.nav-button-component:hover,
-.nav-button-component:focus {
+.nav-button-component:not(.mod-boxy):hover,
+.nav-button-component:not(.mod-boxy):focus {
 	outline: 0;
 	transform: scale(1.2);
 	// box-shadow: 0px 0px 40px green;
+}
+.nav-button-component.mod-boxy:hover {
+	top: -2px;
+	box-shadow: 0 7px rgba(0, 0, 0, 0.5);
+}
+.nav-button-component.mod-boxy:focus {
+	box-shadow: 0 0 3px 1px white;
+    outline: 0;
 }
 
 /* delays */

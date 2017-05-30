@@ -13,17 +13,17 @@ export default class NavButton extends React.Component {
 		txt: '',
 		active: false,
 		page: '',
-		modSquare: false,
+		boxy: false,
 		linkPath: CONSTANTS.ROUTES.SPLASH,
 		onNavClick: () => Promise.resolve(),
     };
 
 	render(){
-		const { wrapperCls, txt, active, modSquare, page, linkPath } = this.props;
+		const { wrapperCls, txt, active, boxy, page, linkPath } = this.props;
 
 		const modifiers = {
 			'active': active,
-			'mod-square-button': modSquare,
+			'mod-boxy': boxy,
 
 			'projects-border-color': page === CONSTANTS.PAGE.PROJECTS,
 			'games-border-color': page === CONSTANTS.PAGE.GAMES,

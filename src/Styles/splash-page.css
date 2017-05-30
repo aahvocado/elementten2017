@@ -5,16 +5,25 @@
 
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
+	.et-splash-page .floating-button-container {
+		margin: 10px;
+	}
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
 	.et-splash-page {
 		transform: translateY(50%);
 	}
+	.et-splash-page .floating-button-container {
+		margin: 30px;
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
 	.et-splash-page {
 		transform: translateY(50%);
+	}
+	.et-splash-page .floating-button-container {
+		margin: 50px;
 	}
 }
