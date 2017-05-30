@@ -30,20 +30,32 @@
 	font-size: 2rem;
     text-transform: capitalize;
 }
-.et-page__title + .et-list-container {
-	margin-top: 1rem;
-}
+
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
+	.et-page__inner {
+		padding: 1rem;
+	}
 	.et-page__title {
 	    margin-left: 3rem;
+	    padding: 1rem;
 	}
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	
+	.et-page__inner {
+		padding: 2rem;
+	}
+	.et-page__title + .et-list-container {
+		margin-top: 1rem;
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-	
+	.et-page__inner {
+		padding: 2rem;
+	}
+	.et-page__title + .et-list-container {
+		margin-top: 1rem;
+	}
 }
