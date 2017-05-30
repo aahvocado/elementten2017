@@ -4,11 +4,14 @@
 }
 .et-page__inner {
 	flex: 1 1 auto;
+	padding: 2rem;
 
 	display: flex;
 	flex-direction: column;
-
-	padding: 2rem;
+	
+    max-height: 100vh;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
 .projects-page {
@@ -29,7 +32,7 @@
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.project-page-title {
+	.et-page__title {
 	    margin-left: 3rem;
 	}
 }

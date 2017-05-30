@@ -1,6 +1,9 @@
 .nav-button-component {
 	height: 200px;
 	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
 	border: 2px solid white;
 	background: white;

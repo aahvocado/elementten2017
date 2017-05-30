@@ -59,7 +59,7 @@
 	top: 0;
 }
 .project-item:hover .project-item__info:before {
-	transform: translateX(0);
+	transform: translateX(-5%);
 }
 .project-item__info:before {
 	width: 130%;
