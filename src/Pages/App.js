@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Splash from '../Pages/Splash';
 import ProjectPage from '../Pages/ProjectPage';
 import GamesPage from '../Pages/GamesPage';
+import AboutPage from '../Pages/AboutPage';
 
 /* styles */
 import '../Styles/styles.css';
@@ -49,7 +50,12 @@ export default class App extends Component {
 						)} 
 					/>
 					<Route path={ CONSTANTS.ROUTES.ABOUT }
-						component={GamesPage} 
+						component={() => (
+							<AboutPage 
+								previousPage={ previousPage }
+								onPageChange={ this.handlePageChange } 
+							/>
+						)}
 					/>
 				</div>
 			</Router>
