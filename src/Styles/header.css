@@ -17,8 +17,8 @@
     bottom: 0;
 
     z-index: -1;
-    animation: horizontal-background-slide-in 1200ms;
-    animation-delay: 0s;
+    animation: horizontal-background-slide-in 4000ms;
+    animation-delay: 100ms;
     animation-fill-mode: forwards;
 
     transform: scaleX(0);

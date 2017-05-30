@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { CONSTANTS } from '../constants';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Link } from 'react-router-dom';
 
 /* components */
 import NavButton from '../Components/NavButton';
@@ -40,8 +41,13 @@ export default class Navigation extends React.Component {
 	      				transitionAppearTimeout={1000}
 						transitionEnterTimeout={1200}
 						transitionLeaveTimeout={1000}>
-						<h1 className="nav-title"
-							onClick={ this.handleNavHome }>Daniel Xiao</h1>
+						<Link 
+							className="nav-title"
+							onClick={ this.handleNavSplash }
+							to={ CONSTANTS.ROUTES.SPLASH }
+						>
+							Daniel Xiao
+						</Link>
 					</ReactCSSTransitionGroup>
 				}
 				<ReactCSSTransitionGroup
@@ -130,5 +136,10 @@ export default class Navigation extends React.Component {
 	handlePageChange = (nextPage) => {
 		const { onPageChange } = this.props;
 		onPageChange(nextPage);
+	}
+
+	handleNavSplash = () => {
+		const { onPageChange } = this.props;
+		onPageChange(CONSTANTS.PAGE.SPLASH); 
 	}
 }

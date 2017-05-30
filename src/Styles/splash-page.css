@@ -1,4 +1,5 @@
 .et-splash-page {
 	display: flex;
 	flex-direction: column;
+    transform: translateY(50%);
 }
