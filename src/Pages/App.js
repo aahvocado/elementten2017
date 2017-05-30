@@ -5,8 +5,8 @@ import { CONSTANTS } from '../constants.js';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 /* pages */
-import Home from '../Pages/Home';
 import Splash from '../Pages/Splash';
+import ProjectPage from '../Pages/ProjectPage';
 
 /* styles */
 import '../Styles/styles.css';
@@ -39,7 +39,7 @@ export default class App extends Component {
 						component={Splash} 
 					/>
 					<Route path={ CONSTANTS.ROUTES.PROJECTS }
-						component={Home} 
+						component={ProjectPage} 
 					/>
 				</div>
 			</Router>
@@ -67,12 +67,7 @@ export default class App extends Component {
 			default:
 				break;
 		}
-	}
-
-	handleMenuToggle = () => {
-		const { menuVisible } = this.state;
-		this.setState({ menuVisible: !menuVisible });
-	}
+	}	
 
 	/* handle switching to another page */
 	handlePageChange = (newPage) => {

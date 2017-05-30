@@ -28,13 +28,12 @@ export default class Home extends React.Component {
 
 		return (
 			<div className={cx('center-container')}>
-				{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-					<HamburgerMenu 
-						onClick={ this.handleMenuToggle }
-						page={ currentPage }
-						active={ menuVisible }
-					/>
-				}
+				<HamburgerMenu 
+					onClick={ this.handleMenuToggle }
+					page={ currentPage }
+					active={ menuVisible }
+				/>
+				
 				<div className={cx('center-container')}>
 					<Navigation
 						vertical

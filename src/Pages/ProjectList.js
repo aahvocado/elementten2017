@@ -14,27 +14,22 @@ import '../Styles/project-list.css';
 */
 export default class ProjectList extends React.Component {
 	static defaultProps = {
+		data: [],
     	pageName: '',
-    	active: false,
     };
 
 	render(){
-		const { pageName, active } = this.props;
+		const { data, pageName } = this.props;
 
 		let renderedProjects = [];
-		ProjectsDetails().forEach((project, idx) => {
-			if(project.category === pageName){
-				renderedProjects.push(
-					<ProjectItem key={'project-item-'+idx+'-key'}
-						{...project}/>
-				);
-			}
+		data.forEach((project, idx) => {
+			renderedProjects.push(
+				<ProjectItem 
+					key={'project-item-'+idx+'-key'}
+					{...project}
+				/>
+			);
 		});
-
-		const modifiers = {
-			'active': active,
-			'inactive': !active,
-		};
 
 		/* TODO NOT RIGHT PAGES */
 		const titleModifier = {
@@ -43,8 +38,10 @@ export default class ProjectList extends React.Component {
 			'about-color': pageName === 'about', 
 		};
 
+		console.log(renderedProjects);
+
 		return (
-			<div className={ cx(`${pageName}-page`, 'projects-page', modifiers) }>
+			<div className={ cx(`${pageName}-page`, 'projects-page') }>
 				<h2 className={ cx('project-page-title', titleModifier)}>{ pageName }</h2>
 
 				<ul className='project-list'>

@@ -12,10 +12,10 @@ import '../Styles/navigation.css';
 
 export default class Navigation extends React.Component {
 	static defaultProps = {
-    	currentPage: CONSTANTS.PAGE.HOME,
-    	onNavClick: () => Promise.resolve(),
+    	page: CONSTANTS.PAGE.HOME,
     	vertical: false,
 		menuVisible: false,
+    	onNavClick: () => Promise.resolve(),
     };
 
     state = {
@@ -23,7 +23,7 @@ export default class Navigation extends React.Component {
 	}
 
 	render(){
-		const { currentPage, vertical, menuVisible } = this.props;
+		const { page, vertical, menuVisible } = this.props;
 
 		const modifiers = {
 			'mod-vertical': vertical,
@@ -58,7 +58,7 @@ export default class Navigation extends React.Component {
 						txt='Projects'
 						wrapperCls="projects-color"
 						page={ CONSTANTS.NAVIGATION.PROJECTS }
-						active={ currentPage === CONSTANTS.PAGE.PROJECTS }
+						active={ page === CONSTANTS.PAGE.PROJECTS }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 
@@ -73,7 +73,7 @@ export default class Navigation extends React.Component {
 						txt='Games'
 						wrapperCls="games-color"
 						page={ CONSTANTS.NAVIGATION.GAMES }
-						active={ currentPage === CONSTANTS.PAGE.GAMES }
+						active={ page === CONSTANTS.PAGE.GAMES }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 
@@ -88,7 +88,7 @@ export default class Navigation extends React.Component {
 						txt='About'
 						wrapperCls="about-color"
 						page={ CONSTANTS.NAVIGATION.ABOUT }
-						active={ currentPage === CONSTANTS.PAGE.ABOUT }
+						active={ page === CONSTANTS.PAGE.ABOUT }
 						onClick={ this.handleNavClick } />
 				</ReactCSSTransitionGroup>
 
@@ -99,28 +99,28 @@ export default class Navigation extends React.Component {
 	}
 
 	renderNavigationStripe() {
-		const { currentPage, previousPage, vertical } = this.props;
+		const { page, previousPage, vertical } = this.props;
 
 		return (
 			<div className='nav-color-stripe-container'>
-				{ currentPage === CONSTANTS.PAGE.PROJECTS &&
+				{ page === CONSTANTS.PAGE.PROJECTS &&
 					<ColorStripe
 						previousPage={ previousPage }
-						page={ currentPage }
+						page={ page }
 						disabled={ !vertical }
 					/>
 				}
-				{ currentPage === CONSTANTS.PAGE.GAMES &&
+				{ page === CONSTANTS.PAGE.GAMES &&
 					<ColorStripe
 						previousPage={ previousPage }
-						page={ currentPage }
+						page={ page }
 						disabled={ !vertical }
 					/>
 				}
-				{ currentPage === CONSTANTS.PAGE.ABOUT &&
+				{ page === CONSTANTS.PAGE.ABOUT &&
 					<ColorStripe
 						previousPage={ previousPage }
-						page={ currentPage }
+						page={ page }
 						disabled={ !vertical }
 					/>
 				}
