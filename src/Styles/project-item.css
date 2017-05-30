@@ -3,12 +3,14 @@
 	background: white;
 	box-sizing: border-box;
 	border: 2px solid white;
+	cursor: pointer;
+	
 	color: black;
 	overflow: hidden;
-	cursor: pointer;
 
 	margin: 10px;
 	position: relative;
+	box-sizing: border-box;
 
 	display: flex;
 	flex-direction: column;
@@ -48,11 +50,12 @@
 .project-item__info {
 	color: white;
 	font-family: 'Convergence', sans-serif;
+	z-index: 1;
 
 	flex: 0 0 auto;
 	width: 100%;
 	padding: 1rem;
-	z-index: 1;
+	box-sizing: border-box;
 
 	position: absolute;
 	left: 0;
@@ -63,7 +66,7 @@
 	transform: translateX(-5%);
 }
 .project-item__info:before {
-	width: 130%;
+	width: 150%;
 	position: absolute;
 	left: -15%;
 	bottom: 0;
@@ -84,9 +87,13 @@
 .project-item__info__name,
 .project-item__info__description {
 	opacity: 0;
+	margin: 0;
 	transition: opacity 700ms;
 }
 .project-item:hover .project-item__info__name,
 .project-item:hover .project-item__info__description {
 	opacity: 1;
+}
+.project-item__info__name + .project-item__info__description {
+	margin-top: 1rem;
 }
