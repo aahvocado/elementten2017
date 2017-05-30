@@ -16,16 +16,10 @@ export default class Header extends React.Component {
 		return (
 			<header 
 				className={ cx('et-header') }
-				onClick={ this.handleHeaderClick }
 			>
 				<h1 className='title'>Daniel Xiao</h1>
 				<span className='subtitle'>is ElementTen</span>
 			</header>
 		);
-	}
-
-	handleHeaderClick = () => {
-		const { onHeaderClick } = this.props;
-		onHeaderClick();
 	}
 }

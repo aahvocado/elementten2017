@@ -7,12 +7,12 @@ import Page from '../Pages/Page';
 import ProjectList from '../Pages/ProjectList';
 
 /*
-	page for development projects
+	page for games projects
 */
 export default class ProjectPage extends Page {
 	static defaultProps = {
-		page: CONSTANTS.PAGE.PROJECTS,
-		pageName: 'development',
+		page: CONSTANTS.PAGE.GAMES,
+		pageName: 'games',
 	};
 
 	renderPageInner() {
@@ -22,6 +22,7 @@ export default class ProjectPage extends Page {
 
 		return (
 			<ProjectList
+				pageName={ pageName }
 				data={ data }
 			/>
 		);

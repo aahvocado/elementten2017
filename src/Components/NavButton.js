@@ -12,14 +12,13 @@ export default class NavButton extends React.Component {
     	wrapperCls: '',
 		txt: '',
 		active: false,
-		onclick: () => Promise.resolve(),
-		style: {},
 		page: '',
 		modSquare: false,
+		linkPath: CONSTANTS.ROUTES.SPLASH,
     };
 
 	render(){
-		const { wrapperCls, txt, active, style, modSquare, page } = this.props;
+		const { wrapperCls, txt, active, modSquare, page, linkPath } = this.props;
 
 		const modifiers = {
 			'active': active,
@@ -33,17 +32,11 @@ export default class NavButton extends React.Component {
 		return (
 			<Link	
 				className={cx('nav-button-component', modifiers, wrapperCls)}
-				style={style}
 				key={`${txt}-key`}
-				to={ CONSTANTS.ROUTES.PROJECTS }
+				to={ linkPath }
 			>
 				{txt}
 			</Link>
 		);
-	}
-
-	handleOnClick = (e) => {
-		const { onClick, page } = this.props;
-		onClick(page);
 	}
 }

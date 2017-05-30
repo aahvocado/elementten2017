@@ -18,10 +18,6 @@ export default class Navigation extends React.Component {
     	onNavClick: () => Promise.resolve(),
     };
 
-    state = {
-		offsets: this.initOffsets(),
-	}
-
 	render(){
 		const { page, vertical, menuVisible } = this.props;
 
@@ -59,7 +55,7 @@ export default class Navigation extends React.Component {
 						wrapperCls="projects-color"
 						page={ CONSTANTS.NAVIGATION.PROJECTS }
 						active={ page === CONSTANTS.PAGE.PROJECTS }
-						onClick={ this.handleNavClick } />
+						linkPath={ CONSTANTS.ROUTES.PROJECTS } />
 				</ReactCSSTransitionGroup>
 
 				<ReactCSSTransitionGroup
@@ -74,7 +70,7 @@ export default class Navigation extends React.Component {
 						wrapperCls="games-color"
 						page={ CONSTANTS.NAVIGATION.GAMES }
 						active={ page === CONSTANTS.PAGE.GAMES }
-						onClick={ this.handleNavClick } />
+						linkPath={ CONSTANTS.ROUTES.GAMES } />
 				</ReactCSSTransitionGroup>
 
 				<ReactCSSTransitionGroup
@@ -89,7 +85,7 @@ export default class Navigation extends React.Component {
 						wrapperCls="about-color"
 						page={ CONSTANTS.NAVIGATION.ABOUT }
 						active={ page === CONSTANTS.PAGE.ABOUT }
-						onClick={ this.handleNavClick } />
+						linkPath={ CONSTANTS.ROUTES.ABOUT } />
 				</ReactCSSTransitionGroup>
 
 				{ this.renderNavigationStripe() }
@@ -127,24 +123,4 @@ export default class Navigation extends React.Component {
 			</div>
 		);
 	}
-
-	initOffsets() {
-		let offsets = {};
-
-		const marginTopFunc = () => { return Math.random() * 100 };
-		offsets.marginTop = [marginTopFunc(), marginTopFunc(), marginTopFunc()];
-
-		return offsets;
-	}
-
-	handleNavClick = (page) => {
-		const { onNavClick } = this.props;
-		onNavClick(page);
-	}
-
-	handleNavHome = () => {
-		const { onNavClick } = this.props;
-		onNavClick(CONSTANTS.NAVIGATION.SPLASH);
-	}
-
 }

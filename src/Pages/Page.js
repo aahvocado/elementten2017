@@ -19,6 +19,7 @@ import '../Styles/page.css';
 export default class Page extends Component {
 	static defaultProps = {
 		page: CONSTANTS.PAGE.HOME,
+		pageName: 'default'
 	};
 
 	state = {
@@ -26,7 +27,7 @@ export default class Page extends Component {
     }
 
 	render(){
-		const { page } = this.props;
+		const { page, pageName } = this.props;
 		const { menuVisible } = this.state;
 
 		const titleModifier = {
@@ -50,7 +51,7 @@ export default class Page extends Component {
 				/>
 
 				<div className={cx('et-page__inner')}>
-					<h2 className={ cx('et-page__title', titleModifier)}>{ page }</h2>
+					<h2 className={ cx('et-page__title', titleModifier)}>{ pageName }</h2>
 
 					{ this.renderPageInner() }
 				</div>

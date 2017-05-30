@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 /* pages */
 import Splash from '../Pages/Splash';
 import ProjectPage from '../Pages/ProjectPage';
+import GamesPage from '../Pages/GamesPage';
 
 /* styles */
 import '../Styles/styles.css';
@@ -14,10 +15,9 @@ import '../Styles/animations.css';
 import '../Styles/react-animations.css';
 
 /*
-	Primary page
+	Primary App Controller
 */
 export default class App extends Component {
-
 	state = {
     	currentPage: CONSTANTS.PAGE.SPLASH,
     	menuVisible: false,
@@ -41,42 +41,14 @@ export default class App extends Component {
 					<Route path={ CONSTANTS.ROUTES.PROJECTS }
 						component={ProjectPage} 
 					/>
+					<Route path={ CONSTANTS.ROUTES.GAMES }
+						component={GamesPage} 
+					/>
+					<Route path={ CONSTANTS.ROUTES.ABOUT }
+						component={GamesPage} 
+					/>
 				</div>
 			</Router>
 		);
-	}
-
-	/* handle the button that was clicked */
-	handleNavDidClick = (nextPage) => {
-		switch(nextPage) {
-			case CONSTANTS.NAVIGATION.SPLASH:
-				this.handlePageChange(CONSTANTS.PAGE.SPLASH);
-				break;
-			case CONSTANTS.NAVIGATION.HOME:
-				this.handlePageChange(CONSTANTS.PAGE.HOME);
-				break;
-			case CONSTANTS.NAVIGATION.PROJECTS:
-				this.handlePageChange(CONSTANTS.PAGE.PROJECTS);
-				break;
-			case CONSTANTS.NAVIGATION.GAMES:
-				this.handlePageChange(CONSTANTS.PAGE.GAMES);
-				break;
-			case CONSTANTS.NAVIGATION.ABOUT:
-				this.handlePageChange(CONSTANTS.PAGE.ABOUT);
-				break;
-			default:
-				break;
-		}
-	}	
-
-	/* handle switching to another page */
-	handlePageChange = (newPage) => {
-		const { currentPage } = this.state;
-		this.setState( {previousPage: currentPage, currentPage: newPage, menuVisible: false} );
-	}
-
-	/* shortcuts */
-	navToHome = () => {
-		this.handlePageChange(CONSTANTS.PAGE.SPLASH);
 	}
 }
