@@ -35,8 +35,12 @@ export default class App extends Component {
 		return (
 			<Router>
 				<div className={cx('et-main', modifiers, currentPage)}>
-					<Route exact path={ CONSTANTS.ROUTES.SPLASH } component={Splash} />
-					<Route path={ CONSTANTS.ROUTES.HOME } component={Home} />
+					<Route exact path={ CONSTANTS.ROUTES.SPLASH } 
+						component={Splash} 
+					/>
+					<Route path={ CONSTANTS.ROUTES.PROJECTS }
+						component={Home} 
+					/>
 				</div>
 			</Router>
 		);

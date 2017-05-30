@@ -8,7 +8,7 @@ import Header from '../Components/Header';
 import HamburgerMenu from '../Components/HamburgerMenu';
 
 /* pages */
-import Projects from '../Pages/Projects';
+import ProjectList from '../Pages/ProjectList';
 
 /* styles */
 import '../Styles/home.css';
@@ -35,35 +35,29 @@ export default class Home extends React.Component {
 						active={ menuVisible }
 					/>
 				}
-
-				{ currentPage === CONSTANTS.PAGE.SPLASH &&
-					<Header
-						onHeaderClick={ this.navToHome }
-					/>
-				}
 				<div className={cx('center-container')}>
-				<Navigation
-					vertical
-					menuVisible={ menuVisible }
-					previousPage={ previousPage }
-					currentPage={ currentPage } 
-					onNavClick={ this.handleNavDidClick }
-				/>
+					<Navigation
+						vertical
+						menuVisible={ menuVisible }
+						previousPage={ previousPage }
+						currentPage={ currentPage } 
+						onNavClick={ this.handleNavDidClick }
+					/>
 
-				<Projects
-					pageName='development'
-					active={currentPage === CONSTANTS.PAGE.PROJECTS}
-				/>
+					<ProjectList
+						pageName='development'
+						active={currentPage === CONSTANTS.PAGE.PROJECTS}
+					/>
 
-				<Projects
-					pageName='games'
-					active={currentPage === CONSTANTS.PAGE.GAMES}
-				/>
+					<ProjectList
+						pageName='games'
+						active={currentPage === CONSTANTS.PAGE.GAMES}
+					/>
 
-				<Projects
-					pageName='about'
-					active={currentPage === CONSTANTS.PAGE.ABOUT}
-				/>
+					<ProjectList
+						pageName='about'
+						active={currentPage === CONSTANTS.PAGE.ABOUT}
+					/>
 				</div>
 			</div>
 		);

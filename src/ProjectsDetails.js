@@ -1,4 +1,4 @@
-export default function ProjectList() {
+export default function ProjectsDetails() {
 	return [
 		/* development */
 		{

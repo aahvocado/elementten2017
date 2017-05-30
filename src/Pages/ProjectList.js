@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import ProjectList from '../ProjectList';
+import ProjectsDetails from '../ProjectsDetails';
 
 /* components */
 import ProjectItem from '../Components/ProjectItem';
@@ -9,10 +9,10 @@ import ProjectItem from '../Components/ProjectItem';
 import '../Styles/project-list.css';
 
 /*
-	Projects
+	ProjectList
 	generic page that creates a list
 */
-export default class Projects extends React.Component {
+export default class ProjectList extends React.Component {
 	static defaultProps = {
     	pageName: '',
     	active: false,
@@ -22,7 +22,7 @@ export default class Projects extends React.Component {
 		const { pageName, active } = this.props;
 
 		let renderedProjects = [];
-		ProjectList().forEach((project, idx) => {
+		ProjectsDetails().forEach((project, idx) => {
 			if(project.category === pageName){
 				renderedProjects.push(
 					<ProjectItem key={'project-item-'+idx+'-key'}
