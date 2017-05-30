@@ -12,7 +12,7 @@ import '../Styles/navigation.css';
 
 export default class Navigation extends React.Component {
 	static defaultProps = {
-    	page: CONSTANTS.PAGE.HOME,
+    	page: CONSTANTS.PAGE.SPLASH,
     	previousPage: CONSTANTS.PAGE.SPLASH,
     	vertical: false,
 		menuVisible: false,
@@ -100,8 +100,6 @@ export default class Navigation extends React.Component {
 
 	renderNavigationStripe() {
 		const { page, previousPage, vertical } = this.props;
-		console.log('nav stripe', page, previousPage);
-
 		return (
 			<div className='nav-color-stripe-container'>
 				{ page === CONSTANTS.PAGE.PROJECTS &&

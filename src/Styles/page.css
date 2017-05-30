@@ -1,6 +1,9 @@
-.et-page {
+.et-main {
 	display: flex;
 	flex-direction: row;
+}
+.et-page {
+	flex: 1 1 auto;
 }
 .et-page__inner {
 	flex: 1 1 auto;

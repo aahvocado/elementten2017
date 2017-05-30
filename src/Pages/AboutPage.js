@@ -14,8 +14,6 @@ export default class AboutPage extends Page {
 	};
 
 	renderPageInner() {
-		const { pageName } = this.props;
-
 		return (
 			<p>Daniel Xiao is a cool cat</p>
 		);

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
-import { CONSTANTS } from '../constants';
 
 /* components */
 import Navigation from '../Components/Navigation';
@@ -10,30 +9,23 @@ import '../Styles/splash-page.css';
 
 export default class Splash extends Component {
 	static defaultProps = {
-		onNavClick: () => Promise.resolve(),
+		onPageChange: () => Promise.resolve(),
 	};
 
 	render(){
 		return (
 			<div className={cx('et-splash-page')}>
-				<Header
-					onHeaderClick={ this.navToSplash }
-				/>
+				<Header />
 
 				<Navigation
-					onNavClick={ this.handleNavDidClick }
+					onPageChange={ this.handlePageChange }
 				/>
 			</div>
 		);
 	}
 
-	handleNavDidClick = (nextPage) => {
-		const { onNavClick } = this.props;
-		onNavClick(nextPage);
-	}
-
-	navToSplash = () => {
-		const { onNavClick } = this.props;
-		onNavClick(CONSTANTS.NAVIGATION.SPLASH);
+	handlePageChange = (nextPage) => {
+		const { onPageChange } = this.props;
+		onPageChange(nextPage);
 	}
 }

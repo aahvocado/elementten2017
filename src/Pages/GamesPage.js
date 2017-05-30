@@ -22,7 +22,6 @@ export default class ProjectPage extends Page {
 
 		return (
 			<ProjectList
-				pageName={ pageName }
 				data={ data }
 			/>
 		);

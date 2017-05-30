@@ -32,10 +32,10 @@
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.navigation-component.nav-open {
+	.navigation-component.mod-vertical.nav-open {
 		transform: translateX(0);
 	}
-	.navigation-component.nav-closed {
+	.navigation-component.mod-vertical.nav-closed {
 		transform: translateX(-95%);
 	}
 	.navigation-component:not(.mod-vertical) {
