@@ -6,6 +6,7 @@
 	justify-content: center;
 	padding: 2rem 0;
 	transition: transform 1s;
+	z-index: 5;
 }
 .navigation-component .nav-title {
 	color: white;
@@ -19,7 +20,6 @@
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	z-index: 1;
 }
 .navigation-component.mod-vertical .nav-button-component {
 	height: 100px;
