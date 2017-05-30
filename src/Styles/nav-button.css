@@ -53,15 +53,21 @@
 .nav-button-component:not(.mod-boxy):focus {
 	outline: 0;
 	transform: scale(1.2);
-	// box-shadow: 0px 0px 40px green;
+}
+.nav-button-component.mod-boxy:not(:hover):focus {
+	box-shadow: 0 0 3px 1px white;
 }
 .nav-button-component.mod-boxy:hover {
-	top: -2px;
-	box-shadow: 0 7px rgba(0, 0, 0, 0.5);
+	transform: translateY(-5px);
 }
-.nav-button-component.mod-boxy:focus {
-	box-shadow: 0 0 3px 1px white;
-    outline: 0;
+.mod-projects-page .nav-button-component.mod-boxy:hover {
+	box-shadow: 0 7px #2b7d3a;
+}
+.mod-games-page .nav-button-component.mod-boxy:hover {
+	box-shadow: 0 7px #b97c0b;
+}
+.mod-about-page .nav-button-component.mod-boxy:hover {
+	box-shadow: 0 7px #a45dab;
 }
 
 /* delays */

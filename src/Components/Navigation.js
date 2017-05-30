@@ -27,6 +27,10 @@ export default class Navigation extends React.Component {
 			'mod-vertical': vertical,
 			'nav-open': menuVisible,
 			'nav-closed': !menuVisible,
+
+			'mod-projects-page': page === CONSTANTS.PAGE.PROJECTS,
+			'mod-games-page': page === CONSTANTS.PAGE.GAMES,
+			'mod-about-page': page === CONSTANTS.PAGE.ABOUT,
 		}
 		
 		return (
