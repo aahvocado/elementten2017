@@ -6,28 +6,32 @@ export default function ProjectsDetails() {
 			category: 'projects',
 			tags: ['semantic-ui', 'js', 'helper'],
 			icon: 'betrayalhelper.png',
-			page: ''
+			page: '',
+			linkTo: 'http://www.elementten.com/BetrayalHelper/',
 		},
 		{
 			name: 'MentorWeb',
 			category: 'projects',
 			tags: ['angular-js', 'js', 'css', 'html', 'agile'],
 			icon: 'mentorweb.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Robocop Dispatch Interface',
 			category: 'projects',
 			tags: ['game', 'flash'],
 			icon: 'robocop.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Atlanta Civic Dashboard',
 			category: 'projects',
 			tags: ['js', 'civics', 'gridster', 'ALS', 'visualization'],
 			icon: 'atlcivicdashboard.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 
 
@@ -37,56 +41,64 @@ export default function ProjectsDetails() {
 			category: 'games',
 			tags: ['game', 'unity'],
 			icon: 'perspectivegame.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Tower of Dormin',
 			category: 'games',
 			tags: ['game', 'flash'],
 			icon: 'towerofdormin.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Quietus',
 			category: 'games',
 			tags: ['game', 'unity'],
 			icon: 'quietus.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Survivor',
 			category: 'games',
 			tags: ['game', 'c#'],
 			icon: 'survivorgame.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Pong Revolutions',
 			category: 'games',
 			tags: ['game', 'flash'],
 			icon: 'pongrevolutions.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'I\'m Going to Rain in Your Volcano',
 			category: 'games',
 			tags: ['game', 'flash'],
 			icon: 'rainvolcano.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Want Everything',
 			category: 'games',
 			tags: ['game', 'flash'],
 			icon: 'wanteverything.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Skyfall',
 			category: 'games',
 			tags: ['game', 'unity'],
 			icon: 'skyfall.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 
 		/* designs */
@@ -95,28 +107,32 @@ export default function ProjectsDetails() {
 			category: 'projects',
 			tags: ['illustrator'],
 			icon: 'textposter.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Work Ready Grad Videos',
 			category: 'projects',
 			tags: ['flash', 'video'],
 			icon: 'workreadygrad.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Fastshop',
 			category: 'projects',
 			tags: ['flash', 'video'],
 			icon: 'fastshop.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 		{
 			name: 'Tiamat Media',
 			category: 'projects',
 			tags: ['photoshop'],
 			icon: 'tiamatmedia.png',
-			page: ''
+			page: '',
+			linkTo: '',
 		},
 	];
 }
