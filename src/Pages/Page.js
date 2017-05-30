@@ -10,7 +10,7 @@ import '../Styles/page.css';
 */
 export default class Page extends Component {
 	static defaultProps = {
-		page: CONSTANTS.PAGE.SPLASH,
+		page: undefined,
 		pageName: 'default',
 		onPageChange: () => Promise.resolve(),
 	};
@@ -31,6 +31,11 @@ export default class Page extends Component {
 				{ this.renderPageInner() }
 			</div>
 		);
+	}
+
+	componentDidMount() {
+		const { onPageLoad, page } = this.props;
+		onPageLoad(page);
 	}
 
 	renderPageInner() {

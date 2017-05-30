@@ -24,10 +24,11 @@ import HamburgerMenu from '../Components/HamburgerMenu';
 */
 export default class App extends Component {
 	state = {
-		currentPage: CONSTANTS.PAGE.SPLASH,
-		previousPage: CONSTANTS.PAGE.SPLASH,
+		currentPage: undefined,
+		previousPage: undefined,
     	menuVisible: false,
     }
+
 	render(){
 		const { currentPage, previousPage, menuVisible } = this.state;
 
@@ -56,7 +57,8 @@ export default class App extends Component {
 						<Route exact path={ CONSTANTS.ROUTES.SPLASH } 
 							component={() => (
 								<Splash
-									onPageChange={ this.handlePageChange } 
+									onPageChange={ this.handlePageChange }
+									onPageLoad={ this.handlePageLoad }
 								/>
 							)}
 						/>
@@ -64,7 +66,8 @@ export default class App extends Component {
 							component={() => (
 								<ProjectPage
 									previousPage={ previousPage }
-									onPageChange={ this.handlePageChange } 
+									onPageChange={ this.handlePageChange }
+									onPageLoad={ this.handlePageLoad }
 								/>
 							)}
 						/>
@@ -72,7 +75,8 @@ export default class App extends Component {
 							component={() => (
 								<GamesPage 
 									previousPage={ previousPage }
-									onPageChange={ this.handlePageChange } 
+									onPageChange={ this.handlePageChange }
+									onPageLoad={ this.handlePageLoad }
 								/>
 							)} 
 						/>
@@ -80,7 +84,8 @@ export default class App extends Component {
 							component={() => (
 								<AboutPage 
 									previousPage={ previousPage }
-									onPageChange={ this.handlePageChange } 
+									onPageChange={ this.handlePageChange }
+									onPageLoad={ this.handlePageLoad }
 								/>
 							)}
 						/>
@@ -88,6 +93,13 @@ export default class App extends Component {
 				</div>
 			</Router>
 		);
+	}
+
+	handlePageLoad = (newPage) => {
+		const { currentPage } = this.state;
+		if(currentPage === undefined){
+			this.setState({ currentPage: newPage });
+		}
 	}
 
 	handlePageChange = (nextPage) => {

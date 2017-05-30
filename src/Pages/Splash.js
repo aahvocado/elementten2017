@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cx from 'classnames';
+import { CONSTANTS } from '../constants';
 
 /* components */
 import Navigation from '../Components/Navigation';
@@ -9,7 +10,9 @@ import '../Styles/splash-page.css';
 
 export default class Splash extends Component {
 	static defaultProps = {
+		page: CONSTANTS.PAGE.SPLASH,
 		onPageChange: () => Promise.resolve(),
+		onPageLoad: () => Promise.resolve(),
 	};
 
 	render(){
@@ -22,6 +25,11 @@ export default class Splash extends Component {
 				/>
 			</div>
 		);
+	}
+
+	componentDidMount() {
+		const { onPageLoad, page } = this.props;
+		onPageLoad(page);
 	}
 
 	handlePageChange = (nextPage) => {
