@@ -24,16 +24,24 @@
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	.project-item {
+	.project-item:not(.mod-large) {
 		flex: 1 1 45%;
 		height: 150px;
+	}
+	.project-item.mod-large {
+		flex: 1 1 100%;
+		height: 250px;
 	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-	.project-item {
+	.project-item:not(.mod-large) {
 		flex: 1 1 45%;
 		height: 200px;
+	}
+	.project-item.mod-large {
+		flex: 1 1 100%;
+		height: 350px;
 	}
 }
 

@@ -32,6 +32,7 @@ export default class ProjectItem extends React.Component {
 
 		const modifiers = {
 			'mod-active': active,
+			'mod-large': active,
 		};
 
 		const isExternalLink = linkTo && linkTo.includes('http');
