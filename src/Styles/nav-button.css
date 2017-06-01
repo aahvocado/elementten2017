@@ -1,6 +1,8 @@
 .nav-button-component {
 	height: 200px;
 	width: 200px;
+	box-sizing: border-box;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,8 +21,7 @@
 	transition: transform 100ms;
 }
 .nav-button-component.mod-boxy {
-	height: 75px;
-	width: 180px;
+	padding: 10px;
 	
 	border: 2px solid white;
 	background: transparent;
@@ -35,16 +36,29 @@
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	
+	.floating-button-container {
+		width: 100%; 
+	}
+	.nav-button-component.mod-boxy {
+		height: 50px;
+		width: inherit;
+	}
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	
+	.floating-button-container {
+		width: 100%; 
+	}
+	.nav-button-component.mod-boxy {
+		height: 50px;
+		width: inherit;
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-	.nav-button-component {
-
+	.nav-button-component.mod-boxy {
+		height: 70px;
+		width: 170px;
 	}
 }
 

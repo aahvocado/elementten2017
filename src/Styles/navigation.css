@@ -4,9 +4,9 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding: 2rem 0;
 	transition: transform 1s;
 	z-index: 5;
+	box-sizing: border-box;
 }
 .navigation-component .nav-title {
 	color: white;
@@ -23,6 +23,7 @@
 	flex-direction: column;
 	align-items: center;
 	position: relative;
+	padding: 1rem;
 }
 .navigation-component.mod-vertical .nav-button-component ~ .nav-button-component,
 .navigation-component.mod-vertical .floating-button-container ~ .floating-button-container {
@@ -49,7 +50,6 @@
 		left: 0;
 		top: 0;
 		width: 150px;
-		box-sizing: border-box;
 	}
 }
 /* tablet */
@@ -78,5 +78,6 @@
 	}
 	.navigation-component.mod-vertical {
 		min-width: 200px;
+		padding: 2rem 0;
 	}
 }
