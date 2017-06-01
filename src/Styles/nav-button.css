@@ -73,15 +73,7 @@
 }
 .nav-button-component.mod-boxy:hover {
 	transform: translateY(-5px);
-}
-.mod-projects-page .nav-button-component.mod-boxy:hover {
-	box-shadow: 0 7px #2b7d3a;
-}
-.mod-games-page .nav-button-component.mod-boxy:hover {
-	box-shadow: 0 7px #b97c0b;
-}
-.mod-about-page .nav-button-component.mod-boxy:hover {
-	box-shadow: 0 7px #a45dab;
+	box-shadow: 0 6px rgba(70, 70, 70, 0.5);
 }
 
 /* delays */
