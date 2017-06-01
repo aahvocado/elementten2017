@@ -30,18 +30,29 @@
 
 	color: white;
 }
-.nav-button-component:not(:hover):not(:focus):not(.mod-boxy) {
-	color: #5073ad;
-	border-color: transparent;
-}
+
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
 	.floating-button-container {
 		width: 100%; 
 	}
+	.nav-button-component:not(.mod-boxy) {
+		padding: 10px;
+		margin: auto;
+		height: 50px;
+		width: 200px;
+		
+		border: 2px solid #5073ad;
+		background: transparent;
+		border-radius: 5px;
+		font-size: 1.5rem;
+	}
 	.nav-button-component.mod-boxy {
 		height: 50px;
 		width: inherit;
+	}
+	.nav-button-component:not(:hover):not(:focus):not(.mod-boxy) {
+		color: #5073ad;
 	}
 }
 /* tablet */
@@ -53,12 +64,20 @@
 		height: 50px;
 		width: inherit;
 	}
+	.nav-button-component:not(:hover):not(:focus):not(.mod-boxy) {
+		color: #5073ad;
+		border-color: transparent;
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
 	.nav-button-component.mod-boxy {
 		height: 70px;
 		width: 170px;
+	}
+	.nav-button-component:not(:hover):not(:focus):not(.mod-boxy) {
+		color: #5073ad;
+		border-color: transparent;
 	}
 }
 

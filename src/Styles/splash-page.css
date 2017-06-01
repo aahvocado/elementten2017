@@ -5,6 +5,9 @@
 
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
+	.et-header + .navigation-component {
+		margin-top: 2rem;
+	}
 	.et-splash-page .floating-button-container {
 		margin: 10px;
 	}
