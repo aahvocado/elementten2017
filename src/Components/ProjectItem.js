@@ -10,22 +10,22 @@ import '../Styles/project-item.css';
 
 export default class ProjectItem extends React.Component {
 	static defaultProps = {
-    	name: '',
-    	icon: '',
-    	description: '',
-    	linkTo: undefined,
+		data: {
+	    	name: '',
+	    	icon: '',
+	    	description: '',
+	    	linkTo: undefined,
+		},
+		active: false,
+		index: -1,
     	onClick: () => {},
     };
 
-    state = {
-    	active: false,
-    }
-
 	render(){
-		const { name, icon, description, linkTo, children } = this.props;
-		const { active } = this.state;
+		const { data, children, active, index } = this.props;
+		const { name, icon, description, linkTo } = data;
 
-		const imgPath = require(`../images/${icon}`);
+		const imgPath = icon && require(`../images/${icon}`);
 		const styles = {
 			backgroundImage: `url(${imgPath})`
 		};
@@ -33,6 +33,7 @@ export default class ProjectItem extends React.Component {
 		const modifiers = {
 			'mod-active': active,
 			'mod-large': active,
+			'mod-psuedo-item': index === -1,
 		};
 
 		const isExternalLink = linkTo && linkTo.includes('http');
@@ -79,7 +80,7 @@ export default class ProjectItem extends React.Component {
 	}
 
 	handleOnClick = () => {
-		const { active } = this.state;
-		this.setState({ active: !active })
+		const { index, onClick } = this.props;
+		onClick(index);
 	}
 }
