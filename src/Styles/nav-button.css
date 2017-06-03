@@ -33,9 +33,6 @@
 
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.floating-button-container {
-		width: 100%; 
-	}
 	.nav-button-component:not(.mod-boxy) {
 		padding: 10px;
 		margin: auto;
@@ -57,9 +54,6 @@
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	.floating-button-container {
-		width: 100%; 
-	}
 	.nav-button-component.mod-boxy {
 		height: 50px;
 		width: inherit;
@@ -93,24 +87,4 @@
 .nav-button-component.mod-boxy:hover {
 	transform: translateY(-5px);
 	box-shadow: 0 6px rgba(70, 70, 70, 0.5);
-}
-
-/* delays */
-.floating-button-container:nth-child(1) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(1) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 200ms;
-}
-.floating-button-container:nth-child(2) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(2) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 400ms;
-}
-
-.floating-button-container:nth-child(3) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(3) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 600ms;
-}
-
-.floating-button-container:nth-child(4) .pop-in-enter.pop-in-enter-active,
-.floating-button-container:nth-child(4) .pop-in-appear.pop-in-appear-active {
-	transition-delay: 800ms;
 }

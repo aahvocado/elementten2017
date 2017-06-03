@@ -1,3 +1,18 @@
+/* grow from background */
+.animation-grow-from-bg {
+    animation-name: grow-from-bg;
+    animation-duration: 800ms;
+}
+@keyframes grow-from-bg {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
 /* sliding */
 @keyframes vertical-background-slide-in {
     0% { 
@@ -15,6 +30,7 @@
         transform: scaleX(1);
     }
 }
+
 /* border color top-left to bottom-right from codepen https://codepen.io/giana/pen/yYBpVY */
 .mod-border-color-change {
     position: relative;
