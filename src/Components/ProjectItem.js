@@ -38,15 +38,18 @@ export default class ProjectItem extends React.Component {
 			'mod-extra-item': isExtra,
 			'mod-invisible-item': invisible,
 
-			'projects-border-color': category === CONSTANTS.CATEGORY.PROJECTS,
-			'games-border-color': category === CONSTANTS.CATEGORY.GAMES,
+			'mod-border-color-change type-default-to-projects': category === CONSTANTS.CATEGORY.PROJECTS,
 		};
+
+		const borderMod = {
+			
+		}
 
 		const isExternalLink = linkTo && linkTo.includes('http');
 		
 		return (
 			<li 
-				className={cx('project-item', modifiers)}
+				className={ cx('project-item', modifiers) }
 				tabIndex={ isExtra ? -1 : index }
 				onClick={ this.handleOnClick }
 			>
@@ -56,7 +59,7 @@ export default class ProjectItem extends React.Component {
 				>
 				</div>
 
-				<div className="project-item__container">
+				<div className={ cx('project-item__container', borderMod)}>
 					<h3 className="project-item__name">{ name }</h3>
 					<p className="project-item__description">{ description }</p>
 

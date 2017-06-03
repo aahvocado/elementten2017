@@ -2,7 +2,7 @@
 .project-item {
 	background: white;
 	box-sizing: border-box;
-	border: 2px solid white;
+	border: 5px solid transparent;
 	
 	color: black;
 	overflow: hidden;
@@ -83,10 +83,13 @@
 	font-family: 'Convergence', sans-serif;
 	z-index: 1;
 
+	border: 5px solid white;
+
 	flex: 0 0 auto;
 	width: 100%;
 	padding: 1rem;
 	box-sizing: border-box;
+	overflow: hidden;
 
 	position: absolute;
 	left: 0;
@@ -112,14 +115,14 @@
 	transform: translateX(-100%);
 	transition: transform 700ms;
 }
-/* info name and description*/
+/* item name */
 .project-item__name {
 	font-size: 2rem;
 	text-align: center;
-	cursor: default;
 }
 .project-item.mod-active .project-item__name {
 	position: relative;
+	/*cursor: default;*/
 }
 .project-item:not(.mod-active) .project-item__name {
 	position: absolute;
@@ -130,9 +133,14 @@
 .project-item:hover:not(.mod-active) .project-item__name {
 	opacity: 1;
 }
+/* description */
 .project-item__description {
 	font-size: 0.8rem;
 }
+/*.project-item.mod-active .project-item__description {
+	cursor: default;
+}*/
+/* more general */
 .project-item__name,
 .project-item__description,
 .project-item__link {

@@ -58,7 +58,7 @@ export default class ProjectList extends React.Component {
 		}
 
 		// add an empty item for odd numbered lists
-		if (selectedIdx && renderedProjects && itemCount % 2 === 0) {
+		if (selectedIdx !== undefined && renderedProjects && itemCount % 2 === 0) {
 			renderedProjects.push(
 				<ProjectItem 
 					key={ `pseudo-item-${itemCount}-key` }
@@ -79,6 +79,6 @@ export default class ProjectList extends React.Component {
 
 	handleItemOnClick = (idx) => {
 		const { selectedIdx } = this.state;
-		this.setState({ selectedIdx: selectedIdx === idx ? -1 : idx });
+		this.setState({ selectedIdx: selectedIdx === idx ? undefined : idx });
 	}
 }

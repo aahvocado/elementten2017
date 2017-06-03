@@ -1,3 +1,4 @@
+/* sliding */
 @keyframes vertical-background-slide-in {
     0% { 
         transform: scaleY(0);
@@ -13,4 +14,58 @@
     100% { 
         transform: scaleX(1);
     }
+}
+/* border color top-left to bottom-right from codepen https://codepen.io/giana/pen/yYBpVY */
+.mod-border-color-change {
+    position: relative;
+    outline: none;
+}
+.mod-border-color-change:before,
+.mod-border-color-change:after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 4px solid transparent;
+}
+.mod-border-color-change:not(.mod-active):before,
+.mod-border-color-change:not(.mod-active):after {
+    border-color: transparent;
+    z-index: 0;
+}
+.mod-border-color-change:before {
+    top: 0;
+    left: 0;
+    transition:
+        width 0.25s ease-out,
+        height 0.25s ease-out 0.25s,
+        border-color 0.25s;
+}
+.mod-border-color-change:after {
+    top: 0;
+    left: 0;
+    transition:
+        height 0.25s ease-out,
+        width 0.25s ease-out 0.25s,
+        border-color 0.25s;
+}
+
+.mod-border-color-change.mod-active:before,
+.mod-border-color-change.mod-active:after {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.mod-border-color-change.type-default-to-projects.mod-active:before {
+    border-top-color: #2b9a3f;
+    border-right-color: #2b9a3f;
+    
+}
+
+.mod-border-color-change.type-default-to-projects.mod-active:after {
+    border-bottom-color: #2b9a3f;
+    border-left-color: #2b9a3f;
+    
 }

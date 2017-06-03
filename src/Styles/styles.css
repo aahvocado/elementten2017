@@ -1,3 +1,6 @@
+.et-color {
+	color: #5073ad;
+}
 .projects-color {
 	color: #2b9a3f;
 }
@@ -8,6 +11,9 @@
 	color: #db7ee4;
 }
 
+.et-border-color {
+	border-color: #5073ad;
+}
 .projects-border-color {
 	border-color: #2b9a3f;
 }
