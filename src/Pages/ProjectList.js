@@ -24,19 +24,9 @@ export default class ProjectList extends React.Component {
 		const { data } = this.props;
 		const { selectedIdx } = this.state;
 
+		// render all items normally
 		let renderedProjects = [];
 		data.forEach((project, idx) => {
-			const shouldRenderBefore = selectedIdx && selectedIdx % 2;
-
-			if (selectedIdx === idx && shouldRenderBefore) { // selected even column
-				renderedProjects.push(
-					<ProjectItem 
-						key={ `pseudo-item-${idx}-key` }
-						index={ -1 }
-					/>
-				);
-			}
-
 			renderedProjects.push(
 				<ProjectItem 
 					key={ `project-item-${idx}-key` }
@@ -44,18 +34,37 @@ export default class ProjectList extends React.Component {
 					index={ idx }
 					active={ selectedIdx === idx }
 					data={ project }
+					invisible={ selectedIdx-1 === idx }
 				/>
 			);
+		});
 
-			/*if (selectedIdx === idx && !shouldRenderBefore) { // selected odd column
-				renderedProjects.push(
-					<ProjectItem 
-						key={ `pseudo-item-${idx}-key` }
-						index={ -1 }
-					/>
-				);
-			}*/
-		});		
+		// add a duplicate fake item one if selecting on right column
+		const shouldRenderExtra = selectedIdx && selectedIdx % 2;
+		if (shouldRenderExtra && renderedProjects.length > 2 && selectedIdx > 0) {
+			const extraIndex = selectedIdx - 1;
+			const newIndex = selectedIdx + 1;
+			const extraData = data[extraIndex];
+			renderedProjects.splice(newIndex, 0, 
+				<ProjectItem 
+					key={ `extra-project-item-${extraIndex}-key` }
+					onClick={ this.handleItemOnClick }
+					index={ extraIndex }
+					data={ extraData }
+					invisible={ false }
+				/>
+			);
+		}
+
+		// add an empty item for odd numbered lists
+		if (selectedIdx && renderedProjects && renderedProjects.length % 2 === 0) {
+			renderedProjects.push(
+				<ProjectItem 
+					key={ `pseudo-item-${renderedProjects.length}-key` }
+					index={ -1 }
+				/>
+			);
+		}
 
 		return (
 			<div className={ cx('et-list-container') }>

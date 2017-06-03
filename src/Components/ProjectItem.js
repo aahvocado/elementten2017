@@ -17,12 +17,13 @@ export default class ProjectItem extends React.Component {
 	    	linkTo: undefined,
 		},
 		active: false,
+		invisible: false,
 		index: -1,
     	onClick: () => {},
     };
 
 	render(){
-		const { data, children, active, index } = this.props;
+		const { data, children, active, index, invisible } = this.props;
 		const { name, icon, description, linkTo } = data;
 
 		const imgPath = icon && require(`../images/${icon}`);
@@ -34,6 +35,7 @@ export default class ProjectItem extends React.Component {
 			'mod-active': active,
 			'mod-large': active,
 			'mod-psuedo-item': index === -1,
+			'mod-invisible-item': invisible,
 		};
 
 		const isExternalLink = linkTo && linkTo.includes('http');

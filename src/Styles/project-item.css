@@ -13,6 +13,12 @@
 
 	display: flex;
 	flex-direction: column;
+
+	transition: all 500ms;
+	transition-properties: height, width;
+}
+.project-item.mod-invisible-item {
+	display: none;
 }
 .project-item:not(.mod-psuedo-item) {
 	cursor: pointer;
@@ -55,6 +61,10 @@
 .project-item__image {
 	flex: 1 1 auto;
 	width: 100%;
+	background-origin: border-box;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 /* info */
 .project-item__container {
@@ -71,6 +81,9 @@
 	left: 0;
 	bottom: 0;
 	top: 0;
+}
+.project-item__container {
+	// transition: all 800ms;
 }
 .project-item:not(.mod-psuedo-item):hover .project-item__container:before,
 .project-item:not(.mod-psuedo-item).mod-active .project-item__container:before {
