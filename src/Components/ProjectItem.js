@@ -18,12 +18,13 @@ export default class ProjectItem extends React.Component {
 		},
 		active: false,
 		invisible: false,
+		isExtra: false,
 		index: -1,
     	onClick: () => {},
     };
 
 	render(){
-		const { data, children, active, index, invisible } = this.props;
+		const { data, children, active, invisible, isExtra } = this.props;
 		const { name, icon, description, linkTo } = data;
 
 		const imgPath = icon && require(`../images/${icon}`);
@@ -34,7 +35,7 @@ export default class ProjectItem extends React.Component {
 		const modifiers = {
 			'mod-active': active,
 			'mod-large': active,
-			'mod-psuedo-item': index === -1,
+			'mod-extra-item': isExtra,
 			'mod-invisible-item': invisible,
 		};
 

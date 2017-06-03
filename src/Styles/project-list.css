@@ -11,3 +11,21 @@
 	justify-content: center;
 	align-items: flex-start;
 }
+/* phone */
+@media screen and (min-width : 0) and (max-width : 760px) {
+	.et-project-list {
+		flex-direction: column;
+	}
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+	.et-project-list {
+		flex-direction: row;
+	}
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+	.et-project-list {
+		flex-direction: row;
+	}
+}

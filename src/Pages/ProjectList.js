@@ -53,7 +53,7 @@ export default class ProjectList extends React.Component {
 					onClick={ this.handleItemOnClick }
 					index={ extraIndex }
 					data={ extraData }
-					invisible={ false }
+					isExtra
 				/>
 			);
 		}
@@ -64,6 +64,7 @@ export default class ProjectList extends React.Component {
 				<ProjectItem 
 					key={ `pseudo-item-${itemCount}-key` }
 					index={ -1 }
+					isExtra
 				/>
 			);
 		}
