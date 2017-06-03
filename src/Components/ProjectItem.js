@@ -24,7 +24,7 @@ export default class ProjectItem extends React.Component {
     };
 
 	render(){
-		const { data, children, active, invisible, isExtra } = this.props;
+		const { data, children, active, invisible, isExtra, index } = this.props;
 		const { name, icon, description, linkTo } = data;
 
 		const imgPath = icon && require(`../images/${icon}`);
@@ -44,6 +44,7 @@ export default class ProjectItem extends React.Component {
 		return (
 			<li 
 				className={cx('project-item', modifiers)}
+				tabIndex={ isExtra ? -1 : index }
 				onClick={ this.handleOnClick }
 			>
 				<div 

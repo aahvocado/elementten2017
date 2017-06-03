@@ -16,6 +16,9 @@
 	transition: all 500ms;
 	transition-properties: height, width;
 }
+/*.project-item:focus {
+	outline: 1px solid #8bbbb7;
+}*/
 .project-item:not(.mod-extra-item) {
 	cursor: pointer;
 }
