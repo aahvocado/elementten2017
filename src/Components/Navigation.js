@@ -55,23 +55,7 @@ export default class Navigation extends React.Component {
 						</Link>
 					</ReactCSSTransitionGroup>
 				}
-				<ReactCSSTransitionGroup
-					className='floating-button-container'
-					transitionName="pop-in"
-					transitionAppear={true}
-      				transitionAppearTimeout={200 + 1000}
-					transitionEnterTimeout={1200}
-					transitionLeaveTimeout={1000}>
-					<NavButton 
-						txt='Projects'
-						wrapperCls="projects-color"
-						boxy={ vertical }
-						page={ CONSTANTS.PAGE.PROJECTS }
-						active={ page === CONSTANTS.PAGE.PROJECTS }
-						linkPath={ CONSTANTS.ROUTES.PROJECTS }
-						onNavClick={ this.handlePageChange } />
-				</ReactCSSTransitionGroup>
-
+				
 				<ReactCSSTransitionGroup
 					className='floating-button-container'
 					transitionName="pop-in"
@@ -86,6 +70,23 @@ export default class Navigation extends React.Component {
 						page={ CONSTANTS.PAGE.GAMES }
 						active={ page === CONSTANTS.PAGE.GAMES }
 						linkPath={ CONSTANTS.ROUTES.GAMES }
+						onNavClick={ this.handlePageChange } />
+				</ReactCSSTransitionGroup>
+				
+				<ReactCSSTransitionGroup
+					className='floating-button-container'
+					transitionName="pop-in"
+					transitionAppear={true}
+      				transitionAppearTimeout={200 + 1000}
+					transitionEnterTimeout={1200}
+					transitionLeaveTimeout={1000}>
+					<NavButton 
+						txt='Projects'
+						wrapperCls="projects-color"
+						boxy={ vertical }
+						page={ CONSTANTS.PAGE.PROJECTS }
+						active={ page === CONSTANTS.PAGE.PROJECTS }
+						linkPath={ CONSTANTS.ROUTES.PROJECTS }
 						onNavClick={ this.handlePageChange } />
 				</ReactCSSTransitionGroup>
 
