@@ -7,7 +7,6 @@
 	color: black;
 	overflow: hidden;
 
-	margin: 10px;
 	position: relative;
 	box-sizing: border-box;
 
@@ -33,7 +32,8 @@
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
 	.project-item:not(.mod-large) {
-		flex: 1 1 45%;
+		flex: 1 1 50%;
+		max-width: 50%;
 		height: 150px;
 	}
 	.project-item.mod-large {
@@ -44,7 +44,8 @@
 /* desktop */
 @media screen and (min-width : 1220px) {
 	.project-item:not(.mod-large) {
-		flex: 1 1 45%;
+		flex: 1 1 50%;
+		max-width: 50%;
 		height: 200px;
 	}
 	.project-item.mod-large {

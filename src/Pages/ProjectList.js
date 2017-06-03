@@ -23,6 +23,9 @@ export default class ProjectList extends React.Component {
 	render(){
 		const { data } = this.props;
 		const { selectedIdx } = this.state;
+		
+		const shouldRenderExtra = selectedIdx && selectedIdx % 2;
+		const itemCount = data.length;
 
 		// render all items normally
 		let renderedProjects = [];
@@ -34,14 +37,13 @@ export default class ProjectList extends React.Component {
 					index={ idx }
 					active={ selectedIdx === idx }
 					data={ project }
-					invisible={ selectedIdx-1 === idx }
+					invisible={ shouldRenderExtra && selectedIdx-1 === idx }
 				/>
 			);
 		});
 
 		// add a duplicate fake item one if selecting on right column
-		const shouldRenderExtra = selectedIdx && selectedIdx % 2;
-		if (shouldRenderExtra && renderedProjects.length > 2 && selectedIdx > 0) {
+		if (shouldRenderExtra && itemCount > 2 && selectedIdx > 0) {
 			const extraIndex = selectedIdx - 1;
 			const newIndex = selectedIdx + 1;
 			const extraData = data[extraIndex];
@@ -57,10 +59,10 @@ export default class ProjectList extends React.Component {
 		}
 
 		// add an empty item for odd numbered lists
-		if (selectedIdx && renderedProjects && renderedProjects.length % 2 === 0) {
+		if (selectedIdx && renderedProjects && itemCount % 2 === 0) {
 			renderedProjects.push(
 				<ProjectItem 
-					key={ `pseudo-item-${renderedProjects.length}-key` }
+					key={ `pseudo-item-${itemCount}-key` }
 					index={ -1 }
 				/>
 			);
