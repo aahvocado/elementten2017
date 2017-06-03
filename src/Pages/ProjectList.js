@@ -53,7 +53,6 @@ export default class ProjectList extends React.Component {
 					onClick={ this.handleItemOnClick }
 					index={ extraIndex }
 					data={ extraData }
-					isExtra
 				/>
 			);
 		}
