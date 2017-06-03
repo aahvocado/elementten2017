@@ -18,7 +18,6 @@
 /* border color top-left to bottom-right from codepen https://codepen.io/giana/pen/yYBpVY */
 .mod-border-color-change {
     position: relative;
-    outline: none;
 }
 .mod-border-color-change:before,
 .mod-border-color-change:after {

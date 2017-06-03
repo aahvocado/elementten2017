@@ -3,6 +3,7 @@
 	background: white;
 	box-sizing: border-box;
 	border: 5px solid transparent;
+    outline: none;
 	
 	color: black;
 	overflow: hidden;
@@ -167,6 +168,10 @@
 	cursor: default;
 }*/
 /* more general */
+.project-item__name,
+.project-item__description {
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.8);
+}
 .project-item__name,
 .project-item__description,
 .project-item__link {
