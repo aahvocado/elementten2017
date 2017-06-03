@@ -37,7 +37,7 @@ export default class ProjectList extends React.Component {
 					index={ idx }
 					active={ selectedIdx === idx }
 					data={ project }
-					invisible={ shouldRenderExtra && selectedIdx-1 === idx }
+					isDisplayNone={ shouldRenderExtra && selectedIdx-1 === idx }
 				/>
 			);
 		});
@@ -53,6 +53,7 @@ export default class ProjectList extends React.Component {
 					onClick={ this.handleItemOnClick }
 					index={ extraIndex }
 					data={ extraData }
+					isExtra
 				/>
 			);
 		}
@@ -63,7 +64,7 @@ export default class ProjectList extends React.Component {
 				<ProjectItem 
 					key={ `pseudo-item-${itemCount}-key` }
 					index={ -1 }
-					isExtra
+					isInvisible
 				/>
 			);
 		}
