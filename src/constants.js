@@ -23,4 +23,8 @@ export var CONSTANTS = {
 		'/games': 'GAMES',
 		'/about': 'ABOUT',
 	},
+	CATEGORY: {
+		PROJECTS: 'projects-category',
+		GAMES: 'games-category',
+	},
 };

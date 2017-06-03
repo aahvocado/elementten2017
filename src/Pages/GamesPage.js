@@ -16,9 +16,7 @@ export default class ProjectPage extends Page {
 	};
 
 	renderPageInner() {
-		const { pageName } = this.props;
-
-		const data = ProjectsDetails().filter((item) => { return item.category === pageName });
+		const data = ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.GAMES });
 
 		return (
 			<ProjectList

@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-// import {CONSTANTS} from '../constants';
+import { CONSTANTS } from '../constants';
 import { Link } from 'react-router-dom';
 
 /* components */
@@ -25,7 +25,7 @@ export default class ProjectItem extends React.Component {
 
 	render(){
 		const { data, children, active, invisible, isExtra, index } = this.props;
-		const { name, icon, description, linkTo } = data;
+		const { name, icon, description, linkTo, category } = data;
 
 		const imgPath = icon && require(`../images/${icon}`);
 		const styles = {
@@ -37,6 +37,9 @@ export default class ProjectItem extends React.Component {
 			'mod-large': active,
 			'mod-extra-item': isExtra,
 			'mod-invisible-item': invisible,
+
+			'projects-border-color': category === CONSTANTS.CATEGORY.PROJECTS,
+			'games-border-color': category === CONSTANTS.CATEGORY.GAMES,
 		};
 
 		const isExternalLink = linkTo && linkTo.includes('http');

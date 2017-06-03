@@ -116,6 +116,7 @@
 .project-item__name {
 	font-size: 2rem;
 	text-align: center;
+	cursor: default;
 }
 .project-item.mod-active .project-item__name {
 	position: relative;
