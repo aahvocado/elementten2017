@@ -58,6 +58,7 @@ export default class Navigation extends React.Component {
 
 				<NavButton 
 					txt='Projects'
+					style={ { animationDelay: '400ms' } }
 					wrapperCls={ cx('projects-color', 'animation-grow-from-bg') }
 					boxy={ vertical }
 					page={ CONSTANTS.PAGE.PROJECTS }

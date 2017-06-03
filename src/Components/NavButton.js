@@ -31,7 +31,7 @@ export default class NavButton extends React.Component {
 		};
 
 		return (
-			<Link	
+			<Link
 				className={cx('nav-button-component', modifiers, wrapperCls)}
 				key={`${txt}-key`}
 				onClick={ this.handleNavClick }

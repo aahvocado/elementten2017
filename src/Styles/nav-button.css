@@ -9,7 +9,7 @@
 	position: relative;
 	
 	border: 2px solid white;
-	background: white;
+	background: transparent;
 	border-radius: 50%;
 	font-size: 2rem;
 
@@ -18,13 +18,12 @@
 	font-family: arial, sans-serif;
 	cursor: pointer;
 
-	transition: transform 100ms;
+	transition: all 300ms;
 }
 .nav-button-component.mod-boxy {
 	padding: 10px;
 	
 	border: 2px solid white;
-	background: transparent;
 	border-radius: 5px;
 	font-size: 1.5rem;
 

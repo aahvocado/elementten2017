@@ -1,17 +1,33 @@
 /* grow from background */
 .animation-grow-from-bg {
+    opacity: 0;
+
     animation-name: grow-from-bg;
     animation-duration: 800ms;
+    animation-fill-mode: forwards;
 }
 @keyframes grow-from-bg {
     0% {
         opacity: 0;
-        transform: scale(0);
+    }
+    99% {
+        opacity: 1;
     }
     100% {
         opacity: 1;
-        transform: scaleY(1);
     }
+}
+.animation-grow-from-bg:nth-child(1) {
+    animation-delay: 200ms;
+}
+.animation-grow-from-bg:nth-child(2) {
+    animation-delay: 400ms;
+}
+.animation-grow-from-bg:nth-child(3) {
+    animation-delay: 600ms;
+}
+.animation-grow-from-bg:nth-child(4) {
+    animation-delay: 800ms;
 }
 /* sliding */
 @keyframes vertical-background-slide-in {
