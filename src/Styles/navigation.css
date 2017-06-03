@@ -23,7 +23,6 @@
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	padding: 1rem;
 }
 .navigation-component.mod-vertical .nav-button-component ~ .nav-button-component,
 .navigation-component.mod-vertical .floating-button-container ~ .floating-button-container {
@@ -50,6 +49,8 @@
 		left: 0;
 		top: 0;
 		width: 150px;
+	    justify-content: flex-start;
+    	padding: 90px 1rem;
 	}
 }
 /* tablet */
@@ -65,6 +66,7 @@
 	/* vertical */
 	.navigation-component.mod-vertical {
 		width: 150px;
+		padding: 1rem;
 	}
 }
 /* desktop */
