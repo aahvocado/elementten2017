@@ -26,6 +26,9 @@
 		width: 100%;
 		height: 150px;
 	}
+	.project-item.mod-large {
+		height: 250px;
+	}
 	.project-item.mod-extra-item {
 		display: none;
 	}
