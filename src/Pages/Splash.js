@@ -21,6 +21,7 @@ export default class Splash extends Component {
 				<Header />
 
 				<Navigation
+					fadeIn
 					onPageChange={ this.handlePageChange }
 				/>
 			</div>

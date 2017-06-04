@@ -16,11 +16,12 @@ export default class Navigation extends React.Component {
     	previousPage: CONSTANTS.PAGE.SPLASH,
     	vertical: false,
 		menuVisible: false,
+		fadeIn: false,
 		onPageChange: () => Promise.resolve(),
     };
 
 	render(){
-		const { page, vertical, menuVisible } = this.props;
+		const { page, vertical, menuVisible, fadeIn } = this.props;
 
 		const modifiers = {
 			'mod-vertical': vertical,
@@ -50,7 +51,7 @@ export default class Navigation extends React.Component {
 				<NavButton 
 					txt='Games'
 					wrapperCls={ cx('games-color') }
-					fadeIn
+					fadeIn={ fadeIn }
 					boxy={ vertical }
 					page={ CONSTANTS.PAGE.GAMES }
 					active={ page === CONSTANTS.PAGE.GAMES }
@@ -60,7 +61,7 @@ export default class Navigation extends React.Component {
 				<NavButton 
 					txt='Projects'
 					wrapperCls={ cx('projects-color') }
-					fadeIn
+					fadeIn={ fadeIn }
 					boxy={ vertical }
 					page={ CONSTANTS.PAGE.PROJECTS }
 					active={ page === CONSTANTS.PAGE.PROJECTS }
@@ -70,7 +71,7 @@ export default class Navigation extends React.Component {
 				<NavButton 
 					txt='About'
 					wrapperCls={ cx('about-color') }
-					fadeIn
+					fadeIn={ fadeIn }
 					boxy={ vertical }
 					page={ CONSTANTS.PAGE.ABOUT }
 					active={ page === CONSTANTS.PAGE.ABOUT }
