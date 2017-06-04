@@ -45,7 +45,7 @@
 	}
 	.nav-button-component.mod-boxy {
 		height: 50px;
-		width: inherit;
+		width: 100%;
 	}
 	.nav-button-component:not(:hover):not(:focus):not(.mod-boxy) {
 		color: #5073ad;
@@ -55,7 +55,7 @@
 @media screen and (min-width : 760px) and (max-width : 1220px) {
 	.nav-button-component.mod-boxy {
 		height: 50px;
-		width: inherit;
+		width: 100%;
 	}
 	.nav-button-component:not(:hover):not(:focus):not(.mod-boxy) {
 		color: #5073ad;
