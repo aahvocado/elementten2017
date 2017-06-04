@@ -14,16 +14,18 @@ export default class NavButton extends React.Component {
 		active: false,
 		page: '',
 		boxy: false,
+		fadeIn: false,
 		linkPath: CONSTANTS.ROUTES.SPLASH,
 		onNavClick: () => Promise.resolve(),
     };
 
 	render(){
-		const { wrapperCls, txt, active, boxy, page, linkPath } = this.props;
+		const { wrapperCls, txt, active, boxy, page, linkPath, fadeIn } = this.props;
 
 		const modifiers = {
 			'active': active,
 			'mod-boxy': boxy,
+			'mod-fade-in animation-grow-from-bg': fadeIn,
 
 			'projects-border-color': page === CONSTANTS.PAGE.PROJECTS,
 			'games-border-color': page === CONSTANTS.PAGE.GAMES,

@@ -49,7 +49,8 @@ export default class Navigation extends React.Component {
 				
 				<NavButton 
 					txt='Games'
-					wrapperCls={ cx('games-color', 'animation-grow-from-bg') }
+					wrapperCls={ cx('games-color') }
+					fadeIn
 					boxy={ vertical }
 					page={ CONSTANTS.PAGE.GAMES }
 					active={ page === CONSTANTS.PAGE.GAMES }
@@ -58,8 +59,8 @@ export default class Navigation extends React.Component {
 
 				<NavButton 
 					txt='Projects'
-					style={ { animationDelay: '400ms' } }
-					wrapperCls={ cx('projects-color', 'animation-grow-from-bg') }
+					wrapperCls={ cx('projects-color') }
+					fadeIn
 					boxy={ vertical }
 					page={ CONSTANTS.PAGE.PROJECTS }
 					active={ page === CONSTANTS.PAGE.PROJECTS }
@@ -68,7 +69,8 @@ export default class Navigation extends React.Component {
 
 				<NavButton 
 					txt='About'
-					wrapperCls={ cx('about-color', 'animation-grow-from-bg') }
+					wrapperCls={ cx('about-color') }
+					fadeIn
 					boxy={ vertical }
 					page={ CONSTANTS.PAGE.ABOUT }
 					active={ page === CONSTANTS.PAGE.ABOUT }
