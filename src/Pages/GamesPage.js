@@ -13,11 +13,12 @@ export default class ProjectPage extends Page {
 	static defaultProps = {
 		page: CONSTANTS.PAGE.GAMES,
 		pageName: 'games',
+		data: ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.GAMES }),
 	};
 
 	renderPageInner() {
+		const { data } = this.props;
 		const { selectedIdx } = this.state;
-		const data = ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.GAMES });
 
 		return (
 			<ProjectList

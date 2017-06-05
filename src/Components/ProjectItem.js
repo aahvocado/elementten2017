@@ -61,7 +61,10 @@ export default class ProjectItem extends React.Component {
 				</div>
 
 				<div className={ cx('project-item__container')}>
-					<button className="project-item__close" onClick={ this.checkOnClick }>X</button>
+					<div className="project-item__nav-container">
+						<button className="project-item__nav mod-left" onClick={ this.handleLeftClick }>X</button>
+						<button className="project-item__nav mod-right" onClick={ this.handleRightClick }>X</button>
+					</div>					
 					
 					<h3 className="project-item__name">{ name }</h3>
 					<p className="project-item__description">{ description }</p>
@@ -102,5 +105,15 @@ export default class ProjectItem extends React.Component {
 	handleOnClick = () => {
 		const { index, onClick } = this.props;
 		onClick(index);
+	}
+
+	handleLeftClick = () => {
+		const { index, onClick } = this.props;
+		onClick(index - 1);
+	}
+
+	handleRightClick = () => {
+		const { index, onClick } = this.props;
+		onClick(index + 1);
 	}
 }

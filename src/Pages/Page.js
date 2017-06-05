@@ -12,6 +12,7 @@ export default class Page extends Component {
 	static defaultProps = {
 		page: undefined,
 		pageName: 'default',
+		data: [],
 		onPageChange: () => Promise.resolve(),
 	};
 
@@ -62,7 +63,15 @@ export default class Page extends Component {
 		onPageChange(nextPage);
 	}
 
-	handleIndexChange = (newIndex) => {
+	handleIndexChange = (nextIdx) => {
+		const { data } = this.props;
+		const maxIdx = data.length - 1;
+		let newIndex = nextIdx;
+		if (newIndex > maxIdx) {
+			newIndex = 0;
+		} else if (newIndex < 0) {
+			newIndex = maxIdx;
+		};
 		this.setState({ selectedIdx: newIndex });
 	}
 }

@@ -13,6 +13,7 @@ export default class ProjectPage extends Page {
 	static defaultProps = {
 		page: CONSTANTS.PAGE.PROJECTS,
 		pageName: 'projects',
+		data: ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.PROJECTS }),
 	};
 
 	state = {
@@ -20,8 +21,9 @@ export default class ProjectPage extends Page {
 	}
 
 	renderPageInner() {
+		const { data } = this.props;
 		const { selectedIdx } = this.state;
-		const data = ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.PROJECTS });
+		
 		return (
 			<ProjectList
 				selectedIdx={ selectedIdx }
