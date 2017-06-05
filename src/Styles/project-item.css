@@ -15,10 +15,33 @@
 	flex-direction: column;
 
 	transition: all 500ms;
-	transition-property: height, width;
 }
-.project-item:not(.mod-invisible-item) {
+.project-item:not(.mod-invisible-item):not(.mod-active) {
 	cursor: pointer;
+}
+.project-item.effects--projects:not(.mod-invisible-item).mod-active {
+	border-color: #2b9a3f;
+}
+.project-item.effects--games:not(.mod-invisible-item).mod-active {
+	border-color: orange;
+}
+/* close button */
+.project-item__close {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+
+	width: 50px;
+}
+.project-item.mod-is-even .project-item__close {
+	right: 0;
+}
+.project-item:not(.mod-is-even) .project-item__close {
+	left: 0;
+}
+.project-item:not(.mod-active) .project-item__close {
+	display: none;
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {

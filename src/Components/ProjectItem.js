@@ -39,8 +39,11 @@ export default class ProjectItem extends React.Component {
 			'mod-extra-item': isExtra,
 			'mod-invisible-item': isInvisible,
 			'mod-display-none': isDisplayNone,
+			'mod-is-even': index % 2,
 
-			'mod-border-color-change type-default-to-projects': category === CONSTANTS.CATEGORY.PROJECTS,
+			'effects--projects': category === CONSTANTS.CATEGORY.PROJECTS,
+			'effects--games': category === CONSTANTS.CATEGORY.GAMES,
+			'effects--about': category === CONSTANTS.CATEGORY.ABOUT,
 		};
 
 		const isExternalLink = linkTo && linkTo.includes('http');
@@ -49,7 +52,7 @@ export default class ProjectItem extends React.Component {
 			<li 
 				className={ cx('project-item', modifiers) }
 				tabIndex={ isExtra ? -1 : index }
-				onClick={ this.handleOnClick }
+				onClick={ this.checkOnClick }
 			>
 				<div 
 					className="project-item__image"
@@ -58,6 +61,8 @@ export default class ProjectItem extends React.Component {
 				</div>
 
 				<div className={ cx('project-item__container')}>
+					<button className="project-item__close" onClick={ this.checkOnClick }>X</button>
+					
 					<h3 className="project-item__name">{ name }</h3>
 					<p className="project-item__description">{ description }</p>
 
@@ -85,6 +90,13 @@ export default class ProjectItem extends React.Component {
 				</div>
 			</li>
 		);
+	}
+
+	checkOnClick = () => {
+		const { active } = this.props;
+		if (!active) {
+			this.handleOnClick();
+		}
 	}
 
 	handleOnClick = () => {
