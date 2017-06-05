@@ -13,12 +13,13 @@ import '../Styles/project-list.css';
 */
 export default class ProjectList extends React.Component {
 	static defaultProps = {
+		wrapperCls: '',
 		data: [],
     	selectedIdx: undefined,
     };
 
 	render(){
-		const { data, selectedIdx } = this.props;
+		const { data, selectedIdx, wrapperCls } = this.props;
 		
 		const shouldRenderExtra = selectedIdx && selectedIdx % 2;
 		const itemCount = data.length;
@@ -66,7 +67,7 @@ export default class ProjectList extends React.Component {
 		}
 
 		return (
-			<div className={ cx('et-list-container') }>
+			<div className={ cx('et-list-container', wrapperCls) }>
 				<ul className='et-project-list'>
 					{ renderedProjects }
 				</ul>

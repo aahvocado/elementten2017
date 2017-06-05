@@ -26,6 +26,7 @@ export default class ProjectPage extends Page {
 
 		return (
 			<ProjectList
+				wrapperCls="et-page"
 				selectedIdx={ selectedIdx }
 				data={ data }
 				onSelectedChange={ this.handleIndexChange }
