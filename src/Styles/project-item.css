@@ -25,23 +25,35 @@
 .project-item.effects--games:not(.mod-invisible-item).mod-active {
 	border-color: orange;
 }
-/* close button */
-.project-item__close {
+/* quick nav buttons */
+.project-item__nav-container {
 	position: absolute;
+	left: 0;
+	right: 0;
 	top: 0;
 	bottom: 0;
+
+	display: flex;
+}
+.project-item:not(.mod-active) .project-item__nav-container {
+	display: none;
+}
+.project-item__nav {
+	height: 100%;
+	width: 50px;
+	flex: 0 0 auto;
 	cursor: pointer;
 
-	width: 50px;
+	background: rgba(255, 255, 255, 0.4);
+	color: lightgray;
+	opacity: 0;
+	transition: opacity 500ms;
 }
-.project-item.mod-is-even .project-item__close {
-	right: 0;
+.project-item__nav:hover {
+	opacity: 1;
 }
-.project-item:not(.mod-is-even) .project-item__close {
-	left: 0;
-}
-.project-item:not(.mod-active) .project-item__close {
-	display: none;
+.project-item__nav.mod-right {
+	margin-left: auto;
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {

@@ -62,8 +62,8 @@ export default class ProjectItem extends React.Component {
 
 				<div className={ cx('project-item__container')}>
 					<div className="project-item__nav-container">
-						<button className="project-item__nav mod-left" onClick={ this.handleLeftClick }>X</button>
-						<button className="project-item__nav mod-right" onClick={ this.handleRightClick }>X</button>
+						<button className="project-item__nav mod-left" onClick={ this.handleLeftClick }></button>
+						<button className="project-item__nav mod-right" onClick={ this.handleRightClick }></button>
 					</div>					
 					
 					<h3 className="project-item__name">{ name }</h3>

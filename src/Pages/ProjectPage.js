@@ -23,7 +23,7 @@ export default class ProjectPage extends Page {
 	renderPageInner() {
 		const { data } = this.props;
 		const { selectedIdx } = this.state;
-		
+
 		return (
 			<ProjectList
 				selectedIdx={ selectedIdx }
@@ -31,9 +31,5 @@ export default class ProjectPage extends Page {
 				onSelectedChange={ this.handleIndexChange }
 			/>
 		);
-	}
-
-	handleIndexChange = (newIndex) => {
-		this.setState({ selectedIdx: newIndex });
 	}
 }
