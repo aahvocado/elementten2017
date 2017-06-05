@@ -4,6 +4,7 @@
 	color: white;
     position: relative;
     z-index: 1;
+
 }
 .et-header:before {
     content: '';
