@@ -14,6 +14,12 @@
 	text-align: center;
 	padding: 0 2rem;
 	display: block;
+
+	transition: all 300ms;
+}
+.et-navigation .nav-title:hover {
+	text-shadow: 0 3px rgba(70, 70, 70, 0.5);
+	transform: translateY(-3px);
 }
 /* vertical */
 .et-navigation.mod-vertical {
@@ -21,7 +27,9 @@
 	align-items: center;
 	position: relative;
 }
-.et-navigation.mod-vertical .nav-title + .et-nav-button,
+.et-navigation.mod-vertical .nav-title + .et-nav-button {
+	margin-top: 2rem;
+}
 .et-navigation.mod-vertical .et-nav-button + .et-nav-button {
 	margin-top: 1rem;
 }

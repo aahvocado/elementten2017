@@ -19,31 +19,41 @@
 	transition: all 300ms;
 	z-index: 1;
 }
+/* content */
 .et-nav-button__content {
 	flex: 0 0 auto;
+	box-sizing: border-box;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 1;
+}
+.et-nav-button:not(.mod-boxy) .et-nav-button__content {
 	width: 95%;
 	height: 95%;
 	border-radius: 50%;
-
-	box-sizing: border-box;
 	background: white;
 
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
 }
-.et-nav-button .et-effect-container {
+
+/* effects container */
+.et-effect-container {
+	position: relative;
 	width: 100%;
 	height: 100%;
+}
+.et-nav-button:not(.mod-boxy) .et-effect-container {
 	overflow: hidden;
 	border-radius: 50%;
-	position: relative;
+}
+.et-nav-button.mod-boxy .et-effect-container {
+	display: none;
 }
 .et-nav-button .et-effect-container:before,
 .et-nav-button .et-effect-container:after {
@@ -82,7 +92,6 @@
 .et-nav-button.effects--about:not(.mod-boxy):hover .et-effect-container:before {
 	border-color: #db7ee4;
 }
-
 .et-nav-button.effects--projects .et-effect-container:after {
 	background-color: rgba(255, 255, 255, 0.5);
 }
@@ -146,7 +155,7 @@
 	}
 }
 
-/* generic coloring */
+/* hover effects */
 .et-nav-button:not(.mod-boxy):hover,
 .et-nav-button:not(.mod-boxy):focus {
 	outline: 0;
