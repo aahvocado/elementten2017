@@ -15,6 +15,10 @@ export default class Page extends Component {
 		onPageChange: () => Promise.resolve(),
 	};
 
+	state = {
+		selectedIdx: undefined,
+	}
+
 	render(){
 		const { page, pageName } = this.props;
 
@@ -25,7 +29,10 @@ export default class Page extends Component {
 		};
 
 		return (
-			<div className={cx('et-page__inner')}>
+			<div 
+				className={cx('et-page__inner')}
+				onClick={ this.handleInnerClick }
+			>
 				<h2 className={ cx('et-page__title', titleModifier)}>{ pageName }</h2>
 
 				{ this.renderPageInner() }
@@ -39,14 +46,23 @@ export default class Page extends Component {
 	}
 
 	renderPageInner() {
-		//extend this
+		// extend this
 		return (
 			<div>extend this function</div>
 		);
 	}
 
+	handleInnerClick = () => {
+		// extend this
+		// this.setState({ selectedIdx: undefined });
+	}
+
 	handlePageChange = (nextPage) => {
 		const { onPageChange } = this.props;
 		onPageChange(nextPage);
+	}
+
+	handleIndexChange = (newIndex) => {
+		this.setState({ selectedIdx: newIndex });
 	}
 }

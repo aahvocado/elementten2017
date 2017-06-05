@@ -14,15 +14,11 @@ import '../Styles/project-list.css';
 export default class ProjectList extends React.Component {
 	static defaultProps = {
 		data: [],
+    	selectedIdx: undefined,
     };
 
-    state = {
-    	selectedIdx: undefined,
-    }
-
 	render(){
-		const { data } = this.props;
-		const { selectedIdx } = this.state;
+		const { data, selectedIdx } = this.props;
 		
 		const shouldRenderExtra = selectedIdx && selectedIdx % 2;
 		const itemCount = data.length;
@@ -79,7 +75,7 @@ export default class ProjectList extends React.Component {
 	}
 
 	handleItemOnClick = (idx) => {
-		const { selectedIdx } = this.state;
-		this.setState({ selectedIdx: selectedIdx === idx ? undefined : idx });
+		const { onSelectedChange } = this.props;;
+		onSelectedChange(idx);
 	}
 }

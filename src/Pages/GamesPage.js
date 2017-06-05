@@ -16,11 +16,14 @@ export default class ProjectPage extends Page {
 	};
 
 	renderPageInner() {
+		const { selectedIdx } = this.state;
 		const data = ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.GAMES });
 
 		return (
 			<ProjectList
+				selectedIdx={ selectedIdx }
 				data={ data }
+				onSelectedChange={ this.handleIndexChange }
 			/>
 		);
 	}

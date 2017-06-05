@@ -15,13 +15,23 @@ export default class ProjectPage extends Page {
 		pageName: 'projects',
 	};
 
-	renderPageInner() {
-		const data = ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.PROJECTS });
+	state = {
+		selectedIdx: undefined,
+	}
 
+	renderPageInner() {
+		const { selectedIdx } = this.state;
+		const data = ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.PROJECTS });
 		return (
 			<ProjectList
+				selectedIdx={ selectedIdx }
 				data={ data }
+				onSelectedChange={ this.handleIndexChange }
 			/>
 		);
+	}
+
+	handleIndexChange = (newIndex) => {
+		this.setState({ selectedIdx: newIndex });
 	}
 }
