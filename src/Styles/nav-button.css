@@ -162,7 +162,6 @@
 	transform: scale(1.2);
 
 	transform: translateY(-8px);
-	box-shadow: 0 8px rgba(0, 0, 0, 0.5);
 }
 .et-nav-button.mod-boxy:not(:hover):focus {
 	box-shadow: 0 0 3px 1px white;
