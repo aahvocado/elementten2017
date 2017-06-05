@@ -5,11 +5,8 @@
 
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.et-splash-page .et-navigation {
-		margin: 10px;
-	}
 	.et-header + .et-navigation {
-		margin-top: 2rem;
+		margin-top: 50px;
 	}
 }
 /* tablet */
@@ -17,8 +14,8 @@
 	.et-splash-page {
 		transform: translateY(50%);
 	}
-	.et-splash-page .et-navigation {
-		margin: 30px;
+	.et-header + .et-navigation {
+		margin-top: 50px;
 	}
 }
 /* desktop */
@@ -26,7 +23,7 @@
 	.et-splash-page {
 		transform: translateY(50%);
 	}
-	.et-splash-page .et-navigation {
-		margin: 50px;
+	.et-header + .et-navigation {
+		margin-top: 50px;
 	}
 }

@@ -30,16 +30,23 @@ export default class NavButton extends React.Component {
 			'projects-border-color': page === CONSTANTS.PAGE.PROJECTS,
 			'games-border-color': page === CONSTANTS.PAGE.GAMES,
 			'about-border-color': page === CONSTANTS.PAGE.ABOUT,
+
+			'effects--projects': page === CONSTANTS.PAGE.PROJECTS,
+			'effects--games': page === CONSTANTS.PAGE.GAMES,
+			'effects--about': page === CONSTANTS.PAGE.ABOUT,
 		};
 
 		return (
 			<Link
-				className={cx('nav-button-component', modifiers, wrapperCls)}
+				className={cx('et-nav-button', modifiers, wrapperCls)}
 				key={`${txt}-key`}
 				onClick={ this.handleNavClick }
 				to={ linkPath }
 			>
-				{txt}
+				<span className="et-nav-button__content">
+					{ txt }
+				</span>
+				<span className={ cx('et-effect-container') }></span>
 			</Link>
 		);
 	}

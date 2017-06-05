@@ -21,8 +21,8 @@
 	align-items: center;
 	position: relative;
 }
-.et-navigation.mod-vertical .nav-title + .nav-button-component,
-.et-navigation.mod-vertical .nav-button-component + .nav-button-component {
+.et-navigation.mod-vertical .nav-title + .et-nav-button,
+.et-navigation.mod-vertical .et-nav-button + .et-nav-button {
 	margin-top: 1rem;
 }
 /* phone */
@@ -37,8 +37,8 @@
 		align-items: center;
 		flex-direction: column;
 	}
-	.et-navigation:not(.mod-vertical) .nav-button-component ~ .nav-button-component {
-		margin-top: 1rem;
+	.et-navigation:not(.mod-vertical) .et-nav-button ~ .et-nav-button {
+		margin-top: 1.3rem;
 	}
 	.et-navigation.mod-vertical {
 		position: absolute;
@@ -55,7 +55,7 @@
 		display: none;
 	}
 	/* horizontal */
-	.et-navigation:not(.mod-vertical) .nav-button-component ~ .nav-button-component {
+	.et-navigation:not(.mod-vertical) .et-nav-button ~ .et-nav-button {
 		margin-left: 2rem;
 	}
 	/* vertical */
@@ -69,7 +69,7 @@
 	.et-floating-hamburger { 
 		display: none;
 	}
-	.et-navigation:not(.mod-vertical) .nav-button-component ~ .nav-button-component {
+	.et-navigation:not(.mod-vertical) .et-nav-button ~ .et-nav-button {
 		margin-left: 2rem;
 	}
 	.et-navigation.mod-vertical {

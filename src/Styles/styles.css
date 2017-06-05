@@ -24,6 +24,16 @@
 	border-color: #db7ee4;
 }
 
+.projects-background-color {
+	background-color: #2b9a3f;
+}
+.games-background-color {
+	background-color: orange;
+}
+.about-background-color {
+	background-color: #db7ee4;
+}
+
 #root {
 	color: #5073ad;
 	background: white;
