@@ -28,7 +28,7 @@ export default class ProjectItem extends React.Component {
 		const { data, children, active, isInvisible, isExtra, isDisplayNone, index } = this.props;
 		const { name, icon, description, linkTo, category } = data;
 
-		const imgPath = icon && require(`../images/${icon}`);
+		const imgPath = icon && require(`../../public/images/${icon}`);
 		const styles = {
 			backgroundImage: `url(${imgPath})`
 		};

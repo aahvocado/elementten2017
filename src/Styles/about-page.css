@@ -2,8 +2,11 @@
 	display: flex;
 	flex-direction: column;
 
+	flex: 1 1 auto;
 	position: relative;
 	justify-content: center;
+
+	height: 100%;
 }
 .et-about__image {
 	flex: 0 0 auto;
@@ -13,7 +16,6 @@
     max-width: 860px;
 }
 .et-about__container {
-	position: absolute;
 	top: 0;
 	left: 0;
 
@@ -33,9 +35,28 @@
 	bottom: 0;
 	height: 100%;
 
-	width: 50%;
+	width: 100%;
 	border-radius: 30px;
 	z-index: 1;
+}
+.bg-blur {
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	position: absolute;
+	border-radius: 50%;
+}
+.bg-blur-mask {
+	overflow: hidden;
+	filter: blur(0px);
+	background-image: url('../../public/images/galleryPhoto.jpg');
+	background-attachment: fixed;
+	background-repeat:no-repeat;
+	background-size:100%;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	position: relative;
 }
 .et-about__description {
 	flex: 1 1 auto;
