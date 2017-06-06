@@ -21,9 +21,6 @@ export default class AboutPage extends Page {
 		const { wrapperCls } = this.props;
 
 		const imgPath = require('../../public/images/galleryPhoto.jpg');
-		const styles = {
-			backgroundImage: `url(${imgPath})`
-		};
 
 		return (
 			<div className={ cx('et-about-page', 'et-page', wrapperCls) }>
@@ -40,10 +37,10 @@ export default class AboutPage extends Page {
 
 				</div>
 
-				<span className="et-about__container-bg" style={ styles }></span>
 				<span className="bg-blur">
-					<span className="bg-blur-mask"></span>
+					<span className="bg-unblur"></span>
 				</span>
+				<img className="et-about__image" src={ imgPath } alt="Daniel at an art gallery in Miami."/>
 
 			</div>
 		);
