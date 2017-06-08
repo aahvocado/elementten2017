@@ -37,6 +37,13 @@ export default class Page extends Component {
 				<h2 className={ cx('et-page__title', titleModifier)}>{ pageName }</h2>
 
 				{ this.renderPageInner() }
+
+				<footer className="et-footer">
+					Daniel Xiao made this using <a className="href-link" href="https://github.com/facebookincubator/create-react-app">create-react-app</a>. 
+					Check out this website's source code on <a className="href-link" href="https://github.com/neonwednesdays/elementten2017">Github</a>.
+					<br />
+					Daniel can be found at <a className="href-link" href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>
+				</footer>
 			</div>
 		);
 	}

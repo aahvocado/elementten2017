@@ -33,3 +33,17 @@
 .subtitle {
     font-size: 2rem;
 }
+
+/* footer */
+.et-footer {
+    color: #aaa;
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.et-footer a.href-link {
+    color: #aaa;
+}
+.et-footer a.href-link:visited {
+    color: #504d4d;
+}
