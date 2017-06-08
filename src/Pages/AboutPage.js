@@ -20,13 +20,12 @@ export default class AboutPage extends Page {
 	renderPageInner() {
 		const { wrapperCls } = this.props;
 
-		const imgPath = require('../../public/images/galleryPhoto.jpg');
+		// const imgPath = require('../../public/images/galleryPhoto.jpg');
 
 		return (
 			<div className={ cx('et-about-page', 'et-page', wrapperCls) }>
-				{/*<img className="et-about__image" src={ imgPath } alt="Daniel at an art gallery in Miami."/>*/}
 
-				<div className="et-about__container">
+				<div className="et-about__content-container">
 					<p className="et-about__description">
 						Daniel Xiao graduated from Georgia Institute of Technology in 2014. He received a Bachelors of Science in Computational Media, which is a major much like Computer Science but it also teaches how to utilize technology and programming to create expressive media. 
 					</p>
@@ -37,10 +36,12 @@ export default class AboutPage extends Page {
 
 				</div>
 
-				<span className="bg-blur">
-					<span className="bg-unblur"></span>
-				</span>
-				<img className="et-about__image" src={ imgPath } alt="Daniel at an art gallery in Miami."/>
+				<div className="et-about__image-container">
+					<span className="bg-blur">
+						<span className="bg-unblur"></span>
+					</span>
+					<img className="et-about__image" alt="Daniel at an art gallery in Miami."/>
+				</div>
 
 			</div>
 		);
