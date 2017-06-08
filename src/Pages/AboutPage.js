@@ -31,7 +31,7 @@ export default class AboutPage extends Page {
 					</p>
 
 					<p className="et-about__description">
-						He would be happy to be contacted at <a href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>.
+						He would be happy to be contacted at <a className="href-link" href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>.
 					</p>
 
 				</div>
