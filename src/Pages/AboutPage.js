@@ -25,6 +25,13 @@ export default class AboutPage extends Page {
 		return (
 			<div className={ cx('et-about-page', 'et-page', wrapperCls) }>
 
+				<div className="et-about__image-container">
+					<span className="bg-blur">
+						<span className="bg-unblur"></span>
+					</span>
+					<img className="et-about__image" alt="Daniel at an art gallery in Miami."/>
+				</div>
+
 				<div className="et-about__content-container">
 					<p className="et-about__description">
 						Daniel Xiao graduated from Georgia Institute of Technology in 2014. He received a Bachelors of Science in Computational Media, which is a major much like Computer Science but it also teaches how to utilize technology and programming to create expressive media. 
@@ -34,14 +41,7 @@ export default class AboutPage extends Page {
 						He would be happy to be contacted at <a className="href-link" href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>.
 					</p>
 
-				</div>
-
-				<div className="et-about__image-container">
-					<span className="bg-blur">
-						<span className="bg-unblur"></span>
-					</span>
-					<img className="et-about__image" alt="Daniel at an art gallery in Miami."/>
-				</div>
+				</div>				
 
 			</div>
 		);

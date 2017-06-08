@@ -34,8 +34,7 @@
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
 	.et-page__inner {
-		padding: 1rem;
-		padding-right: 2rem;
+		padding: 2rem;
 	}
 	.et-page__title {
 	    margin-left: 3rem;
