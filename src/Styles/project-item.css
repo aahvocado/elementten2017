@@ -56,18 +56,21 @@
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
 	.project-item:not(.mod-invisible-item) {
-		flex: 1 1 auto;
+		flex: 0 0 auto;
 		width: 100%;
+	}
+	.project-item:not(.mod-invisible-item):not(.mod-large) {
 		height: 150px;
+	}
+	.project-item.mod-large {
+		height: 400px;
+		display: block;
 	}
 	.project-item__container {
 		display: block;
 	}
 	.project-item__container:before {
 		border-radius: 0;
-	}
-	.project-item.mod-large {
-		height: auto;
 	}
 	.project-item.mod-extra-item {
 		display: none;
