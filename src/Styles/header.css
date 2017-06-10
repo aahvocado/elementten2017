@@ -55,6 +55,9 @@
     text-align: center;
     margin-top: 2rem;
     line-height: 15px;
+
+    border-top: 1px solid #aaa;
+    padding-top: 1rem;
 }
 .et-footer a.href-link {
     color: #aaa;
