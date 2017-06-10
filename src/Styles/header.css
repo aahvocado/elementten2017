@@ -4,6 +4,20 @@
 	color: white;
     position: relative;
     z-index: 1;
+    flex: 0 0 auto;
+}
+/* phone */
+@media screen and (min-width : 0) and (max-width : 760px) {
+    .et-header {
+        height: 180px;
+    }
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
 
 }
 .et-header:before {
@@ -40,6 +54,7 @@
     font-size: 0.7rem;
     text-align: center;
     margin-top: 2rem;
+    line-height: 15px;
 }
 .et-footer a.href-link {
     color: #aaa;
