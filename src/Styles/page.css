@@ -5,6 +5,9 @@
 .et-page {
 	flex: 1 1 auto;
 }
+.et-page__content-container {
+	margin-top: 1rem;
+}
 .et-page__inner {
 	flex: 1 1 auto;
 	padding: 20px;
@@ -29,6 +32,7 @@
 .et-page__title {
 	font-size: 2rem;
     text-transform: capitalize;
+    flex: 0 0 auto;
 }
 
 /* phone */
@@ -45,7 +49,7 @@
 	.et-page__inner {
 		padding: 2rem;
 	}
-	.et-page__title + .et-page {
+	.et-page__title + .et-page__content-container {
 		margin-top: 1rem;
 	}
 }
@@ -54,7 +58,7 @@
 	.et-page__inner {
 		padding: 2rem;
 	}
-	.et-page__title + .et-page {
+	.et-page__title + .et-page__content-container {
 		margin-top: 1rem;
 	}
 }

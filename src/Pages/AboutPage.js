@@ -23,13 +23,13 @@ export default class AboutPage extends Page {
 		// const imgPath = require('../../public/images/galleryPhoto.jpg');
 
 		return (
-			<div className={ cx('et-about-page', 'et-page', wrapperCls) }>
+			<div className={ cx('et-about-page', 'et-page__content-container', wrapperCls) }>
 
 				<div className="et-about__image-container">
 					<span className="bg-blur">
 						<span className="bg-unblur"></span>
 					</span>
-					<img className="et-about__image" alt="Daniel at an art gallery in Miami."/>
+					<div className="et-about__image" alt="Daniel at an art gallery in Miami." />
 				</div>
 
 				<div className="et-about__content-container">
