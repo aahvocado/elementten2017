@@ -4,6 +4,7 @@ import { CONSTANTS } from '../constants';
 
 /* pages */
 import Page from '../Pages/Page';
+import SocialMedia from '../Components/SocialMedia';
 
 import '../Styles/about-page.css';
 
@@ -41,6 +42,7 @@ export default class AboutPage extends Page {
 						He would be happy to be contacted at <a className="href-link" href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>.
 					</p>
 
+					<SocialMedia />
 				</div>				
 
 			</div>

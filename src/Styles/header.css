@@ -50,6 +50,9 @@
 
 /* footer */
 .et-footer {
+    min-height: 1px;
+    height: auto;
+
     color: #aaa;
     font-size: 0.7rem;
     text-align: center;
