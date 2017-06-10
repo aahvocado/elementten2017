@@ -57,7 +57,7 @@
     line-height: 15px;
 
     border-top: 1px solid #aaa;
-    padding-top: 1rem;
+    padding: 1rem 0;
 }
 .et-footer a.href-link {
     color: #aaa;
