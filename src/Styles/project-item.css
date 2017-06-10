@@ -1,5 +1,7 @@
 /* project item */
 .project-item {
+	min-height: 1px;
+
 	background: white;
 	box-sizing: border-box;
 	border: 5px solid transparent;
@@ -65,7 +67,7 @@
 		border-radius: 0;
 	}
 	.project-item.mod-large {
-		height: 100%;
+		height: auto;
 	}
 	.project-item.mod-extra-item {
 		display: none;

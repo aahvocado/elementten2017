@@ -31,6 +31,8 @@
 .et-about__image-container {
     width: 100%;
     position: relative;
+    min-height: 1px;
+    flex: 0 0 auto;
 }
 .et-about__image {
 	flex: 0 0 auto;
