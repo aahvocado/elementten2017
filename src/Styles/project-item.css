@@ -258,6 +258,8 @@
 /* description */
 .project-item__description {
 	flex: 0 0 auto;
+	height: auto;
+	min-height: 1px;
 	max-width: 700px;
 	margin-bottom: 0;
 }
@@ -289,12 +291,16 @@
 .project-item__extra {
 	flex: 0 0 auto;
 	display: flex;
+	min-height: 1px;
+
+	height: 40px;
 }
 .project-item__link {
 	display: block;
 	position: relative;
 	align-self: flex-end;
     flex: 0 0 auto;
+	min-height: 1px;
 
 	background: white;
 	padding: 10px;

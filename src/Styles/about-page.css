@@ -4,6 +4,7 @@
 
 	height: 100%;
 	flex: 0 0 auto;
+	min-height: 1px;
 	position: relative;
 	justify-content: center;
 }
@@ -11,6 +12,7 @@
 .et-about__content-container {
     height: 100%;
     flex: 0 0 auto;
+	min-height: 1px;
     box-sizing: border-box;
 	padding: 20px;
 
@@ -18,6 +20,7 @@
 }
 .et-about__description {
 	flex: 1 1 auto;
+	min-height: 1px;
 	margin: 0;
 
     text-indent: 1.5rem;
@@ -31,6 +34,7 @@
 }
 .et-about__image {
 	flex: 0 0 auto;
+	min-height: 1px;
     border-radius: 15px;
 
     width: 100%;
