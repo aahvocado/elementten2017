@@ -65,7 +65,7 @@
 		border-radius: 0;
 	}
 	.project-item.mod-large {
-		height: auto;
+		height: 100%;
 	}
 	.project-item.mod-extra-item {
 		display: none;

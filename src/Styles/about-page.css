@@ -10,6 +10,7 @@
 /* content */
 .et-about__content-container {
     height: 100%;
+    flex: 0 0 auto;
     box-sizing: border-box;
 	padding: 20px;
 
