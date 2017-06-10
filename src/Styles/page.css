@@ -17,8 +17,7 @@
 	flex-direction: column;
 	
     max-height: 100vh;
-    overflow: scroll;
-    	-webkit-overflow-scrolling: touch;
+
 }
 
 .projects-page {
@@ -40,6 +39,9 @@
 @media screen and (min-width : 0) and (max-width : 760px) {
 	.et-page__inner {
 		padding: 2rem;
+		overflow-x: hidden;
+	    overflow-y: scroll;
+	    	-webkit-overflow-scrolling: touch;
 	}
 	.et-page__title {
 	    margin-left: 3rem;
@@ -49,6 +51,7 @@
 @media screen and (min-width : 760px) and (max-width : 1220px) {
 	.et-page__inner {
 		padding: 2rem;
+		overflow: auto;
 	}
 	.et-page__title + .et-page__content-container {
 		margin-top: 1rem;
@@ -58,6 +61,7 @@
 @media screen and (min-width : 1220px) {
 	.et-page__inner {
 		padding: 2rem;
+		overflow: auto;
 	}
 	.et-page__title + .et-page__content-container {
 		margin-top: 1rem;
