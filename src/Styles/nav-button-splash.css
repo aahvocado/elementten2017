@@ -1,13 +1,17 @@
 .et-nav-button.mod-splash {
 	width: auto;
-	margin-right: auto;
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
+	.et-nav-button.mod-splash {
+	}
 	
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
+	.et-nav-button.mod-splash {
+		margin-right: auto;
+	}
 	.et-nav-button.mod-splash .et-nav-button__effects:before {
 		bottom: 10px;
 		bottom: 1vw;
@@ -17,9 +21,20 @@
 		height: 1rem;
 		height: 3vw;
 	}
+	/* on hover */
+	.et-nav-button__content {
+		transform: translateX(5px);
+		transition: transform 300ms ease-out;
+	}
+	.et-nav-button.mod-splash:hover .et-nav-button__content {
+		transform: translateX(25px);
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
+	.et-nav-button.mod-splash {
+		margin-right: auto;
+	}
 	.et-nav-button.mod-splash .et-nav-button__effects:before {
 		bottom: 12px;
 		left: 0px;
@@ -27,15 +42,16 @@
 		width: 25px;
 		height: 2rem;
 	}
+	/* on hover */
+	.et-nav-button__content {
+		transform: translateX(5px);
+		transition: transform 300ms ease-out;
+	}
+	.et-nav-button.mod-splash:hover .et-nav-button__content {
+		transform: translateX(25px);
+	}
 }
 /* on hover */
-.et-nav-button__content {
-	transform: translateX(5px);
-	transition: transform 300ms ease-out;
-}
-.et-nav-button.mod-splash:hover .et-nav-button__content {
-	transform: translateX(25px);
-}
 .et-nav-button.mod-splash .et-nav-button__effects:before {
 	content: "";
 	position: absolute;
