@@ -44,9 +44,11 @@ export default class NavButton extends React.Component {
 				onClick={ this.handleNavClick }
 				to={ linkPath }
 			>
-				<span className="et-nav-button__content">
+				<div className="et-nav-button__content">
 					{ txt }
-				</span>
+				</div>
+
+				<div className="et-nav-button__effects"></div>
 			</Link>
 		);
 	}

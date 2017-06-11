@@ -1,7 +1,7 @@
 .et-nav-button {
 	box-sizing: border-box;
 	position: relative;
-	
+
 	transition: color 300ms;
 }
 .et-nav-button:not(:hover) {
