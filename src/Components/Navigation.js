@@ -30,6 +30,7 @@ export default class Navigation extends React.Component {
 		const { menuVisible } = this.state;
 
 		const modifiers = {
+			'mod-vertical-nav': !isSplashPage,
 			'mod-splash-nav': isSplashPage,
 			'nav-open': menuVisible,
 			'nav-closed': !menuVisible,
