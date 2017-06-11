@@ -123,3 +123,18 @@
     0% { text-shadow: 0 0 0 rgba(38, 40, 51, 0.8); transform: translate(0px, 0px); }
     100% { text-shadow: -15px 15px 0 rgba(38, 40, 51, 0.8); transform: translate(15px, -15px); }
 }
+
+/* text-shadow raise */
+.animation--text-shadow-raise-small {
+    text-shadow: 0 0 0 #262833;
+
+    animation: text-shadow-raise-small;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    animation-fill-mode: forwards;
+
+}
+@keyframes text-shadow-raise-small {
+    0% { text-shadow: 0 0 0 rgba(38, 40, 51, 0.8); transform: translate(0px, 0px); }
+    100% { text-shadow: -5px 5px 0 rgba(38, 40, 51, 0.8); transform: translate(5px, -5px); }
+}

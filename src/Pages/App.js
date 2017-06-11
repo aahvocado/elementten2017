@@ -36,7 +36,6 @@ export default class App extends Component {
 
 					{ currentPage !== CONSTANTS.PAGE.SPLASH &&
 						<Navigation
-							vertical
 							page={ currentPage }
 							previousPage={ previousPage }
 							onPageChange={ this.handlePageChange }

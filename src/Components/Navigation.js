@@ -16,7 +16,6 @@ export default class Navigation extends React.Component {
 	static defaultProps = {
     	page: CONSTANTS.PAGE.SPLASH,
     	previousPage: CONSTANTS.PAGE.SPLASH,
-    	vertical: false,
 		fadeIn: false,
 		isSplashPage: false,
 		onPageChange: () => Promise.resolve(),
@@ -27,11 +26,10 @@ export default class Navigation extends React.Component {
     }
 
 	render(){
-		const { page, vertical, fadeIn, isSplashPage } = this.props;
+		const { page, fadeIn, isSplashPage } = this.props;
 		const { menuVisible } = this.state;
 
 		const modifiers = {
-			'mod-vertical': vertical,
 			'mod-splash-nav': isSplashPage,
 			'nav-open': menuVisible,
 			'nav-closed': !menuVisible,
@@ -56,14 +54,15 @@ export default class Navigation extends React.Component {
 					role='navigation' 
 				>
 	
-					{ vertical &&
+					{ !isSplashPage &&
 						<Link 
-							className={ cx('nav-title', 'animation-grow-from-bg') }
+							className={ cx('et-navigation__menu__title', 'animation--text-shadow-raise-small') }
 							onClick={ this.handleNavSplash }
 							to={ CONSTANTS.ROUTES.SPLASH }
 						>
-							Daniel Xiao
+							<h1 className='title'>Daniel<br/>Xiao</h1>
 						</Link>
+
 					}
 					
 					<NavButton 
@@ -104,28 +103,28 @@ export default class Navigation extends React.Component {
 	}
 
 	renderNavigationStripe() {
-		const { page, previousPage, vertical } = this.props;
+		const { page, previousPage, isSplashPage } = this.props;
 		return (
 			<div className='nav-color-stripe-container'>
 				{ page === CONSTANTS.PAGE.PROJECTS &&
 					<ColorStripe
 						previousPage={ previousPage }
 						page={ page }
-						disabled={ !vertical }
+						disabled={ isSplashPage }
 					/>
 				}
 				{ page === CONSTANTS.PAGE.GAMES &&
 					<ColorStripe
 						previousPage={ previousPage }
 						page={ page }
-						disabled={ !vertical }
+						disabled={ isSplashPage }
 					/>
 				}
 				{ page === CONSTANTS.PAGE.ABOUT &&
 					<ColorStripe
 						previousPage={ previousPage }
 						page={ page }
-						disabled={ !vertical }
+						disabled={ isSplashPage }
 					/>
 				}
 			</div>
