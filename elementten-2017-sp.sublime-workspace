@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"borderr",
+				"border-radius"
+			],
+			[
+				"et-",
+				"et-social-media__item"
+			],
+			[
+				"page",
+				"pageContainer"
+			],
+			[
+				"React",
+				"ReactDOM"
+			],
+			[
 				"projec-",
 				"project-item__container"
 			],
@@ -96,10 +112,6 @@
 				"transitionAppear"
 			],
 			[
-				"React",
-				"ReactCSSTransitionGroup"
-			],
-			[
 				"offse",
 				"offset2"
 			],
@@ -168,37 +180,117 @@
 	"buffers":
 	[
 		{
+			"file": "src/Pages/App.js",
+			"settings":
+			{
+				"buffer_size": 2442,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 544,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Styles/styles.css",
+			"settings":
+			{
+				"buffer_size": 964,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Pages/Splash.js",
+			"settings":
+			{
+				"buffer_size": 843,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Components/Navigation.js",
+			"settings":
+			{
+				"buffer_size": 3709,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Components/Header.js",
+			"settings":
+			{
+				"buffer_size": 466,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Components/NavButton.js",
+			"settings":
+			{
+				"buffer_size": 1448,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "src/Styles/header.css",
 			"settings":
 			{
-				"buffer_size": 1195,
+				"buffer_size": 932,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Styles/page.css",
+			"file": "src/Styles/splash-page.css",
 			"settings":
 			{
-				"buffer_size": 1077,
+				"buffer_size": 341,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Styles/about-page.css",
+			"file": "src/Styles/navigation.css",
 			"settings":
 			{
-				"buffer_size": 2360,
+				"buffer_size": 318,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Styles/project-item.css",
+			"file": "src/Styles/navigation-splash.css",
 			"settings":
 			{
-				"buffer_size": 6145,
+				"buffer_size": 701,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Styles/nav-button.css",
+			"settings":
+			{
+				"buffer_size": 408,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Styles/nav-button-splash.css",
+			"settings":
+			{
+				"buffer_size": 382,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -302,50 +394,53 @@
 	],
 	"file_history":
 	[
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/page.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/hamburger-menu.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/about-page.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/AboutPage.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/Navigation.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/styles.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Page.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/public/index.html",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/NavButton.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/page.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Splash.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/nav-button.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/ProjectList.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/navigation.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/ProjectPage.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/GamesPage.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/AboutPage.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/navigation.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/nav-button.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/SocialMedia.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/social-media.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/ProjectItem.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-item.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/App.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/header.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Page.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/splash-page.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/HamburgerMenu.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/color-stripe.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/animations.css",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/index.js",
+		"/C/Users/Decks/Documents/Git Projects/elementten2017/README.md",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/build/static/js/main.f7b33917.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/build/index.html",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-item.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/ProjectItem.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/styles.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/package.json",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/node_modules/case-sensitive-paths-webpack-plugin/demo/webpack.config.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/node_modules/dotenv/config.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/public/index.html",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/App.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/Navigation.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/NavButton.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/animations.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/splash-page.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Splash.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/react-animations.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/project-list.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/ProjectsDetails.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/constants.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-container.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/Header.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/hamburger-menu.css",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/HamburgerMenu.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/home.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Home.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Projects.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/color-stripe.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/ProjectList.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/ColorStripe.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/node_modules/dom-converter/scripts/js/test/saneObjectToDom.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingContainer.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/elementten-2017-sp.sublime-project",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Components/FloatingButton.js",
-		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/index.js",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Styles/floating-button.css",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/constants.jsx",
 		"/C/Users/Decks/Documents/Git Projects/elementten2017/src/Pages/Splash.jsx",
@@ -426,10 +521,7 @@
 		"/C/Users/Decks/Documents/Git Projects/superperspective-web/src/index.js",
 		"/C/Users/Decks/Documents/Git Projects/superperspective-web/Gruntfile.js",
 		"/C/Users/Decks/Documents/Git Projects/superperspective-web/.babelrc",
-		"/C/Users/Decks/.bash_profile",
-		"/H/.bash_profile",
-		"/C/Users/Decks/Documents/Git Projects/tntgame/server.js",
-		"/C/Users/Decks/Downloads/FightOptimizer.ash"
+		"/C/Users/Decks/.bash_profile"
 	],
 	"find":
 	{
@@ -453,6 +545,54 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"boxy",
+			"vertical",
+			"2rem",
+			"boxy",
+			"et-navigation-container",
+			"vertical",
+			"hamburger",
+			"200px",
+			"5px",
+			"border-color: white",
+			"#5073ad",
+			"background",
+			"1px",
+			"font",
+			"content",
+			"min-width",
+			"100%",
+			"offset",
+			"scrollTop",
+			"handlePageChange",
+			"hover",
+			"et-navigation-container",
+			"et-navigation",
+			"+ .et-navigation",
+			"1f3963",
+			"E5DE31",
+			"E5D549",
+			"F2C559",
+			"8D73A6",
+			"ffd500",
+			"D9B389",
+			"A67E8D",
+			"ffd810",
+			"8AF260",
+			"D5F293",
+			"29D9C2",
+			"BDF271",
+			"29D9C2",
+			"01A2A6",
+			"2F2933",
+			"2b9a3f",
+			" 29D9C2",
+			"db7ee4",
+			"orange",
+			"2b9a3f",
+			"Page",
+			"content-container",
+			".mod-large",
 			"flex: 0 0",
 			"extra",
 			": auto",
@@ -532,55 +672,7 @@
 			"invisible",
 			"mod-extra-item",
 			":not(.mod-extra-item)",
-			"project-item__container",
-			"isExtra",
-			"project-item__container",
-			"border-color-change",
-			"1px",
-			"transparent",
-			"100%",
-			"0",
-			"100",
-			"hover",
-			".type-default-to-projects",
-			".border-color-default-to-projects",
-			"&",
-			"::",
-			"&::",
-			"$cyan",
-			"\tcursor: default;\n",
-			"\"",
-			"50%",
-			"50",
-			"'games'",
-			"'projects'",
-			"page",
-			"PAGE",
-			"border-color",
-			"properties",
-			"padding",
-			"extra-item",
-			"mod-psuedo-item",
-			"renderedProjects.length",
-			"45",
-			"idx",
-			"shouldRenderInvisible",
-			"transform",
-			"255",
-			"title",
-			"floating-title-container",
-			".floating-button-container",
-			"pseudoIndex",
-			"'",
-			"selectedItem",
-			"name",
-			"255",
-			":not(",
-			"floating-button-container",
-			"floating-button",
-			"nav-button-component",
-			"modSquare",
-			"description: ''"
+			"project-item__container"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -588,6 +680,28 @@
 		"regex": false,
 		"replace_history":
 		[
+			"et-navigation",
+			"262833",
+			"e2be51",
+			"E5DE31",
+			"E5D549",
+			"A262A6",
+			"F2C559",
+			"D98C77",
+			"8D73A6",
+			"ffd500",
+			"ffd810",
+			"8AF260",
+			"D9B389",
+			"D5F293",
+			"29D9C2",
+			"A67E8D",
+			"262833",
+			"01A2A6",
+			" #29D9C2",
+			"BDF271",
+			"29D9C2",
+			"01A2A6",
 			"et-about__content-container",
 			"et-nav-button",
 			"et-navigation",
@@ -605,24 +719,228 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 12,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Styles/header.css",
+					"file": "src/Pages/App.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1195,
+						"buffer_size": 2442,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1094,
-								1094
+								561,
+								561
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 330.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								544
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/Styles/styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								628,
+								628
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 660.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/Pages/Splash.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								163
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/Components/Navigation.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1812,
+								1812
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1188.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/Components/Header.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 466,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								116,
+								116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/Components/NavButton.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								348,
+								348
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/Styles/header.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 932,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								138,
+								138
 							]
 						],
 						"settings":
@@ -632,27 +950,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 528.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/Styles/page.css",
+					"buffer": 8,
+					"file": "src/Styles/splash-page.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1077,
+						"buffer_size": 341,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								558,
-								558
+								38,
+								38
 							]
 						],
 						"settings":
@@ -661,56 +979,85 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 726.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/Styles/navigation.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/Styles/navigation-splash.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								699,
+								502
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/Styles/about-page.css",
+					"buffer": 11,
+					"file": "src/Styles/nav-button.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2360,
+						"buffer_size": 408,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2296,
-								2296
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 2574.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/Styles/project-item.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6145,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5892,
-								5892
+								403,
+								403
 							]
 						],
 						"settings":
@@ -723,6 +1070,35 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "src/Styles/nav-button-splash.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/LESS/LESS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -777,16 +1153,88 @@
 		"selected_items":
 		[
 			[
-				"about-page",
+				"navbutton.js",
+				"src\\Components\\NavButton.js"
+			],
+			[
+				"navigation.js",
+				"src\\Components\\Navigation.js"
+			],
+			[
+				"splash.s",
+				"src\\Pages\\Splash.js"
+			],
+			[
+				"app.js",
+				"src\\Pages\\App.js"
+			],
+			[
+				"header.js",
+				"src\\Components\\Header.js"
+			],
+			[
+				"page.css",
+				"src\\Styles\\page.css"
+			],
+			[
+				"navbutton.css",
+				"src\\Styles\\nav-button.css"
+			],
+			[
+				"navigation.css",
+				"src\\Styles\\navigation.css"
+			],
+			[
+				"aboutpage.css",
 				"src\\Styles\\about-page.css"
+			],
+			[
+				"socialmedia.css",
+				"src\\Styles\\social-media.css"
+			],
+			[
+				"socialm",
+				"src\\Components\\SocialMedia.js"
+			],
+			[
+				"nav-button",
+				"src\\Styles\\nav-button.css"
+			],
+			[
+				"page.js",
+				"src\\Pages\\Page.js"
+			],
+			[
+				"projectlist.js",
+				"src\\Pages\\ProjectList.js"
+			],
+			[
+				"projectitem.j",
+				"src\\Components\\ProjectItem.js"
 			],
 			[
 				"projectitem.css",
 				"src\\Styles\\project-item.css"
 			],
 			[
-				"navigation.css",
+				"navgation.js",
+				"src\\Components\\Navigation.js"
+			],
+			[
+				"navgation.css",
 				"src\\Styles\\navigation.css"
+			],
+			[
+				"hamburg",
+				"src\\Styles\\hamburger-menu.css"
+			],
+			[
+				"hamburgermen",
+				"src\\Components\\HamburgerMenu.js"
+			],
+			[
+				"about-page",
+				"src\\Styles\\about-page.css"
 			],
 			[
 				"header.scs",
@@ -795,10 +1243,6 @@
 			[
 				"project-item.cs",
 				"src\\Styles\\project-item.css"
-			],
-			[
-				"page.css",
-				"src\\Styles\\page.css"
 			],
 			[
 				"config.js",
@@ -825,10 +1269,6 @@
 				"src\\Components\\ProjectItem.js"
 			],
 			[
-				"projectlist.js",
-				"src\\Pages\\ProjectList.js"
-			],
-			[
 				"projectpage",
 				"src\\Pages\\ProjectPage.js"
 			],
@@ -847,14 +1287,6 @@
 			[
 				"splash.js",
 				"src\\Pages\\Splash.js"
-			],
-			[
-				"navigation.js",
-				"src\\Components\\Navigation.js"
-			],
-			[
-				"app.js",
-				"src\\Pages\\App.js"
 			],
 			[
 				"navbutton",

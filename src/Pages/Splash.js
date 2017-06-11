@@ -18,13 +18,12 @@ export default class Splash extends Component {
 	render(){
 		return (
 			<div className={cx('et-splash-page')}>
-				<Header />
-
 				<Navigation
 					isSplashPage
 					fadeIn
 					onPageChange={ this.handlePageChange }
 				/>
+				<Header />
 			</div>
 		);
 	}

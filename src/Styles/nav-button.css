@@ -1,5 +1,7 @@
 .et-nav-button {
 	box-sizing: border-box;
+	position: relative;
+	
 	transition: color 300ms;
 }
 .et-nav-button:not(:hover) {
@@ -19,6 +21,6 @@
 		flex: 0 0 auto;
 		font-size: 2.3rem;
 
-		padding: 1rem;
+		padding: 5px;
 	}
 }
