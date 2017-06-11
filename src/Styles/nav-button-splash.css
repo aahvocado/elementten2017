@@ -1,11 +1,12 @@
 .et-nav-button.mod-splash {
 	width: auto;
+
+	text-shadow: -3px 3px 0 #262833; transform: translate(3px, -3px);
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
 	.et-nav-button.mod-splash {
 	}
-	
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
