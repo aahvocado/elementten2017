@@ -136,9 +136,8 @@ export default class Navigation extends React.Component {
 
 	handlePageChange = (nextPage) => {
 		const { onPageChange } = this.props;
-		this.setState({ menuVisible: false }, () => {
-			onPageChange(nextPage);
-		});
+		this.setState({ menuVisible: false });
+		onPageChange(nextPage);
 	}
 
 	handleNavSplash = () => {

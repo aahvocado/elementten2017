@@ -16,10 +16,6 @@
 
 	transition: all 300ms;
 }
-.et-navigation .nav-title:hover {
-	text-shadow: 0 3px rgba(70, 70, 70, 0.5);
-	transform: translateY(-3px);
-}
 /* vertical */
 .et-navigation.mod-vertical {
 	flex-direction: column;
@@ -77,6 +73,10 @@
 		width: 150px;
 		padding: 1rem;
 	}
+	.et-navigation .nav-title:hover {
+		text-shadow: 0 3px rgba(70, 70, 70, 0.5);
+		transform: translateY(-3px);
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
@@ -92,5 +92,9 @@
 	.et-navigation.mod-vertical {
 		min-width: 200px;
 		padding: 2rem 0;
+	}
+	.et-navigation .nav-title:hover {
+		text-shadow: 0 3px rgba(70, 70, 70, 0.5);
+		transform: translateY(-3px);
 	}
 }

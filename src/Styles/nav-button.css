@@ -160,6 +160,10 @@
 		color: #5073ad;
 		border-color: transparent;
 	}
+	.et-nav-button.mod-boxy:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 6px rgba(70, 70, 70, 0.5);
+	}
 }
 
 /* hover effects */
@@ -172,8 +176,4 @@
 }
 .et-nav-button.mod-boxy:not(:hover):focus {
 	box-shadow: 0 0 3px 1px white;
-}
-.et-nav-button.mod-boxy:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 6px rgba(70, 70, 70, 0.5);
 }
