@@ -8,11 +8,24 @@
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	
+	.et-nav-button.mod-splash .et-nav-button__effects:before {
+		bottom: 10px;
+		bottom: 1vw;
+		left: 0px;
+
+		width: 25px;
+		height: 1rem;
+		height: 3vw;
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-	.et-nav-button.mod-splash:not(:hover) {
+	.et-nav-button.mod-splash .et-nav-button__effects:before {
+		bottom: 12px;
+		left: 0px;
+
+		width: 25px;
+		height: 2rem;
 	}
 }
 /* on hover */
@@ -26,11 +39,6 @@
 .et-nav-button.mod-splash .et-nav-button__effects:before {
 	content: "";
 	position: absolute;
-	bottom: 12px;
-	left: 0px;
-
-	width: 25px;
-	height: 2rem;
 
 	transform-origin: 0% 0%;
 	transform: scaleX(0);

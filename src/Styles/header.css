@@ -17,15 +17,19 @@
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-
+    .title {
+        font-size: 5rem;
+        font-size: 20vw;
+    }
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-
+    .title {
+        font-size: 16rem;
+    }
 }
 
 .title {
-    font-size: 16rem;
     line-height: 90%;
     font-family: 'Bungee', cursive;
 }

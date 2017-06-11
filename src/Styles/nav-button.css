@@ -13,7 +13,13 @@
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	
+	.et-nav-button {
+		flex: 0 0 auto;
+		font-size: 1.6rem;
+		font-size: 3.2vw;
+
+		padding: 5px;
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
