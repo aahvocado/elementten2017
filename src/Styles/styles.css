@@ -1,37 +1,49 @@
+/*
+	Color Scheme - by 
+
+
+	#262833
+	#A262A6
+	#D98C77
+	#e2be51
+	#B4FFE6
+
+*/
+
 .et-color {
-	color: #5073ad;
+	color: #262833;
 }
 .projects-color {
-	color: #2b9a3f;
+	color: #A262A6;
 }
 .games-color {
-	color: orange;
+	color: #D98C77;
 }
 .about-color {
-	color: #db7ee4;
+	color: #e2be51;
 }
 
 .et-border-color {
-	border-color: #5073ad;
+	border-color: #262833;
 }
 .projects-border-color {
-	border-color: #2b9a3f;
+	border-color: #A262A6;
 }
 .games-border-color {
-	border-color: orange;
+	border-color: #D98C77;
 }
 .about-border-color {
-	border-color: #db7ee4;
+	border-color: #e2be51;
 }
 
 .projects-background-color {
-	background-color: #2b9a3f;
+	background-color: #A262A6;
 }
 .games-background-color {
-	background-color: orange;
+	background-color: #D98C77;
 }
 .about-background-color {
-	background-color: #db7ee4;
+	background-color: #e2be51;
 }
 
 #root {

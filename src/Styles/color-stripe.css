@@ -1,5 +1,5 @@
-.et-color-stripe {
-    color: orange;
+d.et-color-stripe {
+    color: #D98C77;
 }
 /* phone */
 @media screen and (min-width : 0) and (max-width: 760px) {
@@ -60,21 +60,21 @@
     transition-timing-function: ease-out;
 }
 .et-color-stripe:not(.disabled).projects-bg:after {
-	background-color: #2b9a3f;
+	background-color: #A262A6;
 }
 .et-color-stripe:not(.disabled).games-bg:after {
-	background-color: orange;
+	background-color: #D98C77;
 }
 .et-color-stripe:not(.disabled).about-bg:after {
-	background-color: #db7ee4;
+	background-color: #e2be51;
 }
 
 .et-color-stripe:not(.disabled).previous-projects-bg:before {
-	background-color: #2b9a3f;
+	background-color: #A262A6;
 }
 .et-color-stripe:not(.disabled).previous-games-bg:before {
-	background-color: orange;
+	background-color: #D98C77;
 }
 .et-color-stripe:not(.disabled).previous-about-bg:before {
-	background-color: #db7ee4;
+	background-color: #e2be51;
 }

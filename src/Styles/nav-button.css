@@ -82,13 +82,13 @@
 	animation: animation--top-left-to-right 1.5s linear infinite;
 }
 .et-nav-button.effects--projects:not(.mod-boxy):hover .et-effect-container:before {
-	border-color: #2b9a3f;
+	border-color: #A262A6;
 }
 .et-nav-button.effects--games:not(.mod-boxy):hover .et-effect-container:before {
-	border-color: orange;
+	border-color: #D98C77;
 }
 .et-nav-button.effects--about:not(.mod-boxy):hover .et-effect-container:before {
-	border-color: #db7ee4;
+	border-color: #e2be51;
 }
 .et-nav-button.effects--projects .et-effect-container:after {
 	background-color: rgba(255, 255, 255, 0.5);

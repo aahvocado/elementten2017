@@ -24,10 +24,10 @@
 	cursor: pointer;
 }
 .project-item.effects--projects:not(.mod-invisible-item).mod-active {
-	border-color: #2b9a3f;
+	border-color: #A262A6;
 }
 .project-item.effects--games:not(.mod-invisible-item).mod-active {
-	border-color: orange;
+	border-color: #D98C77;
 }
 /* quick nav buttons */
 .project-item__nav-container {
