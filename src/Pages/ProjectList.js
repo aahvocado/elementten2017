@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import cx from 'classnames';
 
 /* components */
@@ -11,7 +11,7 @@ import '../Styles/project-list.css';
 	ProjectList
 	generic page that creates a list
 */
-export default class ProjectList extends React.Component {
+export default class ProjectList extends Component {
 	static defaultProps = {
 		wrapperCls: '',
 		data: [],
@@ -30,6 +30,7 @@ export default class ProjectList extends React.Component {
 			renderedProjects.push(
 				<ProjectItem 
 					key={ `project-item-${idx}-key` }
+					ref={ `project-item-${idx}-ref` }
 					onClick={ this.handleItemOnClick }
 					index={ idx }
 					active={ selectedIdx === idx }
@@ -76,7 +77,7 @@ export default class ProjectList extends React.Component {
 	}
 
 	handleItemOnClick = (idx) => {
-		const { onSelectedChange } = this.props;;
-		onSelectedChange(idx);
+		const { onSelectedChange } = this.props;
+		onSelectedChange(this.refs[`project-item-${idx}-ref`], idx);
 	}
 }

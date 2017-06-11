@@ -32,6 +32,7 @@ export default class Page extends Component {
 		return (
 			<div 
 				className={cx('et-page__inner')}
+				ref={ (x) => { this.pageContainer = x; } }
 				onClick={ this.handleInnerClick }
 			>
 				<h2 className={ cx('et-page__title', titleModifier)}>{ pageName }</h2>
@@ -80,5 +81,11 @@ export default class Page extends Component {
 			newIndex = maxIdx;
 		};
 		this.setState({ selectedIdx: newIndex });
+	}
+
+	scrollToItem = (idx) => {
+		if (this.pageContainer) {
+			this.pageContainer.scrollTop = 150 * idx - 10;
+		}
 	}
 }

@@ -18,7 +18,7 @@
 
 	transition: 
 		height 500ms,
-		border-color 500ms;
+		border-color 800ms;
 }
 .project-item:not(.mod-invisible-item):not(.mod-active) {
 	cursor: pointer;

@@ -29,8 +29,13 @@ export default class ProjectPage extends Page {
 				wrapperCls="et-page__content-container"
 				selectedIdx={ selectedIdx }
 				data={ data }
-				onSelectedChange={ this.handleIndexChange }
+				onSelectedChange={ this.handleOnSelect }
 			/>
 		);
+	}
+
+	handleOnSelect = (item, idx) => {
+		this.handleIndexChange(idx);
+		this.scrollToItem(idx);
 	}
 }

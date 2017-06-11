@@ -16,6 +16,10 @@ export default class ProjectPage extends Page {
 		data: ProjectsDetails().filter((item) => { return item.category === CONSTANTS.CATEGORY.GAMES }),
 	};
 
+	state = {
+		selectedIdx: undefined,
+	}
+
 	renderPageInner() {
 		const { data } = this.props;
 		const { selectedIdx } = this.state;
@@ -25,8 +29,13 @@ export default class ProjectPage extends Page {
 				wrapperCls="et-page__content-container"
 				selectedIdx={ selectedIdx }
 				data={ data }
-				onSelectedChange={ this.handleIndexChange }
+				onSelectedChange={ this.handleOnSelect }
 			/>
 		);
+	}
+
+	handleOnSelect = (item, idx) => {
+		this.handleIndexChange(idx);
+		this.scrollToItem(idx);
 	}
 }
