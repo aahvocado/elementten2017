@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 /* components */
 import NavButton from '../Components/NavButton';
 import ColorStripe from '../Components/ColorStripe';
+import HamburgerMenu from '../Components/HamburgerMenu';
 
 /* styles */
 import '../Styles/navigation.css';
@@ -15,13 +16,17 @@ export default class Navigation extends React.Component {
     	page: CONSTANTS.PAGE.SPLASH,
     	previousPage: CONSTANTS.PAGE.SPLASH,
     	vertical: false,
-		menuVisible: false,
 		fadeIn: false,
 		onPageChange: () => Promise.resolve(),
     };
 
+    state = {
+    	menuVisible: false,
+    }
+
 	render(){
-		const { page, vertical, menuVisible, fadeIn } = this.props;
+		const { page, vertical, fadeIn } = this.props;
+		const { menuVisible } = this.state;
 
 		const modifiers = {
 			'mod-vertical': vertical,
@@ -34,53 +39,64 @@ export default class Navigation extends React.Component {
 		}
 		
 		return (
-			<nav 
-				role='navigation' 
-				className={ cx('et-navigation', modifiers) }
-			>
-				{ vertical &&
-					<Link 
-						className={ cx('nav-title', 'animation-grow-from-bg') }
-						onClick={ this.handleNavSplash }
-						to={ CONSTANTS.ROUTES.SPLASH }
-					>
-						Daniel Xiao
-					</Link>
+			<div className={ cx('et-navigation-container') }>
+				{ page !== CONSTANTS.PAGE.SPLASH &&
+					<HamburgerMenu 
+						page={ page }
+						active={ menuVisible }
+						onClick={ this.handleMenuToggle }
+					/>
 				}
-				
-				<NavButton 
-					txt='Games'
-					wrapperCls={ cx('games-color') }
-					fadeIn={ fadeIn }
-					boxy={ vertical }
-					page={ CONSTANTS.PAGE.GAMES }
-					active={ page === CONSTANTS.PAGE.GAMES }
-					linkPath={ CONSTANTS.ROUTES.GAMES }
-					onNavClick={ this.handlePageChange } />
 
-				<NavButton 
-					txt='Projects'
-					wrapperCls={ cx('projects-color') }
-					fadeIn={ fadeIn }
-					boxy={ vertical }
-					page={ CONSTANTS.PAGE.PROJECTS }
-					active={ page === CONSTANTS.PAGE.PROJECTS }
-					linkPath={ CONSTANTS.ROUTES.PROJECTS }
-					onNavClick={ this.handlePageChange } />
-
-				<NavButton 
-					txt='About'
-					wrapperCls={ cx('about-color') }
-					fadeIn={ fadeIn }
-					boxy={ vertical }
-					page={ CONSTANTS.PAGE.ABOUT }
-					active={ page === CONSTANTS.PAGE.ABOUT }
-					linkPath={ CONSTANTS.ROUTES.ABOUT }
-					onNavClick={ this.handlePageChange } />
-
-				{ this.renderNavigationStripe() }
-
-			</nav>
+				<nav 
+					className={ cx('et-navigation', modifiers) }
+					role='navigation' 
+				>
+	
+					{ vertical &&
+						<Link 
+							className={ cx('nav-title', 'animation-grow-from-bg') }
+							onClick={ this.handleNavSplash }
+							to={ CONSTANTS.ROUTES.SPLASH }
+						>
+							Daniel Xiao
+						</Link>
+					}
+					
+					<NavButton 
+						txt='Games'
+						wrapperCls={ cx('games-color') }
+						fadeIn={ fadeIn }
+						boxy={ vertical }
+						page={ CONSTANTS.PAGE.GAMES }
+						active={ page === CONSTANTS.PAGE.GAMES }
+						linkPath={ CONSTANTS.ROUTES.GAMES }
+						onNavClick={ this.handlePageChange } />
+	
+					<NavButton 
+						txt='Projects'
+						wrapperCls={ cx('projects-color') }
+						fadeIn={ fadeIn }
+						boxy={ vertical }
+						page={ CONSTANTS.PAGE.PROJECTS }
+						active={ page === CONSTANTS.PAGE.PROJECTS }
+						linkPath={ CONSTANTS.ROUTES.PROJECTS }
+						onNavClick={ this.handlePageChange } />
+	
+					<NavButton 
+						txt='About'
+						wrapperCls={ cx('about-color') }
+						fadeIn={ fadeIn }
+						boxy={ vertical }
+						page={ CONSTANTS.PAGE.ABOUT }
+						active={ page === CONSTANTS.PAGE.ABOUT }
+						linkPath={ CONSTANTS.ROUTES.ABOUT }
+						onNavClick={ this.handlePageChange } />
+	
+					{ this.renderNavigationStripe() }
+	
+				</nav>
+			</div>
 		);
 	}
 
@@ -113,9 +129,16 @@ export default class Navigation extends React.Component {
 		);
 	}
 
+	handleMenuToggle = () => {
+		const { menuVisible } = this.state;
+		this.setState({ menuVisible: !menuVisible });
+	}
+
 	handlePageChange = (nextPage) => {
 		const { onPageChange } = this.props;
-		onPageChange(nextPage);
+		this.setState({ menuVisible: false }, () => {
+			onPageChange(nextPage);
+		});
 	}
 
 	handleNavSplash = () => {

@@ -17,7 +17,6 @@ import '../Styles/react-animations.css';
 
 /* components */
 import Navigation from '../Components/Navigation';
-import HamburgerMenu from '../Components/HamburgerMenu';
 
 /*
 	Primary App Controller
@@ -26,29 +25,20 @@ export default class App extends Component {
 	state = {
 		currentPage: undefined,
 		previousPage: undefined,
-    	menuVisible: false,
     }
 
 	render(){
-		const { currentPage, previousPage, menuVisible } = this.state;
+		const { currentPage, previousPage } = this.state;
 
 		return (
 			<Router>
 				<div className="et-main">
-					{ currentPage !== CONSTANTS.PAGE.SPLASH &&
-						<HamburgerMenu 
-							page={ currentPage }
-							onClick={ this.handleMenuToggle }
-							active={ menuVisible }
-						/>
-					}
 
 					{ currentPage !== CONSTANTS.PAGE.SPLASH &&
 						<Navigation
 							vertical
 							page={ currentPage }
 							previousPage={ previousPage }
-							menuVisible={ menuVisible }
 							onPageChange={ this.handlePageChange }
 						/>
 					}
@@ -97,18 +87,15 @@ export default class App extends Component {
 
 	handlePageLoad = (newPage) => {
 		const { currentPage } = this.state;
-		if(currentPage === undefined){
+		if (currentPage === undefined) {
 			this.setState({ currentPage: newPage });
 		}
 	}
 
 	handlePageChange = (nextPage) => {
 		const { currentPage } = this.state;
-		this.setState({previousPage: currentPage, currentPage: nextPage, menuVisible: false});
-	}
-
-	handleMenuToggle = () => {
-		const { menuVisible } = this.state;
-		this.setState({ menuVisible: !menuVisible });
+		if (nextPage !== currentPage) {
+			this.setState({ previousPage: currentPage, currentPage: nextPage });
+		}
 	}
 }

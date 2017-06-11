@@ -15,8 +15,13 @@ export default class HamburgerMenu extends Component {
 		active: false,
     };
 
+    state = {
+    	active: false,
+    };
+
 	render(){
 		const { page, active } = this.props;
+		// const { active } = this.state;
 
 		const modifiers = {
 			'mod-active': active,
@@ -42,6 +47,7 @@ export default class HamburgerMenu extends Component {
 
 	handleMenuToggle = () => {
 		const { onClick } = this.props;
+		// this.setState({ active: !this.state.active });
 		onClick();
 	}
 }

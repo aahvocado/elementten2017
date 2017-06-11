@@ -7,7 +7,7 @@
 	z-index: 6;
 	cursor: pointer;
 
-	position: absolute;
+	position: fixed;
 	left: 20px;
 	top: 20px;
 
@@ -27,6 +27,15 @@
 	color: white;
 	border-color: white;
 }
-.et-floating-hamburger:hover {
-	transform: translateY(-3px);
+/* phone */
+@media screen and (min-width : 0) and (max-width : 760px) {
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+	.et-floating-hamburger:hover {
+		transform: translateY(-3px);
+	}
 }
