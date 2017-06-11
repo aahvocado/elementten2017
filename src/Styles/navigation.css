@@ -66,3 +66,10 @@
 		font-size: 2.4rem;
 	}
 }
+/* relative */
+.et-navigation__menu__title + .et-nav-button {
+	margin-top: 2rem;
+}
+.et-navigation:not(.mod-splash-nav) .et-nav-button + .et-nav-button {
+	margin-top: 12px;
+}

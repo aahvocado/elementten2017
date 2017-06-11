@@ -28,14 +28,16 @@ export default class NavButton extends React.Component {
 			'mod-splash': isSplashPage,
 			'mod-fade-in animation-grow-from-bg': fadeIn,
 
-			'projects-border-color': page === CONSTANTS.PAGE.PROJECTS,
-			'games-border-color': page === CONSTANTS.PAGE.GAMES,
-			'about-border-color': page === CONSTANTS.PAGE.ABOUT,
-
 			'effects--projects': page === CONSTANTS.PAGE.PROJECTS,
 			'effects--games': page === CONSTANTS.PAGE.GAMES,
 			'effects--about': page === CONSTANTS.PAGE.ABOUT,
 		};
+
+		const colorMods = {
+			'projects-color': page === CONSTANTS.PAGE.PROJECTS,
+			'games-color': page === CONSTANTS.PAGE.GAMES,
+			'about-color': page === CONSTANTS.PAGE.ABOUT,
+		}
 
 		return (
 			<Link
