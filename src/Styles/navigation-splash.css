@@ -16,7 +16,6 @@
 	}
 	.et-navigation.mod-splash-nav .et-navigation__menu {
 	    flex-direction: row;
-		justify-content: space-around;
 	}
 }
 /* tablet */
