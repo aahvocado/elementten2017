@@ -33,7 +33,6 @@ export default class Page extends Component {
 			<div 
 				className={cx('et-page__inner')}
 				ref={ (x) => { this.pageContainer = x; } }
-				onClick={ this.handleInnerClick }
 			>
 				<h2 className={ cx('et-page__title', titleModifier)}>{ pageName }</h2>
 
