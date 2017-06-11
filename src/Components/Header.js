@@ -15,7 +15,7 @@ export default class Header extends React.Component {
 	render(){
 		return (
 			<header 
-				className={ cx('et-header') }
+				className={ cx('et-header', 'animation--text-shadow-raise') }
 			>
 				<h1 className='title'>Daniel<br/>Xiao</h1>
 				<span className='subtitle'></span>
