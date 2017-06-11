@@ -21,6 +21,20 @@ export default class AboutPage extends Component {
 					href="https://github.com/neonwednesdays"
 				>
 				</a>
+
+				<a 
+					className={ cn('fa fa-instagram', 'et-social-media__item') }
+					target="_blank"
+					href="https://www.instagram.com/aahvocado/"
+				>
+				</a>
+
+				<a 
+					className={ cn('fa fa-linkedin', 'et-social-media__item') }
+					target="_blank"
+					href="https://www.linkedin.com/in/daniel-xiao-b4928a27/"
+				>
+				</a>
 			</div>
 		);
 	}

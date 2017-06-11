@@ -14,8 +14,6 @@
     flex: 0 0 auto;
 	min-height: 1px;
     box-sizing: border-box;
-	padding: 20px;
-
 	z-index: 2;
 }
 .et-about__description {
@@ -89,6 +87,9 @@
 	.et-about__description {
 		color: #262833;
 	}
+	.et-about__image-container + .et-about__content-container {
+		margin-top: 1rem;
+	}
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
@@ -112,6 +113,9 @@
 	.et-about__description {
 		color: #262833;
 	}
+	.et-about__image-container + .et-about__content-container {
+		margin-top: 1rem;
+	}
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
@@ -132,6 +136,7 @@
 	.et-about__content-container {
 		max-width: 400px;
 		width: 50%;
+		padding: 20px;
 
 		position: absolute;
 		top: 0;

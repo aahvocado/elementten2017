@@ -18,3 +18,10 @@
 	color: lightgray;
 	transform: translateY(-5%);
 }
+
+:not(.rtl) .et-social-media__item + .et-social-media__item {
+	margin-left: 1rem;
+}
+.rtl .et-social-media__item + .et-social-media__item {
+	margin-right: 1rem;
+}
