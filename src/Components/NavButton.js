@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 /* styles */
 import '../Styles/nav-button.css';
+import '../Styles/nav-button-splash.css';
 
 /* kinda generic button actually */
 export default class NavButton extends React.Component {
@@ -13,18 +14,18 @@ export default class NavButton extends React.Component {
 		txt: '',
 		active: false,
 		page: '',
-		boxy: false,
+		isSplashPage: false,
 		fadeIn: false,
 		linkPath: CONSTANTS.ROUTES.SPLASH,
 		onNavClick: () => Promise.resolve(),
     };
 
 	render(){
-		const { wrapperCls, txt, active, boxy, page, linkPath, fadeIn } = this.props;
+		const { wrapperCls, txt, active, isSplashPage, page, linkPath, fadeIn } = this.props;
 
 		const modifiers = {
 			'active': active,
-			'mod-boxy': boxy,
+			'mod-splash': isSplashPage,
 			'mod-fade-in animation-grow-from-bg': fadeIn,
 
 			'projects-border-color': page === CONSTANTS.PAGE.PROJECTS,
@@ -46,7 +47,6 @@ export default class NavButton extends React.Component {
 				<span className="et-nav-button__content">
 					{ txt }
 				</span>
-				<span className={ cx('et-effect-container') }></span>
 			</Link>
 		);
 	}

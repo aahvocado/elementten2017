@@ -1,9 +1,7 @@
-.et-navigation {
-	flex: 0 0 auto;
-	min-height: 1px;
-	box-sizing: border-box;
+.et-nav-button.mod-splash {
+	border-bottom: 3px solid;
+	transition: border 700ms;
 }
-
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
 	
@@ -14,7 +12,7 @@
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-	.et-navigation {
-		
+	.et-nav-button.mod-splash:not(:hover) {
+		border-bottom: 3px solid transparent;
 	}
 }

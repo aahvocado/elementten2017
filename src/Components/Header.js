@@ -17,8 +17,8 @@ export default class Header extends React.Component {
 			<header 
 				className={ cx('et-header') }
 			>
-				<h1 className='title'>Daniel Xiao</h1>
-				<span className='subtitle'>is ElementTen</span>
+				<h1 className='title'>Daniel<br/>Xiao</h1>
+				<span className='subtitle'></span>
 			</header>
 		);
 	}

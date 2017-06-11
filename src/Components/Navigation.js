@@ -10,6 +10,7 @@ import HamburgerMenu from '../Components/HamburgerMenu';
 
 /* styles */
 import '../Styles/navigation.css';
+import '../Styles/navigation-splash.css';
 
 export default class Navigation extends React.Component {
 	static defaultProps = {
@@ -17,6 +18,7 @@ export default class Navigation extends React.Component {
     	previousPage: CONSTANTS.PAGE.SPLASH,
     	vertical: false,
 		fadeIn: false,
+		isSplashPage: false,
 		onPageChange: () => Promise.resolve(),
     };
 
@@ -25,11 +27,12 @@ export default class Navigation extends React.Component {
     }
 
 	render(){
-		const { page, vertical, fadeIn } = this.props;
+		const { page, vertical, fadeIn, isSplashPage } = this.props;
 		const { menuVisible } = this.state;
 
 		const modifiers = {
 			'mod-vertical': vertical,
+			'mod-splash-nav': isSplashPage,
 			'nav-open': menuVisible,
 			'nav-closed': !menuVisible,
 
@@ -39,7 +42,7 @@ export default class Navigation extends React.Component {
 		}
 		
 		return (
-			<div className={ cx('et-navigation-container') }>
+			<div className={ cx('et-navigation', modifiers) }>
 				{ page !== CONSTANTS.PAGE.SPLASH &&
 					<HamburgerMenu 
 						page={ page }
@@ -49,7 +52,7 @@ export default class Navigation extends React.Component {
 				}
 
 				<nav 
-					className={ cx('et-navigation', modifiers) }
+					className={ cx('et-navigation__menu') }
 					role='navigation' 
 				>
 	
@@ -67,7 +70,7 @@ export default class Navigation extends React.Component {
 						txt='Games'
 						wrapperCls={ cx('games-color') }
 						fadeIn={ fadeIn }
-						boxy={ vertical }
+						isSplashPage={ isSplashPage }
 						page={ CONSTANTS.PAGE.GAMES }
 						active={ page === CONSTANTS.PAGE.GAMES }
 						linkPath={ CONSTANTS.ROUTES.GAMES }
@@ -77,7 +80,7 @@ export default class Navigation extends React.Component {
 						txt='Projects'
 						wrapperCls={ cx('projects-color') }
 						fadeIn={ fadeIn }
-						boxy={ vertical }
+						isSplashPage={ isSplashPage }
 						page={ CONSTANTS.PAGE.PROJECTS }
 						active={ page === CONSTANTS.PAGE.PROJECTS }
 						linkPath={ CONSTANTS.ROUTES.PROJECTS }
@@ -87,7 +90,7 @@ export default class Navigation extends React.Component {
 						txt='About'
 						wrapperCls={ cx('about-color') }
 						fadeIn={ fadeIn }
-						boxy={ vertical }
+						isSplashPage={ isSplashPage }
 						page={ CONSTANTS.PAGE.ABOUT }
 						active={ page === CONSTANTS.PAGE.ABOUT }
 						linkPath={ CONSTANTS.ROUTES.ABOUT }

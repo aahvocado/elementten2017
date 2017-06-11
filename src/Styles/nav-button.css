@@ -1,183 +1,24 @@
 .et-nav-button {
-	height: 200px;
-	width: 200px;
 	box-sizing: border-box;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-
-	color: #5073ad;
-	flex: 0 0 auto;
-	font-family: arial, sans-serif;
-	cursor: pointer;
-
-	transition: all 300ms;
-	z-index: 1;
+	transition: color 300ms;
 }
-/* content */
-.et-nav-button__content {
-	flex: 0 0 auto;
-	box-sizing: border-box;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	z-index: 1;
-}
-.et-nav-button:not(.mod-boxy) .et-nav-button__content {
-	width: 95%;
-	height: 95%;
-	border-radius: 50%;
-	background: transparent;
-
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-/* effects container */
-.et-effect-container {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-.et-nav-button:not(.mod-boxy) .et-effect-container {
-	overflow: hidden;
-}
-.et-nav-button.mod-boxy .et-effect-container {
-	display: none;
-}
-.et-nav-button .et-effect-container:before,
-.et-nav-button .et-effect-container:after {
-	content: "";
-	position: absolute;
-
-	box-sizing: border-box;
-	border-radius: 50%;
-}
-.et-nav-button .et-effect-container:before {
-	background-color: transparent;
-	border: 5px solid transparent;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	transition: border 300ms;
-}
-.et-nav-button .et-effect-container:after {
-	top: -150%;
-	left: -150%;
-	box-shadow: 0 1px 10px rgba(255, 255, 255, 0.5);
-
-	height: 150%;
-	width: 150%;
-}
-.et-nav-button:not(.mod-boxy):hover .et-effect-container:after {
-	animation: animation--top-left-to-right 1.5s linear infinite;
-}
-.et-nav-button.effects--projects:not(.mod-boxy):hover .et-effect-container:before {
-	border-color: #A262A6;
-}
-.et-nav-button.effects--games:not(.mod-boxy):hover .et-effect-container:before {
-	border-color: #D98C77;
-}
-.et-nav-button.effects--about:not(.mod-boxy):hover .et-effect-container:before {
-	border-color: #e2be51;
-}
-.et-nav-button.effects--projects .et-effect-container:after {
-	background-color: rgba(255, 255, 255, 0.5);
-}
-.et-nav-button.effects--games .et-effect-container:after {
-	background-color: rgba(255, 255, 255, 0.5);
-}
-.et-nav-button.effects--about .et-effect-container:after {
-	background-color: rgba(255, 255, 255, 0.5);
-}
-.et-nav-button.mod-boxy {
-	padding: 10px;
-	
-	border: 2px solid white;
-	border-radius: 5px;
+.et-nav-button:not(:hover) {
 	color: white;
 }
-
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.et-nav-button {
-		font-size: 1.5rem;
-	}
-	.et-nav-button:not(.mod-boxy) {
-		padding: 10px;
-		height: 50px;
-		width: 200px;
-		
-		border: 2px solid #5073ad;
-		background: transparent;
-		border-radius: 5px;
-		font-size: 1.5rem;
-	}
-	.et-nav-button.mod-boxy {
-		height: 50px;
-		width: 100%;
-		font-size: 1.3rem;
-	}
-	.et-nav-button:not(:hover):not(:focus):not(.mod-boxy) {
-		color: #5073ad;
-	}
+	
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	.et-nav-button {
-		font-size: 1.8rem;
-	}
-	.et-nav-button:not(.mod-boxy) .et-nav-button__content {
-		border-radius: 50%;
-	}
-	.et-nav-button.mod-boxy {
-		height: 50px;
-		width: 100%;
-		font-size: 1.4rem;
-	}
-	.et-nav-button:not(:hover):not(:focus):not(.mod-boxy) {
-		color: #5073ad;
-		border-color: transparent;
-	}
+	
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
 	.et-nav-button {
-		font-size: 2rem;
-	}
-	.et-nav-button:not(.mod-boxy) .et-nav-button__content {
-		border-radius: 50%;
-	}
-	.et-nav-button.mod-boxy {
-		height: 70px;
-		width: 170px;
-		font-size: 1.6rem;
-	}
-	.et-nav-button:not(:hover):not(:focus):not(.mod-boxy) {
-		color: #5073ad;
-		border-color: transparent;
-	}
-	.et-nav-button.mod-boxy:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 6px rgba(70, 70, 70, 0.5);
-	}
-}
+		flex: 0 0 auto;
+		font-size: 2.3rem;
 
-/* hover effects */
-.et-nav-button:not(.mod-boxy):hover,
-.et-nav-button:not(.mod-boxy):focus {
-	outline: 0;
-	transform: scale(1.2);
-
-	transform: translateY(-8px);
-}
-.et-nav-button.mod-boxy:not(:hover):focus {
-	box-shadow: 0 0 3px 1px white;
+		padding: 1rem;
+	}
 }

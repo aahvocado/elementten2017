@@ -1,0 +1,34 @@
+.et-navigation.mod-splash-nav {
+	flex: 0 0 auto;
+	min-height: 1px;
+}
+.et-navigation.mod-splash-nav .et-navigation__menu {
+
+}
+/* phone */
+@media screen and (min-width : 0) and (max-width : 760px) {
+	
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+	
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+	.et-navigation.mod-splash-nav .et-navigation__menu {
+		display: flex;
+		flex-direction: row;
+		height: auto;
+
+		position: absolute;
+		top: 50%;
+		right: 10%;
+	}
+
+	/*:not(.rtl) .et-navigation.mod-splash-nav .et-nav-button + .et-nav-button {
+		margin-left: 3rem;
+	}
+	.rtl .et-navigation.mod-splash-nav .et-nav-button + .et-nav-button {
+		margin-right: 3rem;
+	}*/
+}

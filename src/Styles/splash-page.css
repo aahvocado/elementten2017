@@ -1,29 +1,21 @@
 .et-splash-page {
+	position: relative;
 	display: flex;
 	flex-direction: column;
+	height: 100vh;
+
+	justify-content: center;
 }
 
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.et-header + .et-navigation-container {
-		margin-top: 50px;
-	}
+	
 }
 /* tablet */
 @media screen and (min-width : 760px) and (max-width : 1220px) {
-	.et-splash-page {
-		transform: translateY(50%);
-	}
-	.et-header + .et-navigation-container {
-		margin-top: 50px;
-	}
+	
 }
 /* desktop */
 @media screen and (min-width : 1220px) {
-	.et-splash-page {
-		transform: translateY(50%);
-	}
-	.et-header + .et-navigation-container {
-		margin-top: 50px;
-	}
+
 }
