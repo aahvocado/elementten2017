@@ -35,6 +35,7 @@ export default class Navigation extends React.Component {
 			'nav-open': menuVisible,
 			'nav-closed': !menuVisible,
 
+			'mod-generic-page': page === undefined,
 			'mod-projects-page': page === CONSTANTS.PAGE.PROJECTS,
 			'mod-games-page': page === CONSTANTS.PAGE.GAMES,
 			'mod-about-page': page === CONSTANTS.PAGE.ABOUT,
@@ -105,8 +106,14 @@ export default class Navigation extends React.Component {
 
 	renderNavigationStripe() {
 		const { page, previousPage, isSplashPage } = this.props;
+
 		return (
 			<div className='nav-color-stripe-container'>
+				{ (page === undefined || page === CONSTANTS.PAGE.SPLASH) && !isSplashPage &&
+					<ColorStripe
+						page={ 'generic' }
+					/>
+				}
 				{ page === CONSTANTS.PAGE.PROJECTS &&
 					<ColorStripe
 						previousPage={ previousPage }

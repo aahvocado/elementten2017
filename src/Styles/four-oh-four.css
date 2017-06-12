@@ -1,0 +1,25 @@
+.et-404 {
+	background-color: white;
+}
+.et-404__title {
+	text-align: center;
+}
+/* phone */
+@media screen and (min-width : 0) and (max-width : 760px) {
+    .et-404__title {
+        font-size: 4rem;
+    }
+}
+/* tablet */
+@media screen and (min-width : 760px) and (max-width : 1220px) {
+    .et-404__title {
+        font-size: 5rem;
+        font-size: 20vw;
+    }
+}
+/* desktop */
+@media screen and (min-width : 1220px) {
+    .et-404__title {
+        font-size: 16rem;
+    }
+}

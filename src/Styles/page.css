@@ -3,7 +3,7 @@
 	flex-direction: row;
 	color: white;
 }
-.et-main.et-main--splash-page .et-page {
+.et-main.et-main--et-bg .et-page {
 	flex: 1 1 auto;
 	background-color: #5073ad;
 }

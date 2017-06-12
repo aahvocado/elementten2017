@@ -9,6 +9,7 @@ import Splash from '../Pages/Splash';
 import ProjectPage from '../Pages/ProjectPage';
 import GamesPage from '../Pages/GamesPage';
 import AboutPage from '../Pages/AboutPage';
+import FourOhFour from '../Pages/FourOhFour';
 
 /* styles */
 import '../Styles/styles.css';
@@ -30,9 +31,13 @@ export default class App extends Component {
 	render(){
 		const { currentPage, previousPage } = this.state;
 
+		const genericPage = currentPage === CONSTANTS.PAGE.SPLASH;
+
 		const modifiers = {
-			'et-main--splash-page': currentPage === CONSTANTS.PAGE.SPLASH,
+			'et-main--et-bg': genericPage,
 		};
+
+		console.log(currentPage);
 
 		return (
 			<Router>
@@ -46,7 +51,9 @@ export default class App extends Component {
 						/>
 					}
 
+
 					<div className={ cn('et-page') }>
+
 						<Route exact path={ CONSTANTS.ROUTES.SPLASH } 
 							component={() => (
 								<Splash
@@ -82,7 +89,10 @@ export default class App extends Component {
 								/>
 							)}
 						/>
-					</div>
+						<Route path={ '*' }
+							component={() => ( <FourOhFour /> )}
+						/>
+ 					</div>
 				</div>
 			</Router>
 		);

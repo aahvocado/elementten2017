@@ -1,4 +1,4 @@
-d.et-color-stripe {
+.et-color-stripe {
     color: #D98C77;
 }
 /* phone */
@@ -58,6 +58,9 @@ d.et-color-stripe {
     transform-origin: 50% 0;
     transition-property: transform;
     transition-timing-function: ease-out;
+}
+.et-color-stripe:not(.disabled).generic-bg:after {
+    background-color: #5073ad;
 }
 .et-color-stripe:not(.disabled).projects-bg:after {
 	background-color: #A262A6;
