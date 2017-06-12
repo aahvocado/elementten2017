@@ -90,7 +90,7 @@ export default class App extends Component {
 
 	handlePageLoad = (newPage) => {
 		const { currentPage } = this.state;
-		if (currentPage === undefined) {
+		if (newPage !== currentPage && (currentPage === undefined || newPage === CONSTANTS.PAGE.SPLASH)) {
 			this.setState({ currentPage: newPage });
 		}
 	}
