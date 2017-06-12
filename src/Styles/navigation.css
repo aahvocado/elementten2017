@@ -13,6 +13,7 @@
 /* navigation actual menu */
 .et-navigation__menu {
 	padding: 1rem;
+	padding-top: 2rem;
 
 	transition: transform 750ms;
 }

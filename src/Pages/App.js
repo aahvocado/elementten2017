@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import cx from 'classnames';
+import cn from 'classnames';
 import { CONSTANTS } from '../constants.js';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -30,9 +30,13 @@ export default class App extends Component {
 	render(){
 		const { currentPage, previousPage } = this.state;
 
+		const modifiers = {
+			'et-main--splash-page': currentPage === CONSTANTS.PAGE.SPLASH,
+		};
+
 		return (
 			<Router>
-				<div className="et-main">
+				<div className={ cn('et-main', modifiers) }>
 
 					{ currentPage !== CONSTANTS.PAGE.SPLASH &&
 						<Navigation
@@ -42,7 +46,7 @@ export default class App extends Component {
 						/>
 					}
 
-					<div className={cx('et-page')}>
+					<div className={ cn('et-page') }>
 						<Route exact path={ CONSTANTS.ROUTES.SPLASH } 
 							component={() => (
 								<Splash

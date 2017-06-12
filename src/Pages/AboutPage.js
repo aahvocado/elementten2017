@@ -39,6 +39,10 @@ export default class AboutPage extends Page {
 					</p>
 
 					<p className="et-about__description">
+						His focus is on the exciting and growing industry of the web. More specifically, he is excited about the future of front end development. He is currently working at Promethean Inc using technologies such as React and Webpack.
+					</p>
+
+					<p className="et-about__description">
 						He would be happy to be contacted at <a className="href-link" href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>.
 					</p>
 
