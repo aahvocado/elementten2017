@@ -32,13 +32,7 @@ export default class NavButton extends React.Component {
 			'effects--games': page === CONSTANTS.PAGE.GAMES,
 			'effects--about': page === CONSTANTS.PAGE.ABOUT,
 		};
-
-		const colorMods = {
-			'projects-color': page === CONSTANTS.PAGE.PROJECTS,
-			'games-color': page === CONSTANTS.PAGE.GAMES,
-			'about-color': page === CONSTANTS.PAGE.ABOUT,
-		}
-
+		
 		return (
 			<Link
 				className={cx('et-nav-button', modifiers, wrapperCls)}
