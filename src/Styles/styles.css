@@ -76,3 +76,11 @@ a.href-link {
 a.href-link:hover {
 	color: #afd5e0;
 }
+
+/* font awesome overrides */
+a > .fa {
+	margin-right: 3px;
+}
+.fa {
+	text-indent: 0;
+}
