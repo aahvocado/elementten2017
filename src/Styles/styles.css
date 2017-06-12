@@ -78,6 +78,9 @@ a.href-link {
 a.href-link:hover {
 	color: #afd5e0;
 }
+::-webkit-scrollbar { 
+    display: none; 
+}
 
 /* font awesome overrides */
 a > .fa {

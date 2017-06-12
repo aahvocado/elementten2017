@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import cn from 'classnames';
 import { CONSTANTS } from '../constants.js';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 /* pages */
 import Splash from '../Pages/Splash';
@@ -52,7 +52,7 @@ export default class App extends Component {
 					}
 
 
-					<div className={ cn('et-page') }>
+					<Switch className={ cn('et-page') }>
 
 						<Route exact path={ CONSTANTS.ROUTES.SPLASH } 
 							component={() => (
@@ -92,7 +92,7 @@ export default class App extends Component {
 						<Route path={ '*' }
 							component={() => ( <FourOhFour /> )}
 						/>
- 					</div>
+ 					</Switch>
 				</div>
 			</Router>
 		);
