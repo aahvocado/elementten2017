@@ -12,10 +12,11 @@
 }
 /* navigation actual menu */
 .et-navigation__menu {
+	transition: transform 750ms;
+}
+.et-navigation__menu.mod-vertical-nav {
 	padding: 1rem;
 	padding-top: 2rem;
-
-	transition: transform 750ms;
 }
 .et-navigation__menu__title {
 	display: block;
@@ -24,7 +25,7 @@
 
 /* phone */
 @media screen and (min-width : 0) and (max-width : 760px) {
-	.et-navigation__menu {
+	.et-navigation__menu.mod-vertical-nav {
 		padding-top: 100px;
 	}
 	.et-navigation.mod-vertical-nav.nav-open .et-navigation__menu {
