@@ -9,7 +9,8 @@
 @media screen and (min-width : 0) and (max-width : 760px) {
 	.et-navigation.mod-splash-nav {    	
     	position: fixed;
-    	bottom: 10px;
+    	bottom: 20px;
+    	left: 0;
 	}
 	.et-navigation.mod-splash-nav .et-navigation__menu {
 	    flex-direction: row;
