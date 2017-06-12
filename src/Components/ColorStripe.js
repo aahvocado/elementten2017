@@ -33,8 +33,6 @@ export default class ColorStripe extends Component {
 			'previous-about-bg': previousPage === CONSTANTS.PAGE.ABOUT,
 		};
 
-		console.log('page', page);
-
 		return (
 			<div className={ cx('et-color-stripe', modifiers, wrapperCls) }>
 			</div>

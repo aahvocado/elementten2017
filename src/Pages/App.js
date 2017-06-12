@@ -37,8 +37,6 @@ export default class App extends Component {
 			'et-main--et-bg': genericPage,
 		};
 
-		console.log(currentPage);
-
 		return (
 			<Router>
 				<div className={ cn('et-main', modifiers) }>
