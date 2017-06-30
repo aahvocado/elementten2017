@@ -43,7 +43,7 @@ export default class AboutPage extends Page {
 					</p>
 
 					<p className="et-about__description">
-						He would be happy to be contacted at <a className="href-link" href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>. His <a className="href-link" href="./documents/DanielXiao_Resume_Final.pdf"><span className="fa fa-file-text"></span>resume</a> also has more details on the things he has done.
+						He would be happy to be contacted at <a className="href-link" href="mailto:dxiao.ns@gmail.com">dxiao.ns@gmail.com</a>. His <a className="href-link" href="./documents/DanielXiao_Resume.pdf"><span className="fa fa-file-text"></span>resume</a> also has more details on the things he has done.
 					</p>
 
 					<SocialMedia />
