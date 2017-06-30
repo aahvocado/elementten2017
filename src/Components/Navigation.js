@@ -66,17 +66,7 @@ export default class Navigation extends React.Component {
 						</Link>
 
 					}
-					
-					<NavButton 
-						txt='Games'
-						wrapperCls={ cx('games-color') }
-						fadeIn={ fadeIn }
-						isSplashPage={ isSplashPage }
-						page={ CONSTANTS.PAGE.GAMES }
-						active={ page === CONSTANTS.PAGE.GAMES }
-						linkPath={ CONSTANTS.ROUTES.GAMES }
-						onNavClick={ this.handlePageChange } />
-	
+
 					<NavButton 
 						txt='Projects'
 						wrapperCls={ cx('projects-color') }
@@ -86,7 +76,17 @@ export default class Navigation extends React.Component {
 						active={ page === CONSTANTS.PAGE.PROJECTS }
 						linkPath={ CONSTANTS.ROUTES.PROJECTS }
 						onNavClick={ this.handlePageChange } />
-	
+
+					<NavButton 
+						txt='Games'
+						wrapperCls={ cx('games-color') }
+						fadeIn={ fadeIn }
+						isSplashPage={ isSplashPage }
+						page={ CONSTANTS.PAGE.GAMES }
+						active={ page === CONSTANTS.PAGE.GAMES }
+						linkPath={ CONSTANTS.ROUTES.GAMES }
+						onNavClick={ this.handlePageChange } />
+
 					<NavButton 
 						txt='About'
 						wrapperCls={ cx('about-color') }
